@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>jersey2-util - Project Dependencies</title>
+    <title>jersey2-hibernate - Project Dependencies</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -17,7 +17,7 @@
   <body class="composite">
     <div id="banner">
                     <div id="bannerLeft">
-                jersey2-util
+                jersey2-hibernate
                 </div>
                     <div class="clear">
         <hr/>
@@ -30,8 +30,7 @@
         <span id="publishDate">Last Published: 2014-07-07</span>
                   &nbsp;| <span id="projectVersion">Version: 1.1.1</span>
                       </div>
-            <div class="xright">                    <a href="./" title="jersey2-util">jersey2-util</a>
-              
+            <div class="xright">        
                     
       </div>
       <div class="clear">
@@ -42,7 +41,16 @@
       <div id="navcolumn">
              
                     
-                                <h5>Parent Project</h5>
+                                <h5>Manual</h5>
+                  <ul>
+                  <li class="none">
+                          <a href="index.html" title="Introduction">Introduction</a>
+            </li>
+                  <li class="none">
+                          <a href="contributing.html" title="Contributing">Contributing</a>
+            </li>
+          </ul>
+                       <h5>Parent Project</h5>
                   <ul>
                   <li class="none">
                           <a href="../index.html" title="jersey2-toolkit">jersey2-toolkit</a>
@@ -124,11 +132,23 @@
 <th>Type</th>
 <th>License</th></tr>
 <tr class="b">
-<td>commons-io</td>
-<td><a class="externalLink" href="http://commons.apache.org/io/">commons-io</a></td>
-<td>2.4</td>
+<td>net.krotscheck.jersey2</td>
+<td><a class="externalLink" href="https://github.com/krotscheck/jersey2-toolkit/jersey2-util">jersey2-util</a></td>
+<td>1.1.1</td>
 <td>jar</td>
-<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></td></tr>
+<tr class="a">
+<td>org.hibernate</td>
+<td><a class="externalLink" href="http://hibernate.org">hibernate-core</a></td>
+<td>4.3.5.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
+<tr class="b">
+<td>org.hibernate</td>
+<td><a class="externalLink" href="http://search.hibernate.org/hibernate-search">hibernate-search</a></td>
+<td>4.5.1.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
 <tr class="a">
 <td>org.slf4j</td>
 <td><a class="externalLink" href="http://www.slf4j.org">slf4j-api</a></td>
@@ -152,30 +172,36 @@
 <td>jar</td>
 <td><a class="externalLink" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v 1.0</a>-<a class="externalLink" href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
 <tr class="a">
+<td>com.h2database</td>
+<td><a class="externalLink" href="http://www.h2database.com">h2</a></td>
+<td>1.4.179</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://h2database.com/html/license.html">MPL 2.0, and EPL 1.0</a></td></tr>
+<tr class="b">
 <td>junit</td>
 <td><a class="externalLink" href="http://junit.org">junit</a></td>
 <td>4.11</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.opensource.org/licenses/cpl1.0.txt">Common Public License Version 1.0</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.jersey.test-framework.providers</td>
 <td><a class="externalLink" href="https://jersey.java.net/project/project/jersey-test-framework-provider-grizzly2/">jersey-test-framework-provider-grizzly2</a></td>
 <td>2.10.1</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.mockito</td>
 <td><a class="externalLink" href="http://www.mockito.org">mockito-all</a></td>
 <td>1.9.5</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://code.google.com/p/mockito/wiki/License">The MIT License</a></td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.powermock</td>
 <td><a class="externalLink" href="http://www.powermock.org/powermock-api/powermock-api-mockito">powermock-api-mockito</a></td>
 <td>1.5.5</td>
 <td>jar</td>
 <td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.powermock</td>
 <td><a class="externalLink" href="http://www.powermock.org">powermock-module-junit4</a></td>
 <td>1.5.5</td>
@@ -199,7 +225,239 @@
 <td><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></td></tr></table></div></div><a name="Project_Transitive_Dependencies"></a>
 <div class="section">
 <h2>Project Transitive Dependencies<a name="Project_Transitive_Dependencies"></a></h2>
-<p>The following is a list of transitive dependencies for this project. Transitive dependencies are the dependencies of the project dependencies.</p><a name="Project_Transitive_Dependencies_test"></a>
+<p>The following is a list of transitive dependencies for this project. Transitive dependencies are the dependencies of the project dependencies.</p><a name="Project_Transitive_Dependencies_compile"></a>
+<div class="section">
+<h3>compile<a name="compile"></a></h3>
+<p>The following is a list of compile dependencies for this project. These dependencies are required to compile and run the application:</p>
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>GroupId</th>
+<th>ArtifactId</th>
+<th>Version</th>
+<th>Type</th>
+<th>License</th></tr>
+<tr class="b">
+<td>antlr</td>
+<td><a class="externalLink" href="http://www.antlr.org/">antlr</a></td>
+<td>2.7.7</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.antlr.org/license.html">BSD License</a></td></tr>
+<tr class="a">
+<td>com.thoughtworks.paranamer</td>
+<td><a class="externalLink" href="http://paranamer.codehaus.org/paranamer">paranamer</a></td>
+<td>2.3</td>
+<td>jar</td>
+<td>LICENSE.txt</td></tr>
+<tr class="b">
+<td>commons-codec</td>
+<td><a class="externalLink" href="http://commons.apache.org/codec/">commons-codec</a></td>
+<td>1.6</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="a">
+<td>commons-io</td>
+<td><a class="externalLink" href="http://commons.apache.org/io/">commons-io</a></td>
+<td>2.4</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="b">
+<td>commons-lang</td>
+<td><a class="externalLink" href="http://commons.apache.org/lang/">commons-lang</a></td>
+<td>2.6</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="a">
+<td>dom4j</td>
+<td><a class="externalLink" href="http://dom4j.org">dom4j</a></td>
+<td>1.6.1</td>
+<td>jar</td>
+<td>-</td></tr>
+<tr class="b">
+<td>org.apache.avro</td>
+<td><a class="externalLink" href="http://avro.apache.org">avro</a></td>
+<td>1.7.6</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="a">
+<td>org.apache.commons</td>
+<td><a class="externalLink" href="http://commons.apache.org/compress/">commons-compress</a></td>
+<td>1.4.1</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-analyzers">lucene-analyzers</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-core">lucene-core</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-facet">lucene-facet</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-grouping">lucene-grouping</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-highlighter">lucene-highlighter</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-kuromoji">lucene-kuromoji</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-memory">lucene-memory</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-misc">lucene-misc</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-phonetic">lucene-phonetic</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-smartcn">lucene-smartcn</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-spatial">lucene-spatial</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-spellchecker">lucene-spellchecker</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.lucene</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-stempel">lucene-stempel</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.solr</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/solr-parent/solr-analysis-extras">solr-analysis-extras</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.apache.solr</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/solr-parent/solr-core">solr-core</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="a">
+<td>org.apache.solr</td>
+<td><a class="externalLink" href="http://lucene.apache.org/java/solr-parent/solr-solrj">solr-solrj</a></td>
+<td>3.6.2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></td></tr>
+<tr class="b">
+<td>org.codehaus.jackson</td>
+<td><a class="externalLink" href="http://jackson.codehaus.org">jackson-core-asl</a></td>
+<td>1.9.13</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="a">
+<td>org.codehaus.jackson</td>
+<td><a class="externalLink" href="http://jackson.codehaus.org">jackson-mapper-asl</a></td>
+<td>1.9.13</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr>
+<tr class="b">
+<td>org.hibernate</td>
+<td><a class="externalLink" href="http://search.hibernate.org/hibernate-search-analyzers">hibernate-search-analyzers</a></td>
+<td>4.5.1.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
+<tr class="a">
+<td>org.hibernate</td>
+<td><a class="externalLink" href="http://search.hibernate.org/hibernate-search-engine">hibernate-search-engine</a></td>
+<td>4.5.1.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
+<tr class="b">
+<td>org.hibernate</td>
+<td><a class="externalLink" href="http://search.hibernate.org/hibernate-search-orm">hibernate-search-orm</a></td>
+<td>4.5.1.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
+<tr class="a">
+<td>org.hibernate.common</td>
+<td><a class="externalLink" href="http://hibernate.org">hibernate-commons-annotations</a></td>
+<td>4.0.4.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></td></tr>
+<tr class="b">
+<td>org.hibernate.javax.persistence</td>
+<td><a class="externalLink" href="http://hibernate.org">hibernate-jpa-2.1-api</a></td>
+<td>1.0.0.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License (EPL), Version 1.0</a>-<a class="externalLink" href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License (EDL), Version 1.0</a></td></tr>
+<tr class="a">
+<td>org.javassist</td>
+<td><a class="externalLink" href="http://www.javassist.org/">javassist</a></td>
+<td>3.18.1-GA</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.mozilla.org/MPL/MPL-1.1.html">MPL 1.1</a>-<a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">LGPL 2.1</a>-<a class="externalLink" href="http://www.apache.org/licenses/">Apache License 2.0</a></td></tr>
+<tr class="b">
+<td>org.jboss</td>
+<td><a class="externalLink" href="http://www.jboss.org/jandex">jandex</a></td>
+<td>1.1.0.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">AL 2.0</a></td></tr>
+<tr class="a">
+<td>org.jboss.logging</td>
+<td><a class="externalLink" href="http://www.jboss.org">jboss-logging</a></td>
+<td>3.1.3.GA</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, version 2.0</a></td></tr>
+<tr class="b">
+<td>org.jboss.logging</td>
+<td><a class="externalLink" href="http://www.jboss.org/jboss-logging-tools-parent/jboss-logging-annotations">jboss-logging-annotations</a></td>
+<td>1.2.0.Beta1</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://repository.jboss.org/licenses/cc0-1.0.txt">Public Domain</a></td></tr>
+<tr class="a">
+<td>org.jboss.spec.javax.transaction</td>
+<td><a class="externalLink" href="http://www.jboss.org/jboss-transaction-api_1.2_spec">jboss-transaction-api_1.2_spec</a></td>
+<td>1.0.0.Final</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://repository.jboss.org/licenses/cddl.txt">Common Development and Distribution License</a>-<a class="externalLink" href="http://repository.jboss.org/licenses/gpl-2.0-ce.txt">GNU General Public License, Version 2 with the Classpath Exception</a></td></tr>
+<tr class="b">
+<td>xml-apis</td>
+<td><a class="externalLink" href="http://xml.apache.org/commons/#external">xml-apis</a></td>
+<td>1.0.b2</td>
+<td>jar</td>
+<td><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></td></tr></table></div><a name="Project_Transitive_Dependencies_test"></a>
 <div class="section">
 <h3>test<a name="test"></a></h3>
 <p>The following is a list of test dependencies for this project. These dependencies are only required to compile and run unit tests for the application:</p>
@@ -393,13 +651,7 @@
 <td><a class="externalLink" href="https://jersey.java.net/jersey-server/">jersey-server</a></td>
 <td>2.10.1</td>
 <td>jar</td>
-<td><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></td></tr>
-<tr class="b">
-<td>org.javassist</td>
-<td><a class="externalLink" href="http://www.javassist.org/">javassist</a></td>
-<td>3.18.1-GA</td>
-<td>jar</td>
-<td><a class="externalLink" href="http://www.mozilla.org/MPL/MPL-1.1.html">MPL 1.1</a>-<a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">LGPL 2.1</a>-<a class="externalLink" href="http://www.apache.org/licenses/">Apache License 2.0</a></td></tr></table></div></div><a name="Project_Dependency_Graph"></a>
+<td><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></td></tr></table></div></div><a name="Project_Dependency_Graph"></a>
 <div class="section">
 <h2>Project Dependency Graph<a name="Project_Dependency_Graph"></a></h2><script language="javascript" type="text/javascript">
       function toggleDependencyDetail( divId, imgId )
@@ -422,7 +674,18 @@
 <div class="section">
 <h3>Dependency Tree<a name="Dependency_Tree"></a></h3>
 <ul>
-<li>net.krotscheck.jersey2:jersey2-util:jar:1.1.1 <img id="_img1" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep0', '_img1' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep0" style="display:none">
+<li>net.krotscheck.jersey2:jersey2-hibernate:jar:1.1.1 <img id="_img1" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep0', '_img1' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep0" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>jersey2-hibernate</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>A Jersey2 Feature which injects Hibernate components into your
+        application.</p>
+<p><b>URL: </b><a class="externalLink" href="https://github.com/krotscheck/jersey2-toolkit/jersey2-hibernate">https://github.com/krotscheck/jersey2-toolkit/jersey2-hibernate</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></p></td></tr></table></div>
+<ul>
+<li>net.krotscheck.jersey2:jersey2-util:jar:1.1.1 (compile) <img id="_img3" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep2', '_img3' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep2" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey2-util</th></tr>
@@ -433,7 +696,7 @@
 <p><b>URL: </b><a class="externalLink" href="https://github.com/krotscheck/jersey2-toolkit/jersey2-util">https://github.com/krotscheck/jersey2-toolkit/jersey2-util</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, Version 2.0</a></p></td></tr></table></div>
 <ul>
-<li>commons-io:commons-io:jar:2.4 (compile) <img id="_img3" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep2', '_img3' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep2" style="display:none">
+<li>commons-io:commons-io:jar:2.4 (compile) <img id="_img5" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep4', '_img5' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep4" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Commons IO</th></tr>
@@ -442,8 +705,385 @@
 <p><b>Description: </b>The Commons IO library contains utility classes, stream implementations, file filters, 
 file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://commons.apache.org/io/">http://commons.apache.org/io/</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li></ul></li>
+<li>org.hibernate:hibernate-core:jar:4.3.5.Final (compile) <img id="_img7" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep6', '_img7' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep6" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Core Hibernate O/RM functionality</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>The core O/RM functionality as provided by Hibernate</p>
+<p><b>URL: </b><a class="externalLink" href="http://hibernate.org">http://hibernate.org</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div>
+<ul>
+<li>org.jboss.logging:jboss-logging:jar:3.1.3.GA (compile) <img id="_img9" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep8', '_img9' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep8" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>JBoss Logging 3</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>The JBoss Logging Framework</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.jboss.org">http://www.jboss.org</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache License, version 2.0</a></p></td></tr></table></div></li>
+<li>org.jboss.logging:jboss-logging-annotations:jar:1.2.0.Beta1 (compile) <img id="_img11" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep10', '_img11' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep10" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>JBoss Logging I18n Annotations</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Parent POM for JBoss projects. Provides default project build configuration.</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.jboss.org/jboss-logging-tools-parent/jboss-logging-annotations">http://www.jboss.org/jboss-logging-tools-parent/jboss-logging-annotations</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://repository.jboss.org/licenses/cc0-1.0.txt">Public Domain</a></p></td></tr></table></div></li>
+<li>org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.0.Final (compile) <img id="_img13" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep12', '_img13' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep12" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Java Transaction API</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>The Java Transaction 1.2 API classes</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.jboss.org/jboss-transaction-api_1.2_spec">http://www.jboss.org/jboss-transaction-api_1.2_spec</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://repository.jboss.org/licenses/cddl.txt">Common Development and Distribution License</a><a class="externalLink" href="http://repository.jboss.org/licenses/gpl-2.0-ce.txt">GNU General Public License, Version 2 with the Classpath Exception</a></p></td></tr></table></div></li>
+<li>dom4j:dom4j:jar:1.6.1 (compile) <img id="_img15" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep14', '_img15' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep14" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>dom4j</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>dom4j: the flexible XML framework for Java</p>
+<p><b>URL: </b><a class="externalLink" href="http://dom4j.org">http://dom4j.org</a></p>
+<p><b>Project License: </b>No license is defined for this project.</p></td></tr></table></div>
+<ul>
+<li>xml-apis:xml-apis:jar:1.0.b2 (compile) <img id="_img17" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep16', '_img17' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep16" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>XML Commons External Components XML APIs</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>xml-commons provides an Apache-hosted set of DOM, SAX, and 
+    JAXP interfaces for use in other xml-based projects. Our hope is that we 
+    can standardize on both a common version and packaging scheme for these 
+    critical XML standards interfaces to make the lives of both our developers 
+    and users easier. The External Components portion of xml-commons contains 
+    interfaces that are defined by external standards organizations. For DOM, 
+    that's the W3C; for SAX it's David Megginson and sax.sourceforge.net; for 
+    JAXP it's Sun.</p>
+<p><b>URL: </b><a class="externalLink" href="http://xml.apache.org/commons/#external">http://xml.apache.org/commons/#external</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li></ul></li>
+<li>org.hibernate.common:hibernate-commons-annotations:jar:4.0.4.Final (compile) <img id="_img19" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep18', '_img19' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep18" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Hibernate Commons Annotations</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Common reflection code used in support of annotation processing</p>
+<p><b>URL: </b><a class="externalLink" href="http://hibernate.org">http://hibernate.org</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div></li>
+<li>org.hibernate.javax.persistence:hibernate-jpa-2.1-api:jar:1.0.0.Final (compile) <img id="_img21" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep20', '_img21' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep20" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Java Persistence API, Version 2.1</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Clean-room definition of JPA APIs intended for use in developing Hibernate JPA implementation.  See README.md for details</p>
+<p><b>URL: </b><a class="externalLink" href="http://hibernate.org">http://hibernate.org</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License (EPL), Version 1.0</a><a class="externalLink" href="http://www.eclipse.org/org/documents/edl-v10.php">Eclipse Distribution License (EDL), Version 1.0</a></p></td></tr></table></div></li>
+<li>org.javassist:javassist:jar:3.18.1-GA (compile) <img id="_img23" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep22', '_img23' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep22" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Javassist</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
+    simple.  It is a class library for editing bytecodes in Java.</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.javassist.org/">http://www.javassist.org/</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.mozilla.org/MPL/MPL-1.1.html">MPL 1.1</a><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">LGPL 2.1</a><a class="externalLink" href="http://www.apache.org/licenses/">Apache License 2.0</a></p></td></tr></table></div></li>
+<li>antlr:antlr:jar:2.7.7 (compile) <img id="_img25" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep24', '_img25' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep24" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>AntLR Parser Generator</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>A framework for constructing recognizers, compilers,
+    and translators from grammatical descriptions containing
+    Java, C#, C++, or Python actions.</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.antlr.org/">http://www.antlr.org/</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.antlr.org/license.html">BSD License</a></p></td></tr></table></div></li>
+<li>org.jboss:jandex:jar:1.1.0.Final (compile) <img id="_img27" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep26', '_img27' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep26" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Java Annotation Indexer</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Parent POM for JBoss projects. Provides default project build configuration.</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.jboss.org/jandex">http://www.jboss.org/jandex</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">AL 2.0</a></p></td></tr></table></div></li></ul></li>
+<li>org.hibernate:hibernate-search:jar:4.5.1.Final (compile) <img id="_img29" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep28', '_img29' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep28" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Hibernate Search</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Hibernate Search</p>
+<p><b>URL: </b><a class="externalLink" href="http://search.hibernate.org/hibernate-search">http://search.hibernate.org/hibernate-search</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div>
+<ul>
+<li>org.hibernate:hibernate-search-orm:jar:4.5.1.Final (compile) <img id="_img31" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep30', '_img31' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep30" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Hibernate Search ORM</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Hibernate Search integration with Hibernate Core</p>
+<p><b>URL: </b><a class="externalLink" href="http://search.hibernate.org/hibernate-search-orm">http://search.hibernate.org/hibernate-search-orm</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div>
+<ul>
+<li>org.hibernate:hibernate-search-engine:jar:4.5.1.Final (compile) <img id="_img33" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep32', '_img33' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep32" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Hibernate Search Engine</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>the core of the Object/Lucene mapper, query engine and index management</p>
+<p><b>URL: </b><a class="externalLink" href="http://search.hibernate.org/hibernate-search-engine">http://search.hibernate.org/hibernate-search-engine</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div>
+<ul>
+<li>org.apache.lucene:lucene-core:jar:3.6.2 (compile) <img id="_img35" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep34', '_img35' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep34" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Core</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Apache Lucene Java Core</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-core">http://lucene.apache.org/java/lucene-parent/lucene-core</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.avro:avro:jar:1.7.6 (compile) <img id="_img37" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep36', '_img37' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep36" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Apache Avro</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Avro core components</p>
+<p><b>URL: </b><a class="externalLink" href="http://avro.apache.org">http://avro.apache.org</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div>
+<ul>
+<li>org.codehaus.jackson:jackson-core-asl:jar:1.9.13 (compile) <img id="_img39" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep38', '_img39' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep38" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Jackson</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Jackson is a high-performance JSON processor (parser, generator)</p>
+<p><b>URL: </b><a class="externalLink" href="http://jackson.codehaus.org">http://jackson.codehaus.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li>
-<li>org.slf4j:slf4j-api:jar:1.7.5 (compile) <img id="_img5" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep4', '_img5' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep4" style="display:none">
+<li>org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13 (compile) <img id="_img41" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep40', '_img41' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep40" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Data Mapper for Jackson</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Data Mapper package is a high-performance data binding package
+built on Jackson JSON processor</p>
+<p><b>URL: </b><a class="externalLink" href="http://jackson.codehaus.org">http://jackson.codehaus.org</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li>
+<li>com.thoughtworks.paranamer:paranamer:jar:2.3 (compile) <img id="_img43" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep42', '_img43' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep42" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>ParaNamer Core</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Paranamer allows runtime access to constructor and method parameter names for Java classes</p>
+<p><b>URL: </b><a class="externalLink" href="http://paranamer.codehaus.org/paranamer">http://paranamer.codehaus.org/paranamer</a></p>
+<p><b>Project License: </b><a href="LICENSE.txt">BSD</a></p></td></tr></table></div></li>
+<li>org.apache.commons:commons-compress:jar:1.4.1 (compile) <img id="_img45" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep44', '_img45' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep44" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Commons Compress</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Apache Commons Compress software defines an API for working with compression and archive formats.
+These include: bzip2, gzip, pack200, xz and ar, cpio, jar, tar, zip, dump.</p>
+<p><b>URL: </b><a class="externalLink" href="http://commons.apache.org/compress/">http://commons.apache.org/compress/</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li></ul></li>
+<li>org.apache.lucene:lucene-facet:jar:3.6.2 (compile) <img id="_img47" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep46', '_img47' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep46" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Facets</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Package for Faceted Indexing and Search</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-facet">http://lucene.apache.org/java/lucene-parent/lucene-facet</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li></ul></li>
+<li>org.hibernate:hibernate-search-analyzers:jar:4.5.1.Final (compile) <img id="_img49" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep48', '_img49' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep48" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Hibernate Search Analyzer Framework</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Hibernate Search Analyzer Framework based on Apache Solr</p>
+<p><b>URL: </b><a class="externalLink" href="http://search.hibernate.org/hibernate-search-analyzers">http://search.hibernate.org/hibernate-search-analyzers</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div>
+<ul>
+<li>org.apache.lucene:lucene-analyzers:jar:3.6.2 (compile) <img id="_img51" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep50', '_img51' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep50" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Common Analyzers</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Additional Analyzers</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-analyzers">http://lucene.apache.org/java/lucene-parent/lucene-analyzers</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.solr:solr-analysis-extras:jar:3.6.2 (compile) <img id="_img53" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep52', '_img53' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep52" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Apache Solr Analysis Extras</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Apache Solr Analysis Extras</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/solr-parent/solr-analysis-extras">http://lucene.apache.org/java/solr-parent/solr-analysis-extras</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div>
+<ul>
+<li>org.apache.solr:solr-core:jar:3.6.2 (compile) <img id="_img55" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep54', '_img55' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep54" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Apache Solr Core</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Apache Solr Core</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/solr-parent/solr-core">http://lucene.apache.org/java/solr-parent/solr-core</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div>
+<ul>
+<li>org.apache.solr:solr-solrj:jar:3.6.2 (compile) <img id="_img57" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep56', '_img57' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep56" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Apache Solr Solrj</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Apache Solr Solrj</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/solr-parent/solr-solrj">http://lucene.apache.org/java/solr-parent/solr-solrj</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-highlighter:jar:3.6.2 (compile) <img id="_img59" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep58', '_img59' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep58" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Highlighter</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>This is the highlighter for apache lucene java</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-highlighter">http://lucene.apache.org/java/lucene-parent/lucene-highlighter</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-kuromoji:jar:3.6.2 (compile) <img id="_img61" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep60', '_img61' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep60" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Kuromoji Japanese Morphological Analyzer</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Lucene Kuromoji Japanese Morphological Analyzer</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-kuromoji">http://lucene.apache.org/java/lucene-parent/lucene-kuromoji</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-memory:jar:3.6.2 (compile) <img id="_img63" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep62', '_img63' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep62" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Memory</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>High-performance single-document index to compare against Query</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-memory">http://lucene.apache.org/java/lucene-parent/lucene-memory</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-misc:jar:3.6.2 (compile) <img id="_img65" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep64', '_img65' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep64" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Miscellaneous</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Miscellaneous Lucene extensions</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-misc">http://lucene.apache.org/java/lucene-parent/lucene-misc</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-phonetic:jar:3.6.2 (compile) <img id="_img67" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep66', '_img67' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep66" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Phonetic Analyzer</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Phonetic Analyzer</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-phonetic">http://lucene.apache.org/java/lucene-parent/lucene-phonetic</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-spatial:jar:3.6.2 (compile) <img id="_img69" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep68', '_img69' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep68" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Spatial</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Spatial search package</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-spatial">http://lucene.apache.org/java/lucene-parent/lucene-spatial</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-spellchecker:jar:3.6.2 (compile) <img id="_img71" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep70', '_img71' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep70" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Spellchecker</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Spell Checker</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-spellchecker">http://lucene.apache.org/java/lucene-parent/lucene-spellchecker</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-grouping:jar:3.6.2 (compile) <img id="_img73" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep72', '_img73' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep72" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Grouping</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Lucene Grouping Module</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-grouping">http://lucene.apache.org/java/lucene-parent/lucene-grouping</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>commons-codec:commons-codec:jar:1.6 (compile) <img id="_img75" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep74', '_img75' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep74" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Commons Codec</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>The codec package contains simple encoder and decoders for
+     various formats such as Base64 and Hexadecimal.  In addition to these
+     widely used encoders and decoders, the codec package also maintains a
+     collection of phonetic encoding utilities.</p>
+<p><b>URL: </b><a class="externalLink" href="http://commons.apache.org/codec/">http://commons.apache.org/codec/</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li>
+<li>commons-lang:commons-lang:jar:2.6 (compile) <img id="_img77" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep76', '_img77' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep76" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Commons Lang</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Commons Lang, a package of Java utility classes for the
+        classes that are in java.lang's hierarchy, or are considered to be so
+        standard as to justify existence in java.lang.</p>
+<p><b>URL: </b><a class="externalLink" href="http://commons.apache.org/lang/">http://commons.apache.org/lang/</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li></ul></li>
+<li>org.apache.lucene:lucene-smartcn:jar:3.6.2 (compile) <img id="_img79" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep78', '_img79' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep78" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Smart Chinese Analyzer</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Smart Chinese Analyzer</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-smartcn">http://lucene.apache.org/java/lucene-parent/lucene-smartcn</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li>
+<li>org.apache.lucene:lucene-stempel:jar:3.6.2 (compile) <img id="_img81" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep80', '_img81' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep80" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Lucene Stempel Analyzer</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>Stempel Analyzer</p>
+<p><b>URL: </b><a class="externalLink" href="http://lucene.apache.org/java/lucene-parent/lucene-stempel">http://lucene.apache.org/java/lucene-parent/lucene-stempel</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li></ul></li></ul></li></ul></li></ul></li>
+<li>com.h2database:h2:jar:1.4.179 (test) <img id="_img83" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep82', '_img83' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep82" style="display:none">
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>H2 Database Engine</th></tr>
+<tr class="b">
+<td>
+<p><b>Description: </b>H2 Database Engine</p>
+<p><b>URL: </b><a class="externalLink" href="http://www.h2database.com">http://www.h2database.com</a></p>
+<p><b>Project License: </b><a class="externalLink" href="http://h2database.com/html/license.html">MPL 2.0, and EPL 1.0</a></p></td></tr></table></div></li>
+<li>org.slf4j:slf4j-api:jar:1.7.5 (compile) <img id="_img85" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep84', '_img85' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep84" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>SLF4J API Module</th></tr>
@@ -452,7 +1092,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>The slf4j API</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.slf4j.org">http://www.slf4j.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.opensource.org/licenses/mit-license.php">MIT License</a></p></td></tr></table></div></li>
-<li>ch.qos.logback:logback-core:jar:1.0.13 (test) <img id="_img7" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep6', '_img7' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep6" style="display:none">
+<li>ch.qos.logback:logback-core:jar:1.0.13 (test) <img id="_img87" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep86', '_img87' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep86" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Logback Core Module</th></tr>
@@ -461,7 +1101,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>logback-core module</p>
 <p><b>URL: </b><a class="externalLink" href="http://logback.qos.ch">http://logback.qos.ch</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v 1.0</a><a class="externalLink" href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public License</a></p></td></tr></table></div></li>
-<li>org.glassfish.jersey.containers:jersey-container-servlet:jar:2.10.1 (provided) <img id="_img9" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep8', '_img9' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep8" style="display:none">
+<li>org.glassfish.jersey.containers:jersey-container-servlet:jar:2.10.1 (provided) <img id="_img89" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep88', '_img89' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep88" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-container-servlet</th></tr>
@@ -471,7 +1111,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/jersey-container-servlet/">https://jersey.java.net/project/jersey-container-servlet/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.10.1 (provided) <img id="_img11" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep10', '_img11' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep10" style="display:none">
+<li>org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.10.1 (provided) <img id="_img91" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep90', '_img91' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep90" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-container-servlet-core</th></tr>
@@ -481,7 +1121,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/jersey-container-servlet-core/">https://jersey.java.net/project/jersey-container-servlet-core/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.hk2.external:javax.inject:jar:2.3.0-b05 (provided) <img id="_img13" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep12', '_img13' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep12" style="display:none">
+<li>org.glassfish.hk2.external:javax.inject:jar:2.3.0-b05 (provided) <img id="_img93" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep92', '_img93' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep92" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>javax.inject:1 as OSGi bundle</th></tr>
@@ -490,7 +1130,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Injection API (JSR 330) version ${javax.inject.version} repackaged as OSGi bundle</p>
 <p><b>URL: </b><a class="externalLink" href="https://hk2.java.net/external/javax.inject">https://hk2.java.net/external/javax.inject</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li></ul></li>
-<li>org.glassfish.jersey.core:jersey-common:jar:2.10.1 (provided) <img id="_img15" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep14', '_img15' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep14" style="display:none">
+<li>org.glassfish.jersey.core:jersey-common:jar:2.10.1 (provided) <img id="_img95" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep94', '_img95' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep94" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-core-common</th></tr>
@@ -500,7 +1140,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/jersey-common/">https://jersey.java.net/jersey-common/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>javax.annotation:javax.annotation-api:jar:1.2 (provided) <img id="_img17" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep16', '_img17' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep16" style="display:none">
+<li>javax.annotation:javax.annotation-api:jar:1.2 (provided) <img id="_img97" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep96', '_img97' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep96" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>javax.annotation API</th></tr>
@@ -509,7 +1149,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Common Annotations for the JavaTM Platform API</p>
 <p><b>URL: </b><a class="externalLink" href="http://jcp.org/en/jsr/detail?id=250">http://jcp.org/en/jsr/detail?id=250</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li>
-<li>org.glassfish.jersey.bundles.repackaged:jersey-guava:jar:2.10.1 (provided) <img id="_img19" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep18', '_img19' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep18" style="display:none">
+<li>org.glassfish.jersey.bundles.repackaged:jersey-guava:jar:2.10.1 (provided) <img id="_img99" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep98', '_img99' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep98" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-repackaged-guava</th></tr>
@@ -518,7 +1158,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Jersey Guava Repackaged</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/project/jersey-guava/">https://jersey.java.net/project/project/jersey-guava/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div></li>
-<li>org.glassfish.hk2:hk2-api:jar:2.3.0-b05 (provided) <img id="_img21" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep20', '_img21' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep20" style="display:none">
+<li>org.glassfish.hk2:hk2-api:jar:2.3.0-b05 (provided) <img id="_img101" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep100', '_img101' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep100" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>HK2 API module</th></tr>
@@ -528,7 +1168,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://hk2.java.net/hk2-api">https://hk2.java.net/hk2-api</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.hk2:hk2-utils:jar:2.3.0-b05 (provided) <img id="_img23" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep22', '_img23' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep22" style="display:none">
+<li>org.glassfish.hk2:hk2-utils:jar:2.3.0-b05 (provided) <img id="_img103" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep102', '_img103' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep102" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>HK2 Implementation Utilities</th></tr>
@@ -537,7 +1177,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>HK2 Implementation Utilities</p>
 <p><b>URL: </b><a class="externalLink" href="https://hk2.java.net/hk2-utils">https://hk2.java.net/hk2-utils</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li>
-<li>org.glassfish.hk2.external:aopalliance-repackaged:jar:2.3.0-b05 (provided) <img id="_img25" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep24', '_img25' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep24" style="display:none">
+<li>org.glassfish.hk2.external:aopalliance-repackaged:jar:2.3.0-b05 (provided) <img id="_img105" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep104', '_img105' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep104" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>aopalliance version 1.0 repackaged as a module</th></tr>
@@ -546,7 +1186,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Generic Modules subsystem</p>
 <p><b>URL: </b><a class="externalLink" href="https://hk2.java.net/external/aopalliance-repackaged">https://hk2.java.net/external/aopalliance-repackaged</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li></ul></li>
-<li>org.glassfish.hk2:hk2-locator:jar:2.3.0-b05 (provided) <img id="_img27" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep26', '_img27' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep26" style="display:none">
+<li>org.glassfish.hk2:hk2-locator:jar:2.3.0-b05 (provided) <img id="_img107" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep106', '_img107' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep106" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>ServiceLocator Default Implementation</th></tr>
@@ -554,19 +1194,8 @@ file comparators, endian transformation classes, and much more.</p>
 <td>
 <p><b>Description: </b>ServiceLocator Default Implementation</p>
 <p><b>URL: </b><a class="externalLink" href="https://hk2.java.net/hk2-locator">https://hk2.java.net/hk2-locator</a></p>
-<p><b>Project License: </b><a class="externalLink" href="https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div>
-<ul>
-<li>org.javassist:javassist:jar:3.18.1-GA (provided) <img id="_img29" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep28', '_img29' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep28" style="display:none">
-<table border="0" class="bodyTable">
-<tr class="a">
-<th>Javassist</th></tr>
-<tr class="b">
-<td>
-<p><b>Description: </b>Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
-    simple.  It is a class library for editing bytecodes in Java.</p>
-<p><b>URL: </b><a class="externalLink" href="http://www.javassist.org/">http://www.javassist.org/</a></p>
-<p><b>Project License: </b><a class="externalLink" href="http://www.mozilla.org/MPL/MPL-1.1.html">MPL 1.1</a><a class="externalLink" href="http://www.gnu.org/licenses/lgpl-2.1.html">LGPL 2.1</a><a class="externalLink" href="http://www.apache.org/licenses/">Apache License 2.0</a></p></td></tr></table></div></li></ul></li>
-<li>org.glassfish.hk2:osgi-resource-locator:jar:1.0.1 (provided) <img id="_img31" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep30', '_img31' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep30" style="display:none">
+<p><b>Project License: </b><a class="externalLink" href="https://glassfish.java.net/nonav/public/CDDL+GPL_1_1.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li>
+<li>org.glassfish.hk2:osgi-resource-locator:jar:1.0.1 (provided) <img id="_img109" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep108', '_img109' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep108" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>OSGi resource locator bundle - used by various API providers that rely on META-INF/services mechanism to locate providers.</th></tr>
@@ -575,7 +1204,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>See http://wiki.glassfish.java.net/Wiki.jsp?page=JdkSpiOsgi for more information</p>
 <p><b>URL: </b><a class="externalLink" href="http://glassfish.org/osgi-resource-locator/">http://glassfish.org/osgi-resource-locator/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li></ul></li>
-<li>org.glassfish.jersey.core:jersey-server:jar:2.10.1 (provided) <img id="_img33" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep32', '_img33' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep32" style="display:none">
+<li>org.glassfish.jersey.core:jersey-server:jar:2.10.1 (provided) <img id="_img111" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep110', '_img111' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep110" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-core-server</th></tr>
@@ -585,7 +1214,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/jersey-server/">https://jersey.java.net/jersey-server/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.jersey.core:jersey-client:jar:2.10.1 (provided) <img id="_img35" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep34', '_img35' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep34" style="display:none">
+<li>org.glassfish.jersey.core:jersey-client:jar:2.10.1 (provided) <img id="_img113" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep112', '_img113' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep112" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-core-client</th></tr>
@@ -594,7 +1223,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Jersey core client implementation</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/jersey-client/">https://jersey.java.net/jersey-client/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div></li>
-<li>javax.validation:validation-api:jar:1.1.0.Final (provided) <img id="_img37" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep36', '_img37' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep36" style="display:none">
+<li>javax.validation:validation-api:jar:1.1.0.Final (provided) <img id="_img115" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep114', '_img115' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep114" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Bean Validation API</th></tr>
@@ -603,7 +1232,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Bean Validation API</p>
 <p><b>URL: </b><a class="externalLink" href="http://beanvalidation.org">http://beanvalidation.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li></ul></li>
-<li>javax.ws.rs:javax.ws.rs-api:jar:2.0 (provided) <img id="_img39" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep38', '_img39' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep38" style="display:none">
+<li>javax.ws.rs:javax.ws.rs-api:jar:2.0 (provided) <img id="_img117" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep116', '_img117' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep116" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>javax.ws.rs-api</th></tr>
@@ -612,7 +1241,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Java.net - The Source for Java Technology Collaboration</p>
 <p><b>URL: </b><a class="externalLink" href="http://jax-rs-spec.java.net">http://jax-rs-spec.java.net</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL 1.1</a><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">GPL2 w/ CPE</a></p></td></tr></table></div></li></ul></li>
-<li>org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:2.10.1 (test) <img id="_img41" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep40', '_img41' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep40" style="display:none">
+<li>org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:2.10.1 (test) <img id="_img119" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep118', '_img119' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep118" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-test-framework-provider-grizzly2</th></tr>
@@ -622,7 +1251,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/project/jersey-test-framework-provider-grizzly2/">https://jersey.java.net/project/project/jersey-test-framework-provider-grizzly2/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:2.10.1 (test) <img id="_img43" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep42', '_img43' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep42" style="display:none">
+<li>org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:2.10.1 (test) <img id="_img121" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep120', '_img121' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep120" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-test-framework-core</th></tr>
@@ -632,7 +1261,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/jersey-test-framework-core/">https://jersey.java.net/project/jersey-test-framework-core/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>javax.servlet:javax.servlet-api:jar:3.0.1 (test) <img id="_img45" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep44', '_img45' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep44" style="display:none">
+<li>javax.servlet:javax.servlet-api:jar:3.0.1 (test) <img id="_img123" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep122', '_img123' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep122" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Java Servlet API</th></tr>
@@ -641,7 +1270,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Java.net - The Source for Java Technology Collaboration</p>
 <p><b>URL: </b><a class="externalLink" href="http://servlet-spec.java.net">http://servlet-spec.java.net</a></p>
 <p><b>Project License: </b><a class="externalLink" href="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html">CDDL + GPLv2 with classpath exception</a></p></td></tr></table></div></li></ul></li>
-<li>org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:2.10.1 (test) <img id="_img47" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep46', '_img47' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep46" style="display:none">
+<li>org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:2.10.1 (test) <img id="_img125" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep124', '_img125' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep124" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-container-grizzly2-http</th></tr>
@@ -651,7 +1280,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/jersey-container-grizzly2-http/">https://jersey.java.net/project/jersey-container-grizzly2-http/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.grizzly:grizzly-http-server:jar:2.3.8 (test) <img id="_img49" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep48', '_img49' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep48" style="display:none">
+<li>org.glassfish.grizzly:grizzly-http-server:jar:2.3.8 (test) <img id="_img127" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep126', '_img127' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep126" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>grizzly-http-server</th></tr>
@@ -661,7 +1290,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://grizzly.java.net/grizzly-http-server">http://grizzly.java.net/grizzly-http-server</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL.html">CDDL+GPL</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.grizzly:grizzly-http:jar:2.3.8 (test) <img id="_img51" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep50', '_img51' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep50" style="display:none">
+<li>org.glassfish.grizzly:grizzly-http:jar:2.3.8 (test) <img id="_img129" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep128', '_img129' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep128" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>grizzly-http</th></tr>
@@ -671,7 +1300,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://grizzly.java.net/grizzly-http">http://grizzly.java.net/grizzly-http</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL.html">CDDL+GPL</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.grizzly:grizzly-framework:jar:2.3.8 (test) <img id="_img53" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep52', '_img53' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep52" style="display:none">
+<li>org.glassfish.grizzly:grizzly-framework:jar:2.3.8 (test) <img id="_img131" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep130', '_img131' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep130" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>grizzly-framework</th></tr>
@@ -680,7 +1309,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Grizzly Bill of Materials (BOM)</p>
 <p><b>URL: </b><a class="externalLink" href="http://grizzly.java.net/grizzly-framework">http://grizzly.java.net/grizzly-framework</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL.html">CDDL+GPL</a></p></td></tr></table></div></li></ul></li></ul></li></ul></li>
-<li>org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:2.10.1 (test) <img id="_img55" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep54', '_img55' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep54" style="display:none">
+<li>org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:2.10.1 (test) <img id="_img133" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep132', '_img133' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep132" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>jersey-container-grizzly2-servlet</th></tr>
@@ -690,7 +1319,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="https://jersey.java.net/project/jersey-container-grizzly2-servlet/">https://jersey.java.net/project/jersey-container-grizzly2-servlet/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL_1_1.html">CDDL+GPL License</a></p></td></tr></table></div>
 <ul>
-<li>org.glassfish.grizzly:grizzly-http-servlet:jar:2.3.8 (test) <img id="_img57" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep56', '_img57' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep56" style="display:none">
+<li>org.glassfish.grizzly:grizzly-http-servlet:jar:2.3.8 (test) <img id="_img135" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep134', '_img135' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep134" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>grizzly-http-servlet</th></tr>
@@ -699,7 +1328,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Grizzly Bill of Materials (BOM)</p>
 <p><b>URL: </b><a class="externalLink" href="http://grizzly.java.net/grizzly-http-servlet">http://grizzly.java.net/grizzly-http-servlet</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://glassfish.java.net/public/CDDL+GPL.html">CDDL+GPL</a></p></td></tr></table></div></li></ul></li>
-<li>org.ow2.asm:asm-debug-all:jar:5.0.2 (test) <img id="_img59" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep58', '_img59' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep58" style="display:none">
+<li>org.ow2.asm:asm-debug-all:jar:5.0.2 (test) <img id="_img137" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep136', '_img137' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep136" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>ASM Debug All</th></tr>
@@ -708,7 +1337,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>A very small and fast Java bytecode manipulation framework</p>
 <p><b>URL: </b><a class="externalLink" href="http://asm.objectweb.org/asm-debug-all/">http://asm.objectweb.org/asm-debug-all/</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://asm.objectweb.org/license.html">BSD</a></p></td></tr></table></div></li></ul></li>
-<li>junit:junit:jar:4.11 (test) <img id="_img61" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep60', '_img61' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep60" style="display:none">
+<li>junit:junit:jar:4.11 (test) <img id="_img139" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep138', '_img139' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep138" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>JUnit</th></tr>
@@ -719,7 +1348,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://junit.org">http://junit.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.opensource.org/licenses/cpl1.0.txt">Common Public License Version 1.0</a></p></td></tr></table></div>
 <ul>
-<li>org.hamcrest:hamcrest-core:jar:1.3 (test) <img id="_img63" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep62', '_img63' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep62" style="display:none">
+<li>org.hamcrest:hamcrest-core:jar:1.3 (test) <img id="_img141" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep140', '_img141' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep140" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Hamcrest Core</th></tr>
@@ -728,7 +1357,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>This is the core API of hamcrest matcher framework to be used by third-party framework providers. This includes the a foundation set of matcher implementations for common operations.</p>
 <p><b>URL: </b><a class="externalLink" href="https://github.com/hamcrest/JavaHamcrest/hamcrest-core">https://github.com/hamcrest/JavaHamcrest/hamcrest-core</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.opensource.org/licenses/bsd-license.php">New BSD License</a></p></td></tr></table></div></li></ul></li>
-<li>org.mockito:mockito-all:jar:1.9.5 (test) <img id="_img65" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep64', '_img65' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep64" style="display:none">
+<li>org.mockito:mockito-all:jar:1.9.5 (test) <img id="_img143" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep142', '_img143' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep142" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Mockito</th></tr>
@@ -737,7 +1366,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>Mock objects library for java</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.mockito.org">http://www.mockito.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://code.google.com/p/mockito/wiki/License">The MIT License</a></p></td></tr></table></div></li>
-<li>org.powermock:powermock-module-junit4:jar:1.5.5 (test) <img id="_img67" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep66', '_img67' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep66" style="display:none">
+<li>org.powermock:powermock-module-junit4:jar:1.5.5 (test) <img id="_img145" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep144', '_img145' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep144" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>powermock-module-junit4</th></tr>
@@ -747,7 +1376,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.powermock.org">http://www.powermock.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div>
 <ul>
-<li>org.powermock:powermock-module-junit4-common:jar:1.5.5 (test) <img id="_img69" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep68', '_img69' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep68" style="display:none">
+<li>org.powermock:powermock-module-junit4-common:jar:1.5.5 (test) <img id="_img147" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep146', '_img147' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep146" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>powermock-module-junit4-common</th></tr>
@@ -757,7 +1386,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.powermock.org/powermock-modules/powermock-module-junit4-common">http://www.powermock.org/powermock-modules/powermock-module-junit4-common</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div>
 <ul>
-<li>org.powermock:powermock-core:jar:1.5.5 (test) <img id="_img71" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep70', '_img71' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep70" style="display:none">
+<li>org.powermock:powermock-core:jar:1.5.5 (test) <img id="_img149" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep148', '_img149' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep148" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>powermock-core</th></tr>
@@ -766,7 +1395,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>PowerMock core functionality.</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.powermock.org">http://www.powermock.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li>
-<li>org.powermock:powermock-reflect:jar:1.5.5 (test) <img id="_img73" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep72', '_img73' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep72" style="display:none">
+<li>org.powermock:powermock-reflect:jar:1.5.5 (test) <img id="_img151" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep150', '_img151' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep150" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>powermock-reflect</th></tr>
@@ -776,7 +1405,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.powermock.org/powermock-reflect">http://www.powermock.org/powermock-reflect</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div>
 <ul>
-<li>org.objenesis:objenesis:jar:2.1 (test) <img id="_img75" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep74', '_img75' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep74" style="display:none">
+<li>org.objenesis:objenesis:jar:2.1 (test) <img id="_img153" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep152', '_img153' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep152" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Objenesis</th></tr>
@@ -785,7 +1414,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Description: </b>A library for instantiating Java objects</p>
 <p><b>URL: </b><a class="externalLink" href="http://objenesis.org">http://objenesis.org</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">Apache 2</a></p></td></tr></table></div></li></ul></li></ul></li></ul></li>
-<li>org.powermock:powermock-api-mockito:jar:1.5.5 (test) <img id="_img77" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep76', '_img77' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep76" style="display:none">
+<li>org.powermock:powermock-api-mockito:jar:1.5.5 (test) <img id="_img155" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep154', '_img155' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep154" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>powermock-api-mockito</th></tr>
@@ -795,7 +1424,7 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>URL: </b><a class="externalLink" href="http://www.powermock.org/powermock-api/powermock-api-mockito">http://www.powermock.org/powermock-api/powermock-api-mockito</a></p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div>
 <ul>
-<li>org.powermock:powermock-api-support:jar:1.5.5 (test) <img id="_img79" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep78', '_img79' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep78" style="display:none">
+<li>org.powermock:powermock-api-support:jar:1.5.5 (test) <img id="_img157" src="./images/icon_info_sml.gif" alt="Information" onclick="toggleDependencyDetail( '_dep156', '_img157' );" style="cursor: pointer;vertical-align:text-bottom;"></img><div id="_dep156" style="display:none">
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>powermock-api-support</th></tr>
@@ -806,24 +1435,34 @@ file comparators, endian transformation classes, and much more.</p>
 <p><b>Project License: </b><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0.txt">The Apache Software License, Version 2.0</a></p></td></tr></table></div></li></ul></li></ul></li></ul></div></div><a name="Licenses"></a>
 <div class="section">
 <h2>Licenses<a name="Licenses"></a></h2>
+<p><b>Public Domain: </b>JBoss Logging I18n Annotations</p>
 <p><b>CDDL + GPLv2 with classpath exception: </b>HK2 API module, HK2 Implementation Utilities, Java Servlet API, OSGi resource locator bundle - used by various API providers that rely on META-INF/services mechanism to locate providers., ServiceLocator Default Implementation, aopalliance version 1.0 repackaged as a module, javax.annotation API, javax.inject:1 as OSGi bundle</p>
-<p><b>Apache 2: </b>Objenesis</p>
 <p><b>New BSD License: </b>Hamcrest Core</p>
-<p><b>BSD: </b>ASM Debug All</p>
-<p><b>Apache License, Version 2.0: </b>jersey2-util</p>
+<p><b>Apache 2: </b>Apache Solr Analysis Extras, Apache Solr Core, Apache Solr Solrj, Lucene Common Analyzers, Lucene Core, Lucene Facets, Lucene Grouping, Lucene Highlighter, Lucene Kuromoji Japanese Morphological Analyzer, Lucene Memory, Lucene Miscellaneous, Lucene Phonetic Analyzer, Lucene Smart Chinese Analyzer, Lucene Spatial, Lucene Spellchecker, Lucene Stempel Analyzer, Objenesis</p>
+<p><b>Unknown: </b>dom4j</p>
+<p><b>Common Development and Distribution License: </b>Java Transaction API</p>
 <p><b>Eclipse Public License - v 1.0: </b>Logback Core Module</p>
-<p><b>LGPL 2.1: </b>Javassist</p>
 <p><b>MPL 1.1: </b>Javassist</p>
-<p><b>CDDL+GPL: </b>grizzly-framework, grizzly-http, grizzly-http-server, grizzly-http-servlet</p>
-<p><b>The Apache Software License, Version 2.0: </b>Bean Validation API, Commons IO, powermock-api-mockito, powermock-api-support, powermock-core, powermock-module-junit4, powermock-module-junit4-common, powermock-reflect</p>
-<p><b>GNU Lesser General Public License: </b>Logback Core Module</p>
+<p><b>GNU General Public License, Version 2 with the Classpath Exception: </b>Java Transaction API</p>
+<p><b>GNU Lesser General Public License: </b>Core Hibernate O/RM functionality, Hibernate Commons Annotations, Hibernate Search, Hibernate Search Analyzer Framework, Hibernate Search Engine, Hibernate Search ORM, Logback Core Module</p>
+<p><b>Eclipse Public License (EPL), Version 1.0: </b>Java Persistence API, Version 2.1</p>
 <p><b>CDDL 1.1: </b>javax.ws.rs-api</p>
-<p><b>GPL2 w/ CPE: </b>javax.ws.rs-api</p>
+<p><b>BSD License: </b>AntLR Parser Generator</p>
+<p><b>AL 2.0: </b>Java Annotation Indexer</p>
 <p><b>CDDL+GPL License: </b>jersey-container-grizzly2-http, jersey-container-grizzly2-servlet, jersey-container-servlet, jersey-container-servlet-core, jersey-core-client, jersey-core-common, jersey-core-server, jersey-repackaged-guava, jersey-test-framework-core, jersey-test-framework-provider-grizzly2</p>
-<p><b>Apache License 2.0: </b>Javassist</p>
 <p><b>Common Public License Version 1.0: </b>JUnit</p>
-<p><b>MIT License: </b>SLF4J API Module</p>
-<p><b>The MIT License: </b>Mockito</p></div><a name="Dependency_File_Details"></a>
+<p><b>MPL 2.0, and EPL 1.0: </b>H2 Database Engine</p>
+<p><b>The MIT License: </b>Mockito</p>
+<p><b>Apache License, version 2.0: </b>JBoss Logging 3</p>
+<p><b>BSD: </b>ASM Debug All, ParaNamer Core</p>
+<p><b>LGPL 2.1: </b>Javassist</p>
+<p><b>Apache License, Version 2.0: </b>jersey2-hibernate, jersey2-util</p>
+<p><b>CDDL+GPL: </b>grizzly-framework, grizzly-http, grizzly-http-server, grizzly-http-servlet</p>
+<p><b>The Apache Software License, Version 2.0: </b>Apache Avro, Bean Validation API, Commons Codec, Commons Compress, Commons IO, Commons Lang, Data Mapper for Jackson, Jackson, XML Commons External Components XML APIs, powermock-api-mockito, powermock-api-support, powermock-core, powermock-module-junit4, powermock-module-junit4-common, powermock-reflect</p>
+<p><b>GPL2 w/ CPE: </b>javax.ws.rs-api</p>
+<p><b>Apache License 2.0: </b>Javassist</p>
+<p><b>Eclipse Distribution License (EDL), Version 1.0: </b>Java Persistence API, Version 2.1</p>
+<p><b>MIT License: </b>SLF4J API Module</p></div><a name="Dependency_File_Details"></a>
 <div class="section">
 <h2>Dependency File Details<a name="Dependency_File_Details"></a></h2>
 <table border="0" class="bodyTable">
@@ -836,11 +1475,43 @@ file comparators, endian transformation classes, and much more.</p>
 <th>JDK Rev</th>
 <th>Debug</th></tr>
 <tr class="b">
+<td>antlr-2.7.7.jar</td>
+<td>434.85 kB</td>
+<td>239</td>
+<td>224</td>
+<td>12</td>
+<td>1.2</td>
+<td>debug</td></tr>
+<tr class="a">
 <td>logback-core-1.0.13.jar</td>
 <td>409.05 kB</td>
 <td>391</td>
 <td>349</td>
 <td>32</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>h2-1.4.179.jar</td>
+<td>1.60 MB</td>
+<td>627</td>
+<td>624</td>
+<td>35</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>paranamer-2.3.jar</td>
+<td>28.86 kB</td>
+<td>25</td>
+<td>15</td>
+<td>1</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>commons-codec-1.6.jar</td>
+<td>227.32 kB</td>
+<td>218</td>
+<td>76</td>
+<td>6</td>
 <td>1.5</td>
 <td>debug</td></tr>
 <tr class="a">
@@ -850,6 +1521,22 @@ file comparators, endian transformation classes, and much more.</p>
 <td>110</td>
 <td>6</td>
 <td>1.6</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>commons-lang-2.6.jar</td>
+<td>277.56 kB</td>
+<td>155</td>
+<td>133</td>
+<td>10</td>
+<td>1.3</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>dom4j-1.6.1.jar</td>
+<td>306.54 kB</td>
+<td>208</td>
+<td>190</td>
+<td>14</td>
+<td>1.3</td>
 <td>debug</td></tr>
 <tr class="b">
 <td>javax.annotation-api-1.2.jar</td>
@@ -892,6 +1579,174 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1.5</td>
 <td>debug</td></tr>
 <tr class="a">
+<td>jersey2-util-1.1.1.jar</td>
+<td>3.58 kB</td>
+<td>11</td>
+<td>1</td>
+<td>1</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>avro-1.7.6.jar</td>
+<td>415.61 kB</td>
+<td>331</td>
+<td>309</td>
+<td>9</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>commons-compress-1.4.1.jar</td>
+<td>235.71 kB</td>
+<td>156</td>
+<td>129</td>
+<td>14</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-analyzers-3.6.2.jar</td>
+<td>1.12 MB</td>
+<td>396</td>
+<td>302</td>
+<td>52</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>lucene-core-3.6.2.jar</td>
+<td>1.47 MB</td>
+<td>997</td>
+<td>973</td>
+<td>18</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-facet-3.6.2.jar</td>
+<td>288.73 kB</td>
+<td>264</td>
+<td>231</td>
+<td>26</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>lucene-grouping-3.6.2.jar</td>
+<td>62.51 kB</td>
+<td>44</td>
+<td>35</td>
+<td>1</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-highlighter-3.6.2.jar</td>
+<td>87.08 kB</td>
+<td>64</td>
+<td>54</td>
+<td>2</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>lucene-kuromoji-3.6.2.jar</td>
+<td>4.33 MB</td>
+<td>65</td>
+<td>42</td>
+<td>4</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-memory-3.6.2.jar</td>
+<td>29.12 kB</td>
+<td>19</td>
+<td>10</td>
+<td>1</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>lucene-misc-3.6.2.jar</td>
+<td>64.25 kB</td>
+<td>45</td>
+<td>35</td>
+<td>3</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-phonetic-3.6.2.jar</td>
+<td>14.81 kB</td>
+<td>12</td>
+<td>3</td>
+<td>1</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>lucene-smartcn-3.6.2.jar</td>
+<td>3.43 MB</td>
+<td>35</td>
+<td>21</td>
+<td>2</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-spatial-3.6.2.jar</td>
+<td>58.96 kB</td>
+<td>47</td>
+<td>34</td>
+<td>6</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>lucene-spellchecker-3.6.2.jar</td>
+<td>102.37 kB</td>
+<td>74</td>
+<td>61</td>
+<td>5</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>lucene-stempel-3.6.2.jar</td>
+<td>499.95 kB</td>
+<td>33</td>
+<td>19</td>
+<td>3</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>solr-analysis-extras-3.6.2.jar</td>
+<td>35.62 kB</td>
+<td>16</td>
+<td>8</td>
+<td>1</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>solr-core-3.6.2.jar</td>
+<td>1.52 MB</td>
+<td>1,055</td>
+<td>1,009</td>
+<td>36</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>solr-solrj-3.6.2.jar</td>
+<td>308.94 kB</td>
+<td>211</td>
+<td>192</td>
+<td>11</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>jackson-core-asl-1.9.13.jar</td>
+<td>226.80 kB</td>
+<td>137</td>
+<td>121</td>
+<td>8</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>jackson-mapper-asl-1.9.13.jar</td>
+<td>762.37 kB</td>
+<td>529</td>
+<td>502</td>
+<td>18</td>
+<td>1.5</td>
+<td>debug</td></tr>
+<tr class="b">
 <td>grizzly-framework-2.3.8.jar</td>
 <td>815.95 kB</td>
 <td>602</td>
@@ -899,7 +1754,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>23</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>grizzly-http-2.3.8.jar</td>
 <td>325.30 kB</td>
 <td>173</td>
@@ -907,7 +1762,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>3</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>grizzly-http-server-2.3.8.jar</td>
 <td>219.22 kB</td>
 <td>140</td>
@@ -915,7 +1770,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>6</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>grizzly-http-servlet-2.3.8.jar</td>
 <td>197.49 kB</td>
 <td>103</td>
@@ -923,7 +1778,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>hk2-api-2.3.0-b05.jar</td>
 <td>155.71 kB</td>
 <td>156</td>
@@ -931,7 +1786,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>7</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>hk2-locator-2.3.0-b05.jar</td>
 <td>158.52 kB</td>
 <td>102</td>
@@ -939,7 +1794,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>2</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>hk2-utils-2.3.0-b05.jar</td>
 <td>80.83 kB</td>
 <td>79</td>
@@ -947,7 +1802,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>6</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>osgi-resource-locator-1.0.1.jar</td>
 <td>19.76 kB</td>
 <td>23</td>
@@ -955,7 +1810,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>aopalliance-repackaged-2.3.0-b05.jar</td>
 <td>14.44 kB</td>
 <td>39</td>
@@ -963,7 +1818,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>4</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>javax.inject-2.3.0-b05.jar</td>
 <td>5.80 kB</td>
 <td>15</td>
@@ -971,7 +1826,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1</td>
 <td>1.6</td>
 <td>release</td></tr>
-<tr class="a">
+<tr class="b">
 <td>jersey-guava-2.10.1.jar</td>
 <td>940.30 kB</td>
 <td>773</td>
@@ -979,7 +1834,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>9</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>jersey-container-grizzly2-http-2.10.1.jar</td>
 <td>26.16 kB</td>
 <td>33</td>
@@ -987,7 +1842,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>2</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>jersey-container-grizzly2-servlet-2.10.1.jar</td>
 <td>6.77 kB</td>
 <td>13</td>
@@ -995,7 +1850,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>jersey-container-servlet-2.10.1.jar</td>
 <td>15.35 kB</td>
 <td>23</td>
@@ -1003,7 +1858,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>3</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>jersey-container-servlet-core-2.10.1.jar</td>
 <td>53.71 kB</td>
 <td>55</td>
@@ -1011,7 +1866,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>4</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>jersey-client-2.10.1.jar</td>
 <td>150.10 kB</td>
 <td>115</td>
@@ -1019,7 +1874,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>5</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>jersey-common-2.10.1.jar</td>
 <td>706.29 kB</td>
 <td>514</td>
@@ -1027,7 +1882,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>17</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>jersey-server-2.10.1.jar</td>
 <td>898.26 kB</td>
 <td>711</td>
@@ -1035,7 +1890,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>25</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>jersey-test-framework-core-2.10.1.jar</td>
 <td>28.72 kB</td>
 <td>34</td>
@@ -1043,7 +1898,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>2</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="b">
+<tr class="a">
 <td>jersey-test-framework-provider-grizzly2-2.10.1.jar</td>
 <td>11.93 kB</td>
 <td>20</td>
@@ -1051,7 +1906,7 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1</td>
 <td>1.6</td>
 <td>debug</td></tr>
-<tr class="a">
+<tr class="b">
 <td>hamcrest-core-1.3.jar</td>
 <td>43.97 kB</td>
 <td>52</td>
@@ -1059,12 +1914,100 @@ file comparators, endian transformation classes, and much more.</p>
 <td>3</td>
 <td>1.5</td>
 <td>debug</td></tr>
+<tr class="a">
+<td>hibernate-core-4.3.5.Final.jar</td>
+<td>4.99 MB</td>
+<td>3,678</td>
+<td>3,431</td>
+<td>199</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>hibernate-search-4.5.1.Final.jar</td>
+<td>2.23 kB</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>-</td>
+<td>release</td></tr>
+<tr class="a">
+<td>hibernate-search-analyzers-4.5.1.Final.jar</td>
+<td>2.31 kB</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>-</td>
+<td>release</td></tr>
+<tr class="b">
+<td>hibernate-search-engine-4.5.1.Final.jar</td>
+<td>886.88 kB</td>
+<td>796</td>
+<td>666</td>
+<td>71</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>hibernate-search-orm-4.5.1.Final.jar</td>
+<td>119.81 kB</td>
+<td>105</td>
+<td>69</td>
+<td>15</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>hibernate-commons-annotations-4.0.4.Final.jar</td>
+<td>73.55 kB</td>
+<td>79</td>
+<td>67</td>
+<td>7</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>hibernate-jpa-2.1-api-1.0.0.Final.jar</td>
+<td>110.71 kB</td>
+<td>207</td>
+<td>200</td>
+<td>4</td>
+<td>1.6</td>
+<td>debug</td></tr>
 <tr class="b">
 <td>javassist-3.18.1-GA.jar</td>
 <td>697.46 kB</td>
 <td>414</td>
 <td>390</td>
 <td>17</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>jandex-1.1.0.Final.jar</td>
+<td>74.76 kB</td>
+<td>55</td>
+<td>44</td>
+<td>1</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>jboss-logging-3.1.3.GA.jar</td>
+<td>55.84 kB</td>
+<td>57</td>
+<td>45</td>
+<td>1</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="a">
+<td>jboss-logging-annotations-1.2.0.Beta1.jar</td>
+<td>11.29 kB</td>
+<td>28</td>
+<td>16</td>
+<td>1</td>
+<td>1.6</td>
+<td>debug</td></tr>
+<tr class="b">
+<td>jboss-transaction-api_1.2_spec-1.0.0.Final.jar</td>
+<td>27.07 kB</td>
+<td>35</td>
+<td>22</td>
+<td>2</td>
 <td>1.6</td>
 <td>debug</td></tr>
 <tr class="a">
@@ -1148,6 +2091,14 @@ file comparators, endian transformation classes, and much more.</p>
 <td>1.5</td>
 <td>debug</td></tr>
 <tr class="a">
+<td>xml-apis-1.0.b2.jar</td>
+<td>106.76 kB</td>
+<td>217</td>
+<td>184</td>
+<td>17</td>
+<td>1.2</td>
+<td>release</td></tr>
+<tr class="b">
 <th>Total</th>
 <th>Size</th>
 <th>Entries</th>
@@ -1155,38 +2106,38 @@ file comparators, endian transformation classes, and much more.</p>
 <th>Packages</th>
 <th>JDK Rev</th>
 <th>Debug</th></tr>
-<tr class="b">
-<td>39</td>
-<td>8.71 MB</td>
-<td>7,295</td>
-<td>5,879</td>
-<td>369</td>
+<tr class="a">
+<td>78</td>
+<td>32.96 MB</td>
+<td>18,579</td>
+<td>15,976</td>
+<td>987</td>
 <td>1.6</td>
-<td>38</td></tr>
-<tr class="a">
-<td>compile: 2</td>
-<td>compile: 206.27 kB</td>
-<td>compile: 162</td>
-<td>compile: 133</td>
-<td>compile: 9</td>
-<td>-</td>
-<td>compile: 2</td></tr>
+<td>74</td></tr>
 <tr class="b">
-<td>test: 21</td>
-<td>test: 4.51 MB</td>
-<td>test: 3,824</td>
-<td>test: 2,758</td>
-<td>test: 243</td>
+<td>compile: 41</td>
+<td>compile: 23.54 MB</td>
+<td>compile: 11,233</td>
+<td>compile: 9,996</td>
+<td>compile: 609</td>
 <td>-</td>
-<td>test: 21</td></tr>
+<td>compile: 38</td></tr>
 <tr class="a">
-<td>provided: 16</td>
-<td>provided: 4.00 MB</td>
-<td>provided: 3,309</td>
-<td>provided: 2,988</td>
-<td>provided: 117</td>
+<td>test: 22</td>
+<td>test: 6.10 MB</td>
+<td>test: 4,451</td>
+<td>test: 3,382</td>
+<td>test: 278</td>
 <td>-</td>
-<td>provided: 15</td></tr></table></div><a name="Dependency_Repository_Locations"></a>
+<td>test: 22</td></tr>
+<tr class="b">
+<td>provided: 15</td>
+<td>provided: 3.32 MB</td>
+<td>provided: 2,895</td>
+<td>provided: 2,598</td>
+<td>provided: 100</td>
+<td>-</td>
+<td>provided: 14</td></tr></table></div><a name="Dependency_Repository_Locations"></a>
 <div class="section">
 <h2>Dependency Repository Locations<a name="Dependency_Repository_Locations"></a></h2>
 <table border="0" class="bodyTable">
@@ -1207,9 +2158,21 @@ file comparators, endian transformation classes, and much more.</p>
 <tr class="a">
 <th>Artifact</th></tr>
 <tr class="b">
+<td>antlr:antlr:jar:2.7.7</td></tr>
+<tr class="a">
 <td>ch.qos.logback:logback-core:jar:1.0.13</td></tr>
+<tr class="b">
+<td>com.h2database:h2:jar:1.4.179</td></tr>
+<tr class="a">
+<td>com.thoughtworks.paranamer:paranamer:jar:2.3</td></tr>
+<tr class="b">
+<td>commons-codec:commons-codec:jar:1.6</td></tr>
 <tr class="a">
 <td>commons-io:commons-io:jar:2.4</td></tr>
+<tr class="b">
+<td>commons-lang:commons-lang:jar:2.6</td></tr>
+<tr class="a">
+<td>dom4j:dom4j:jar:1.6.1</td></tr>
 <tr class="b">
 <td>javax.annotation:javax.annotation-api:jar:1.2</td></tr>
 <tr class="a">
@@ -1221,49 +2184,113 @@ file comparators, endian transformation classes, and much more.</p>
 <tr class="b">
 <td>junit:junit:jar:4.11</td></tr>
 <tr class="a">
+<td>net.krotscheck.jersey2:jersey2-util:jar:1.1.1</td></tr>
+<tr class="b">
+<td>org.apache.avro:avro:jar:1.7.6</td></tr>
+<tr class="a">
+<td>org.apache.commons:commons-compress:jar:1.4.1</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-analyzers:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.lucene:lucene-core:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-facet:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.lucene:lucene-grouping:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-highlighter:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.lucene:lucene-kuromoji:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-memory:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.lucene:lucene-misc:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-phonetic:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.lucene:lucene-smartcn:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-spatial:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.lucene:lucene-spellchecker:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.lucene:lucene-stempel:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.solr:solr-analysis-extras:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.apache.solr:solr-core:jar:3.6.2</td></tr>
+<tr class="a">
+<td>org.apache.solr:solr-solrj:jar:3.6.2</td></tr>
+<tr class="b">
+<td>org.codehaus.jackson:jackson-core-asl:jar:1.9.13</td></tr>
+<tr class="a">
+<td>org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13</td></tr>
+<tr class="b">
 <td>org.glassfish.grizzly:grizzly-framework:jar:2.3.8</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.grizzly:grizzly-http:jar:2.3.8</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.grizzly:grizzly-http-server:jar:2.3.8</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.grizzly:grizzly-http-servlet:jar:2.3.8</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.hk2:hk2-api:jar:2.3.0-b05</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.hk2:hk2-locator:jar:2.3.0-b05</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.hk2:hk2-utils:jar:2.3.0-b05</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.hk2:osgi-resource-locator:jar:1.0.1</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.hk2.external:aopalliance-repackaged:jar:2.3.0-b05</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.hk2.external:javax.inject:jar:2.3.0-b05</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.jersey.bundles.repackaged:jersey-guava:jar:2.10.1</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.jersey.containers:jersey-container-grizzly2-http:jar:2.10.1</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:jar:2.10.1</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.jersey.containers:jersey-container-servlet:jar:2.10.1</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.jersey.containers:jersey-container-servlet-core:jar:2.10.1</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.jersey.core:jersey-client:jar:2.10.1</td></tr>
-<tr class="a">
+<tr class="b">
 <td>org.glassfish.jersey.core:jersey-common:jar:2.10.1</td></tr>
-<tr class="b">
+<tr class="a">
 <td>org.glassfish.jersey.core:jersey-server:jar:2.10.1</td></tr>
-<tr class="a">
-<td>org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:2.10.1</td></tr>
 <tr class="b">
-<td>org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:2.10.1</td></tr>
+<td>org.glassfish.jersey.test-framework:jersey-test-framework-core:jar:2.10.1</td></tr>
 <tr class="a">
+<td>org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:jar:2.10.1</td></tr>
+<tr class="b">
 <td>org.hamcrest:hamcrest-core:jar:1.3</td></tr>
+<tr class="a">
+<td>org.hibernate:hibernate-core:jar:4.3.5.Final</td></tr>
+<tr class="b">
+<td>org.hibernate:hibernate-search:jar:4.5.1.Final</td></tr>
+<tr class="a">
+<td>org.hibernate:hibernate-search-analyzers:jar:4.5.1.Final</td></tr>
+<tr class="b">
+<td>org.hibernate:hibernate-search-engine:jar:4.5.1.Final</td></tr>
+<tr class="a">
+<td>org.hibernate:hibernate-search-orm:jar:4.5.1.Final</td></tr>
+<tr class="b">
+<td>org.hibernate.common:hibernate-commons-annotations:jar:4.0.4.Final</td></tr>
+<tr class="a">
+<td>org.hibernate.javax.persistence:hibernate-jpa-2.1-api:jar:1.0.0.Final</td></tr>
 <tr class="b">
 <td>org.javassist:javassist:jar:3.18.1-GA</td></tr>
+<tr class="a">
+<td>org.jboss:jandex:jar:1.1.0.Final</td></tr>
+<tr class="b">
+<td>org.jboss.logging:jboss-logging:jar:3.1.3.GA</td></tr>
+<tr class="a">
+<td>org.jboss.logging:jboss-logging-annotations:jar:1.2.0.Beta1</td></tr>
+<tr class="b">
+<td>org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.0.0.Final</td></tr>
 <tr class="a">
 <td>org.mockito:mockito-all:jar:1.9.5</td></tr>
 <tr class="b">
@@ -1285,9 +2312,11 @@ file comparators, endian transformation classes, and much more.</p>
 <tr class="b">
 <td>org.slf4j:slf4j-api:jar:1.7.5</td></tr>
 <tr class="a">
-<th>Total</th></tr>
+<td>xml-apis:xml-apis:jar:1.0.b2</td></tr>
 <tr class="b">
-<td>39 (compile: 2, test: 21, provided: 16)</td></tr></table></div>
+<th>Total</th></tr>
+<tr class="a">
+<td>78 (compile: 41, test: 22, provided: 15)</td></tr></table></div>
       </div>
     </div>
     <div class="clear">

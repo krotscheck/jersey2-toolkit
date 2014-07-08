@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>jersey2-util - Surefire Report</title>
+    <title>jersey2-hibernate - Surefire Report</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -17,7 +17,7 @@
   <body class="composite">
     <div id="banner">
                     <div id="bannerLeft">
-                jersey2-util
+                jersey2-hibernate
                 </div>
                     <div class="clear">
         <hr/>
@@ -30,8 +30,7 @@
         <span id="publishDate">Last Published: 2014-07-07</span>
                   &nbsp;| <span id="projectVersion">Version: 1.1.1</span>
                       </div>
-            <div class="xright">                    <a href="./" title="jersey2-util">jersey2-util</a>
-              
+            <div class="xright">        
                     
       </div>
       <div class="clear">
@@ -42,7 +41,16 @@
       <div id="navcolumn">
              
                     
-                                <h5>Parent Project</h5>
+                                <h5>Manual</h5>
+                  <ul>
+                  <li class="none">
+                          <a href="index.html" title="Introduction">Introduction</a>
+            </li>
+                  <li class="none">
+                          <a href="contributing.html" title="Contributing">Contributing</a>
+            </li>
+          </ul>
+                       <h5>Parent Project</h5>
                   <ul>
                   <li class="none">
                           <a href="../index.html" title="jersey2-toolkit">jersey2-toolkit</a>
@@ -123,12 +131,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>5</td>
+<td>13</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.037</td></tr></table><br />
+<td>4.579</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
 <div class="section">
 <h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
@@ -143,16 +151,32 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#net.krotscheck.util">net.krotscheck.util</a></td>
-<td>5</td>
+<td><a href="#net.krotscheck.jersey2.hibernate">net.krotscheck.jersey2.hibernate</a></td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.037</td></tr></table><br />
+<td>0.538</td></tr>
+<tr class="a">
+<td><a href="#net.krotscheck.jersey2.hibernate.factory">net.krotscheck.jersey2.hibernate.factory</a></td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>1.969</td></tr>
+<tr class="b">
+<td><a href="#net.krotscheck.jersey2.hibernate.lifecycle">net.krotscheck.jersey2.hibernate.lifecycle</a></td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>2.072</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
 <div class="section">
-<h3>net.krotscheck.util<a name="net.krotscheck.util"></a></h3><a name="net.krotscheck.util"></a>
+<h3>net.krotscheck.jersey2.hibernate<a name="net.krotscheck.jersey2.hibernate"></a></h3><a name="net.krotscheck.jersey2.hibernate"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <th></th>
@@ -164,40 +188,168 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#net.krotscheck.utilResourceUtilTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
-<td><a href="#net.krotscheck.utilResourceUtilTest">ResourceUtilTest</a></td>
-<td>5</td>
+<td><a href="#net.krotscheck.jersey2.hibernateHibernateFeatureTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernateHibernateFeatureTest">HibernateFeatureTest</a></td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.037</td></tr></table></div><br /></div>
+<td>0.538</td></tr></table></div>
+<div class="section">
+<h3>net.krotscheck.jersey2.hibernate.factory<a name="net.krotscheck.jersey2.hibernate.factory"></a></h3><a name="net.krotscheck.jersey2.hibernate.factory"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryFulltextSearchFactoryFactoryTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryFulltextSearchFactoryFactoryTest">FulltextSearchFactoryFactoryTest</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>1.402</td></tr>
+<tr class="a">
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryFulltextSessionFactoryTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryFulltextSessionFactoryTest">FulltextSessionFactoryTest</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.133</td></tr>
+<tr class="b">
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryHibernateConfigurationFactoryTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryHibernateConfigurationFactoryTest">HibernateConfigurationFactoryTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.068</td></tr>
+<tr class="a">
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryHibernateSessionFactoryFactoryTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryHibernateSessionFactoryFactoryTest">HibernateSessionFactoryFactoryTest</a></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.279</td></tr>
+<tr class="b">
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryHibernateSessionFactoryTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernate.factoryHibernateSessionFactoryTest">HibernateSessionFactoryTest</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.087</td></tr></table></div>
+<div class="section">
+<h3>net.krotscheck.jersey2.hibernate.lifecycle<a name="net.krotscheck.jersey2.hibernate.lifecycle"></a></h3><a name="net.krotscheck.jersey2.hibernate.lifecycle"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td><a href="#net.krotscheck.jersey2.hibernate.lifecycleSearchIndexContextListenerTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#net.krotscheck.jersey2.hibernate.lifecycleSearchIndexContextListenerTest">SearchIndexContextListenerTest</a></td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>2.072</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
 <div class="section">
-<h3>ResourceUtilTest<a name="ResourceUtilTest"></a></h3><a name="net.krotscheck.utilResourceUtilTest"></a>
+<h3>FulltextSearchFactoryFactoryTest<a name="FulltextSearchFactoryFactoryTest"></a></h3><a name="net.krotscheck.jersey2.hibernate.factoryFulltextSearchFactoryFactoryTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>testGetResourceAsStream</td>
-<td>0.028</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>testGetResourceAsString</td>
-<td>0.008</td></tr>
+<td>testProvideDispose</td>
+<td>1.402</td></tr></table></div>
+<div class="section">
+<h3>FulltextSessionFactoryTest<a name="FulltextSessionFactoryTest"></a></h3><a name="net.krotscheck.jersey2.hibernate.factoryFulltextSessionFactoryTest"></a>
+<table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>testConstructorIsPrivate</td>
-<td>0</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>testGetPathForResource</td>
-<td>0.001</td></tr>
+<td>testProvideDispose</td>
+<td>0.133</td></tr></table></div>
+<div class="section">
+<h3>HibernateConfigurationFactoryTest<a name="HibernateConfigurationFactoryTest"></a></h3><a name="net.krotscheck.jersey2.hibernate.factoryHibernateConfigurationFactoryTest"></a>
+<table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>testGetFileForResource</td>
-<td>0</td></tr></table></div><br /></div>
+<td>testProvideDispose</td>
+<td>0.003</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testBinder</td>
+<td>0.065</td></tr></table></div>
+<div class="section">
+<h3>HibernateSessionFactoryFactoryTest<a name="HibernateSessionFactoryFactoryTest"></a></h3><a name="net.krotscheck.jersey2.hibernate.factoryHibernateSessionFactoryFactoryTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testProvideDispose</td>
+<td>0.099</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testEventInjection</td>
+<td>0.089</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testBinder</td>
+<td>0.091</td></tr></table></div>
+<div class="section">
+<h3>HibernateSessionFactoryTest<a name="HibernateSessionFactoryTest"></a></h3><a name="net.krotscheck.jersey2.hibernate.factoryHibernateSessionFactoryTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testProvideDispose</td>
+<td>0.087</td></tr></table></div>
+<div class="section">
+<h3>HibernateFeatureTest<a name="HibernateFeatureTest"></a></h3><a name="net.krotscheck.jersey2.hibernateHibernateFeatureTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testService</td>
+<td>0.538</td></tr></table></div>
+<div class="section">
+<h3>SearchIndexContextListenerTest<a name="SearchIndexContextListenerTest"></a></h3><a name="net.krotscheck.jersey2.hibernate.lifecycleSearchIndexContextListenerTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testOnStartup</td>
+<td>0.823</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testInterruptedIndex</td>
+<td>0.055</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testOnReload</td>
+<td>1.111</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testOnShutdown</td>
+<td>0.083</td></tr></table></div><br /></div>
       </div>
     </div>
     <div class="clear">
