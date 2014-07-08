@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BugCollection version='2.0.3' threshold='medium' effort='min'><Error></Error><Project><SrcDir>/Users/krotscheck/Desktop/jersey2-toolkit/hibernate/src/main/java</SrcDir><SrcDir>/Users/krotscheck/Desktop/jersey2-toolkit/hibernate/src/test/java</SrcDir></Project></BugCollection>
