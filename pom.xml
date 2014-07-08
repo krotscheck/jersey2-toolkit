@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck.jersey2</groupId>
     <artifactId>jersey2-toolkit</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 
     <packaging>pom</packaging>
     <name>jersey2-toolkit</name>
@@ -12,6 +12,7 @@
 
     <modules>
         <module>util</module>
+        <module>hibernate</module>
     </modules>
 
     <!-- The license under which this package is released -->
@@ -73,7 +74,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <jersey.version>2.9.1</jersey.version>
+        <jersey.version>2.10.1</jersey.version>
         <project.build.sourceEncoding>
             UTF-8
         </project.build.sourceEncoding>
@@ -107,16 +108,16 @@
                             <goal>site</goal>
                         </goals>
                         <phase>site-deploy</phase>
-                        <configuration>
-                            <server>github</server>
-                            <message>Site:
-                                ${project.groupId}:${project.artifactId}:${project.version}
-                            </message>
-                            <merge>true</merge>
-                            <oauth2Token>${env.TOKEN}</oauth2Token>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <server>github</server>
+                    <message>Site:
+                        ${project.groupId}:${project.artifactId}:${project.version}
+                    </message>
+                    <merge>true</merge>
+                    <oauth2Token>${env.TOKEN}</oauth2Token>
+                </configuration>
             </plugin>
         </plugins>
         <pluginManagement>
@@ -198,12 +199,12 @@
                     <configuration>
                         <check>
                             <haltOnFailure>true</haltOnFailure>
-                            <branchRate>85</branchRate>
-                            <lineRate>85</lineRate>
-                            <totalBranchRate>85</totalBranchRate>
-                            <totalLineRate>85</totalLineRate>
-                            <packageLineRate>85</packageLineRate>
-                            <packageBranchRate>85</packageBranchRate>
+                            <branchRate>100</branchRate>
+                            <lineRate>100</lineRate>
+                            <totalBranchRate>100</totalBranchRate>
+                            <totalLineRate>100</totalLineRate>
+                            <packageLineRate>100</packageLineRate>
+                            <packageBranchRate>100</packageBranchRate>
                         </check>
                         <formats>
                             <format>xml</format>
@@ -254,6 +255,13 @@
                     <configuration>
                         <skipDeploy>true</skipDeploy>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-module-markdown</artifactId>
+                            <version>1.6</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
 
                 <!-- Resources plugin -->
@@ -304,18 +312,13 @@
             <version>1.0.13</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Jersey (JAX-RS) -->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
             <version>${jersey.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.test-framework.providers</groupId>
@@ -324,6 +327,31 @@
             <version>${jersey.version}</version>
         </dependency>
 
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>1.5.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+            <version>1.5.5</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <reporting>
