@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck.jersey2</groupId>
@@ -97,31 +99,53 @@
 
     <build>
         <plugins>
+            <!-- Deploy the web site -->
             <plugin>
-                <!-- Deploy the web site -->
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
-                <version>0.9</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>site-deploy</phase>
-                    </execution>
-                </executions>
                 <configuration>
                     <server>github</server>
-                    <message>Site:
-                        ${project.groupId}:${project.artifactId}:${project.version}
-                    </message>
+                    <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <merge>true</merge>
                     <oauth2Token>${env.TOKEN}</oauth2Token>
                 </configuration>
             </plugin>
+
         </plugins>
         <pluginManagement>
             <plugins>
+
+                <!-- Deploy the web site -->
+                <plugin>
+                    <groupId>com.github.github</groupId>
+                    <artifactId>site-maven-plugin</artifactId>
+                    <version>0.9</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>site</goal>
+                            </goals>
+                            <phase>site-deploy</phase>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <!-- Site plugin. -->
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <skipDeploy>true</skipDeploy>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-module-markdown</artifactId>
+                            <version>1.6</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
                 <!-- JGitFlow -->
                 <plugin>
                     <groupId>com.atlassian.maven.plugins</groupId>
@@ -248,22 +272,6 @@
                     <version>2.5</version>
                 </plugin>
 
-                <!-- Site plugin - skip deploy, handled by git plugin. -->
-                <plugin>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.3</version>
-                    <configuration>
-                        <skipDeploy>true</skipDeploy>
-                    </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.apache.maven.doxia</groupId>
-                            <artifactId>doxia-module-markdown</artifactId>
-                            <version>1.6</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-
                 <!-- Resources plugin -->
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
@@ -293,6 +301,7 @@
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>2.8</version>
                 </plugin>
+
 
             </plugins>
         </pluginManagement>
