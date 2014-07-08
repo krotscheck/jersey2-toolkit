@@ -19,20 +19,20 @@ under the License.
 -->
 <rss version="0.91">
   <channel>
-    <title>jersey2-toolkit - Checkstyle report</title>
-    <link>https://github.com/krotscheck/jersey2-toolkit</link>
-    <description>jersey2-toolkit - Checkstyle report</description>
+    <title>jersey2-util - Checkstyle report</title>
+    <link>https://github.com/krotscheck/jersey2-toolkit/jersey2-util</link>
+    <description>jersey2-util - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2014 krotscheck.net</copyright>
     <item>
-      <title>File: 12,
+      <title>File: 2,
              Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
-            <link>https://github.com/krotscheck/jersey2-toolkit/checkstyle.html</link>
+            <link>https://github.com/krotscheck/jersey2-toolkit/jersey2-util/checkstyle.html</link>
       <description>
-        <p>Click <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-util/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.package-info.java">net/krotscheck/jersey2/hibernate/factory/package-info.java</a>
+                  <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-util/checkstyle.html#net.krotscheck.util.ResourceUtil.java">net/krotscheck/util/ResourceUtil.java</a>
                 </td>
                 <td>
                   0
@@ -60,147 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.package-info.java">net/krotscheck/jersey2/hibernate/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateSessionFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.util.ResourceUtil.java">net/krotscheck/util/ResourceUtil.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.lifecycle.package-info.java">net/krotscheck/jersey2/hibernate/lifecycle/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener.java">net/krotscheck/jersey2/hibernate/lifecycle/SearchIndexContextListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateSessionFactoryFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.HibernateFeature.java">net/krotscheck/jersey2/hibernate/HibernateFeature.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateConfigurationFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateConfigurationFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.FulltextSearchFactoryFactory.java">net/krotscheck/jersey2/hibernate/factory/FulltextSearchFactoryFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.util.package-info.java">net/krotscheck/util/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.FulltextSessionFactory.java">net/krotscheck/jersey2/hibernate/factory/FulltextSessionFactory.java</a>
+                  <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-util/checkstyle.html#net.krotscheck.util.package-info.java">net/krotscheck/util/package-info.java</a>
                 </td>
                 <td>
                   0
