@@ -20,7 +20,7 @@
     <parent>
         <artifactId>jersey2-toolkit</artifactId>
         <groupId>net.krotscheck.jersey2</groupId>
-        <version>1.1.4</version>
+        <version>1.1.5</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -44,6 +44,16 @@
                     <merge>true</merge>
                     <oauth2Token>${github_oauth2_token}</oauth2Token>
                     <path>${project.name}</path>
+                </configuration>
+            </plugin>
+
+            <!-- Deploy to internal repo before pushing to github -->
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <altDeploymentRepository>
+                        internal.repo::default::file://${project.parent.build.directory}/site/repo
+                    </altDeploymentRepository>
                 </configuration>
             </plugin>
         </plugins>
