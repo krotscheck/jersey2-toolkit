@@ -7,6 +7,8 @@ case "$1" in
 		;;
 	finish)
 		mvn -B com.atlassian.maven.plugins:maven-jgitflow-plugin:release-finish -DpushReleases=true
+		mvn clean deploy site
+		mvn site-deploy
 		RETVAL=1
 		;;
 	*)
