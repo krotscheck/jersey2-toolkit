@@ -11,11 +11,12 @@ branches:
   - /^hotfix\/.*$/
   - /^release\/.*$/
 after_success:
-  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "Not building on master, no release needed. "; exit 0; fi
-  - mvn clean deploy site site-deploy
+- if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "Not building on master, no release
+  needed. "; exit 0; fi
+- mvn clean deploy site site-deploy
 env:
   global:
-    secure: slClAnD5IkFq+l2Up1DpnFhxS6R6fHuwInY8ZAHx8NE8B5UDVCjZnEzfeFbAMHlGLAeMmoOY69m6JQF98NZvbPtCYAoFnyczkxGox2Uehtl9HlflM5c5cKknprEUNuyxLgm2mo7WvjPJETabiUrx2TVnw4rq9mOoWgaflZuu/eo=
+    secure: kAYa9b1MZh7Cg1mZruvAkGiEkUBnCF/vhjB/5n/IFZ7OLx2O3M1+Wu6GpBghfuBC9MmayN15Sy+9PSj1i1UQ7EteGVE6eEf47a3E9CkTz6/L01vhh/327LHJCid/NH8mmam2V21KztjCYLI9jGj7J11WftGgbfb8o8fguIUEjq8=
 cache:
   directories:
-    - $HOME/.m2
+  - $HOME/.m2

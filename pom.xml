@@ -81,6 +81,7 @@
         <project.reporting.outputEncoding>
             UTF-8
         </project.reporting.outputEncoding>
+        <github_oauth2_token>${env.TOKEN}</github_oauth2_token>
     </properties>
 
     <distributionManagement>
@@ -105,7 +106,7 @@
                     <server>github</server>
                     <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <merge>true</merge>
-                    <oauth2Token>${env.TOKEN}</oauth2Token>
+                    <oauth2Token>${github_oauth2_token}</oauth2Token>
                 </configuration>
             </plugin>
 
