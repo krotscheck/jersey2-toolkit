@@ -82,6 +82,9 @@
             UTF-8
         </project.reporting.outputEncoding>
         <github_oauth2_token>${env.TOKEN}</github_oauth2_token>
+
+        <!-- velocity variables -->
+        <site_version>${project.version}</site_version>
     </properties>
 
     <distributionManagement>
