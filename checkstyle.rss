@@ -116,7 +116,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener.java">net/krotscheck/jersey2/hibernate/lifecycle/SearchIndexContextListener.java</a>
+                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateSessionFactoryFactory.java</a>
                 </td>
                 <td>
                   0
@@ -130,7 +130,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateSessionFactoryFactory.java</a>
+                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener.java">net/krotscheck/jersey2/hibernate/lifecycle/SearchIndexContextListener.java</a>
                 </td>
                 <td>
                   0
