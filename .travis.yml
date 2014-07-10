@@ -2,7 +2,7 @@ language: java
 jdk:
 - openjdk7
 install: mvn install -DskipTests=true
-script: mvn test
+script: mvn install
 branches:
   only:
   - master
@@ -10,13 +10,6 @@ branches:
   - /^feature\/.*$/
   - /^hotfix\/.*$/
   - /^release\/.*$/
-after_success:
-- if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "Not building on master, no release
-  needed. "; exit 0; fi
-- mvn clean deploy site site-deploy
-env:
-  global:
-    secure: kAYa9b1MZh7Cg1mZruvAkGiEkUBnCF/vhjB/5n/IFZ7OLx2O3M1+Wu6GpBghfuBC9MmayN15Sy+9PSj1i1UQ7EteGVE6eEf47a3E9CkTz6/L01vhh/327LHJCid/NH8mmam2V21KztjCYLI9jGj7J11WftGgbfb8o8fguIUEjq8=
 cache:
   directories:
   - $HOME/.m2
