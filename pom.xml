@@ -12,6 +12,7 @@
 
     <modules>
         <module>jersey2-util</module>
+        <module>jersey2-configuration</module>
         <module>jersey2-hibernate</module>
     </modules>
 
