@@ -11,8 +11,8 @@
     <url>https://github.com/krotscheck/jersey2-toolkit</url>
 
     <modules>
-        <module>util</module>
-        <module>hibernate</module>
+        <module>jersey2-util</module>
+        <module>jersey2-hibernate</module>
     </modules>
 
     <!-- The license under which this package is released -->
