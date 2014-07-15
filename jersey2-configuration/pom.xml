@@ -20,15 +20,16 @@
     <parent>
         <artifactId>jersey2-toolkit</artifactId>
         <groupId>net.krotscheck.jersey2</groupId>
-        <version>1.1.6</version>
+        <version>1.1.7</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jersey2-util</artifactId>
+    <artifactId>jersey2-configuration</artifactId>
     <packaging>jar</packaging>
-    <name>jersey2-util</name>
-    <description>Utilities that simplify writing code within a Jersey2
-        environment.
+    <name>jersey2-configuration</name>
+    <description>
+        Centralized configuration for the jersey2-toolkit.
     </description>
 
     <build>
@@ -40,7 +41,6 @@
                     <server>github</server>
                     <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <merge>true</merge>
-                    <oauth2Token>${github_oauth2_token}</oauth2Token>
                     <path>${project.name}</path>
                 </configuration>
             </plugin>
@@ -59,10 +59,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.4</version>
+            <groupId>net.krotscheck.jersey2</groupId>
+            <artifactId>jersey2-util</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- Apache-commons-config -->
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
         </dependency>
     </dependencies>
+
 
 </project>

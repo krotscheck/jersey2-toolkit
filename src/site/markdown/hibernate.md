@@ -39,7 +39,6 @@ The jersey2-hibernate feature is published to a maven repository on github. You 
 		<dependency>
 			<groupId>net.krotscheck.jersey2</groupId>
 			<artifactId>jersey2-hibernate</artifactId>
-    	    <version>${site_version}</version>
     	</dependency>
 		...
 	</dependencies>

@@ -16,22 +16,111 @@
   ~ limitations under the License.
   -->
 <project name="${project.name}">
-    <body>
-        <head inherit="top">
-            <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', 'UA-52636237-1', 'auto');
-                ga('send', 'pageview');
-            </script>
+    <skin>
+        <groupId>lt.velykis.maven.skins</groupId>
+        <artifactId>reflow-maven-skin</artifactId>
+        <version>1.1.1</version>
+    </skin>
+
+    <body>    <!-- Add a rel to Google profile for all pages -->
+        <head>
+            <link rel="author" href="https://plus.google.com/+MichaelKrotscheck"/>
         </head>
 
-        <menu ref="parent" inherit="top"/>
-        <menu ref="modules" inherit="top"/>
-        <menu ref="reports" inherit="top"/>
+        <links>
+            <item name="GitHub project"
+                  href="http://github.com/krotscheck/jersey2-toolkit/"/>
+        </links>
+
+        <menu name="Main">
+            <item name="Home"
+                  href="index.html"/>
+            <item name="Maven Repository"
+                  href="maven.html"/>
+            <item name="GitHub Project"
+                  href="http://github.com/krotscheck/jersey2-toolkit/"/>
+            <item name="Release Notes"
+                  href="release-notes.html"/>
+        </menu>
+
+        <menu name="Features">
+            <item name="jersey2-configuration"
+                  href="configuration.html"/>
+            <item name="jersey2-hibernate"
+                  href="hibernate.html"/>
+        </menu>
+
+        <menu name="Contribute">
+            <item name="Contribute"
+                  href="contribute.html"/>
+            <item name="Issues"
+                  href="https://github.com/krotscheck/jersey2-toolkit/issues"/>
+            <item name="Fork on GitHub"
+                  href="http://github.com/krotscheck/jersey2-toolkit/"/>
+            <item name="License"
+                  href="license.html"/>
+        </menu>
+
+        <menu ref="modules"/>
+        <menu ref="reports"/>
     </body>
 
+
+    <!--<publishDate position="bottom" format="yyyy-MM-dd"/>-->
+    <version position="bottom"/>
+
+    <custom>
+        <reflowSkin>
+            <skinAttribution>false</skinAttribution>
+            <protocolRelativeURLs>false</protocolRelativeURLs>
+            <smoothScroll>true</smoothScroll>
+            <theme>bootswatch-cosmo</theme>
+            <highlightJs>true</highlightJs>
+            <highlightJsTheme>github</highlightJsTheme>
+            <absoluteResourceURL>
+                https://krotscheck.github.io/jersey2-toolkit
+            </absoluteResourceURL>
+            <brand>
+                <href>https://krotscheck.github.io/jersey2-toolkit</href>
+            </brand>
+            <slogan>A collection of useful Jersey2 Features</slogan>
+            <titleTemplate>%2$s | %1$s</titleTemplate>
+            <toc>false</toc>
+            <breadcrumbs>false</breadcrumbs>
+            <tocTopMax>6</tocTopMax>
+
+            <topNav>Features|Contribute</topNav>
+
+            <bottomNav maxSpan="12">
+                <column>Main</column>
+                <column>Contribute</column>
+                <column>Features</column>
+                <column>reports</column>
+            </bottomNav>
+
+            <pages>
+                <index project="jersey2-toolkit">
+                    <titleTemplate>jersey2-toolkit</titleTemplate>
+                    <markPageHeader>false</markPageHeader>
+                </index>
+
+                <!-- Disable source highlighting for Maven reports -->
+                <source-repository>
+                    <highlightJs>false</highlightJs>
+                </source-repository>
+
+                <issue-tracking>
+                    <highlightJs>false</highlightJs>
+                </issue-tracking>
+
+                <license>
+                    <highlightJs>false</highlightJs>
+                </license>
+            </pages>
+        </reflowSkin>
+    </custom>
+
+
+    <googleAnalyticsAccountId>UA-52636237-1</googleAnalyticsAccountId>
 </project>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck.jersey2</groupId>
     <artifactId>jersey2-toolkit</artifactId>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
 
     <packaging>pom</packaging>
     <name>jersey2-toolkit</name>
@@ -11,8 +11,9 @@
     <url>https://github.com/krotscheck/jersey2-toolkit</url>
 
     <modules>
-        <module>util</module>
-        <module>hibernate</module>
+        <module>jersey2-util</module>
+        <module>jersey2-configuration</module>
+        <module>jersey2-hibernate</module>
     </modules>
 
     <!-- The license under which this package is released -->
@@ -81,7 +82,6 @@
         <project.reporting.outputEncoding>
             UTF-8
         </project.reporting.outputEncoding>
-        <github_oauth2_token>${env.TOKEN}</github_oauth2_token>
 
         <!-- velocity variables -->
         <site_version>${project.version}</site_version>
@@ -111,7 +111,6 @@
                         ${project.groupId}:${project.artifactId}:${project.version}
                     </message>
                     <merge>true</merge>
-                    <oauth2Token>${github_oauth2_token}</oauth2Token>
                 </configuration>
             </plugin>
 
@@ -153,9 +152,14 @@
                     </configuration>
                     <dependencies>
                         <dependency>
-                            <groupId>org.apache.maven.doxia</groupId>
-                            <artifactId>doxia-module-markdown</artifactId>
-                            <version>1.6</version>
+                            <groupId>lt.velykis.maven.skins</groupId>
+                            <artifactId>reflow-velocity-tools</artifactId>
+                            <version>1.1.1</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.velocity</groupId>
+                            <artifactId>velocity</artifactId>
+                            <version>1.7</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -377,6 +381,27 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.7</version>
+                <configuration>
+                    <anonymousConnection>
+                        scm:git:git@github.com:krotscheck/jersey2-toolkit.git
+                    </anonymousConnection>
+                    <developerConnection>
+                        scm:git:git@github.com:krotscheck/jersey2-toolkit.git
+                    </developerConnection>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>summary</report>
+                            <report>license</report>
+                            <report>modules</report>
+                            <report>project-team</report>
+                            <report>dependencies</report>
+                            <report>dependency-convergence</report>
+                            <report>plugins</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
