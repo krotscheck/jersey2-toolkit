@@ -1,3 +1,4 @@
+net.krotscheck.jersey2.configuration
 net.krotscheck.jersey2.hibernate
 net.krotscheck.jersey2.hibernate.entity
 net.krotscheck.jersey2.hibernate.factory
