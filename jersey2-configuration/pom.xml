@@ -44,16 +44,6 @@
                     <path>${project.name}</path>
                 </configuration>
             </plugin>
-
-            <!-- Deploy to internal repo before pushing to github -->
-            <plugin>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <altDeploymentRepository>
-                        internal.repo::default::file://${project.parent.build.directory}/site/repo
-                    </altDeploymentRepository>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
