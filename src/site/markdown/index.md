@@ -5,6 +5,7 @@ can enhance and accelerate your web service development. Features can be
 loaded wholesale, or can be assembled on an as-needed basis. Available features are as follows:
 
 * [jersey2-util](http://krotscheck.github.io/jersey2-toolkit/jersey2-util)<br/>Utilities that simplify development in a Jersey2 environment.
+* [jersey2-configuration](http://krotscheck.github.io/jersey2-toolkit/jersey2-configuration)<br/>Centralized configuration for all jersey2-toolkit components.
 * [jersey2-hibernate](http://krotscheck.github.io/jersey2-toolkit/jersey2-hibernate)<br/>Jersey2 Feature and Binders for the Hibernate ORM.
 
 ## Basic Usage
