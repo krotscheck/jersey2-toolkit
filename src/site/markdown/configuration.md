@@ -48,7 +48,6 @@ You can enable the repository with the following in your <code>pom.xml</code>.
 		<dependency>
 			<groupId>net.krotscheck.jersey2</groupId>
 			<artifactId>jersey2-configuration</artifactId>
-    	    <version>${site_version}</version>
     	</dependency>
 		...
 	</dependencies>
