@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck.jersey2</groupId>
@@ -15,7 +17,7 @@
         <module>jersey2-configuration</module>
         <module>jersey2-hibernate</module>
     </modules>
-    
+
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>
@@ -134,7 +136,8 @@
         <repository>
             <id>sonatype-nexus-staging</id>
             <name>Sonatype Nexus release repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/
+            </url>
         </repository>
     </distributionManagement>
 
@@ -146,7 +149,9 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <configuration>
                     <server>github</server>
-                    <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
+                    <message>Site:
+                        ${project.groupId}:${project.artifactId}:${project.version}
+                    </message>
                     <merge>true</merge>
                 </configuration>
             </plugin>
@@ -163,7 +168,14 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.2.2</version>
+                    <version>2.4.2</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.scm</groupId>
+                            <artifactId>maven-scm-provider-gitexe</artifactId>
+                            <version>1.9</version>
+                        </dependency>
+                    </dependencies>
                     <configuration>
                         <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
                     </configuration>
