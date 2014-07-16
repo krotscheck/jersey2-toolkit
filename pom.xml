@@ -151,6 +151,7 @@
                     <server>github</server>
                     <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <merge>true</merge>
+                    <oauth2Token>${github.oauth2Token}</oauth2Token>
                 </configuration>
             </plugin>
 
