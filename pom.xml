@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck.jersey2</groupId>
     <artifactId>jersey2-toolkit</artifactId>
-    <version>1.1.7</version>
+    <version>1.1.8-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>jersey2-toolkit</name>
@@ -88,15 +88,21 @@
     </properties>
 
     <distributionManagement>
-        <repository>
-            <id>maven</id>
-            <url>https://krotscheck.github.com/jersey2-toolkit/repo</url>
-        </repository>
         <site>
             <id>github</id>
             <name>GitHub Sites</name>
             <url>https://krotscheck.github.com/jersey2-toolkit</url>
         </site>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Sonatype Nexus release repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <build>
@@ -107,26 +113,29 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <configuration>
                     <server>github</server>
-                    <message>Site:
-                        ${project.groupId}:${project.artifactId}:${project.version}
-                    </message>
+                    <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <merge>true</merge>
                 </configuration>
             </plugin>
 
-            <!-- Deploy to internal repo before pushing to github -->
             <plugin>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <altDeploymentRepository>
-                        internal.repo::default::file://${project.build.directory}/site/repo
-                    </altDeploymentRepository>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
             </plugin>
-
         </plugins>
+
         <pluginManagement>
             <plugins>
+                <!-- Release plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.2.2</version>
+                    <configuration>
+                        <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+                    </configuration>
+                </plugin>
+
 
                 <!-- Deploy the web site -->
                 <plugin>
@@ -164,26 +173,6 @@
                     </dependencies>
                 </plugin>
 
-                <!-- JGitFlow -->
-                <plugin>
-                    <groupId>com.atlassian.maven.plugins</groupId>
-                    <artifactId>maven-jgitflow-plugin</artifactId>
-                    <version>1.0-alpha27</version>
-                    <configuration>
-                        <flowInitContext>
-                            <masterBranchName>master</masterBranchName>
-                            <developBranchName>develop</developBranchName>
-                            <featureBranchPrefix>feature/</featureBranchPrefix>
-                            <releaseBranchPrefix>release/</releaseBranchPrefix>
-                            <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
-                            <versionTagPrefix>v</versionTagPrefix>
-                        </flowInitContext>
-                        <noDeploy>true</noDeploy>
-                        <tagMessage>Tagging release ${project.version}
-                        </tagMessage>
-                    </configuration>
-                </plugin>
-
                 <!-- Compiler plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -202,9 +191,11 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <addDefaultImplementationEntries>true
+                                <addDefaultImplementationEntries>
+                                    true
                                 </addDefaultImplementationEntries>
-                                <addDefaultSpecificationEntries>true
+                                <addDefaultSpecificationEntries>
+                                    true
                                 </addDefaultSpecificationEntries>
                             </manifest>
                         </archive>
