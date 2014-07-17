@@ -1,0 +1,25 @@
+#set($h1 = '#')
+#set($h2 = '##')
+#set($h3 = '###')
+#set($h4 = '####')
+#set($h5 = '#####')
+#set($h6 = '######')
+
+#macro( header $moduleName)
+$h1 $moduleName
+#foreach ($collectedProject in $project.collectedProjects)
+#if($collectedProject.name.equals($moduleName))
+<span class="lead">${collectedProject.description}</span>
+#end
+#end
+#end
+
+#macro( dependency $moduleName)
+
+    <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${moduleName}</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+
+#end

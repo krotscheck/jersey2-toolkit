@@ -1,0 +1,10 @@
+#parse( "scripts.vm" )
+#set($moduleName = "jersey2-util")
+
+#header($moduleName)
+
+This library provides utility methods used by other jersey2-toolkit features.
+There are some useful things here, however you'll have to explore them on 
+your own.
+
+#dependency($moduleName)

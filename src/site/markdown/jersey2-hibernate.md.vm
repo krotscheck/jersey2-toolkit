@@ -1,0 +1,165 @@
+#parse( "scripts.vm" )
+#set($moduleName = "jersey2-hibernate")
+
+#header($moduleName)
+
+This library provides HK2 injectors and container lifecycle components for 
+common Hibernate functionality. This feature **does not** any hibernate
+database adapters.
+
+#dependency($moduleName)
+
+$h2 Quickstart
+
+First, register the feature in your application in accordance with the 
+[Jersey2 Application Model](https://jersey.java.net/documentation/latest/deployment.html#environmenmt.appmodel).
+
+	import net.krotscheck.jersey2.hibernate.HibernateFeature;
+	import org.glassfish.jersey.server.ResourceConfig;
+
+	public class YourApplication extends ResourceConfig {
+	    public YourApplication() {
+	        register(HibernateFeature.class);
+	    }
+	}
+	
+Second, configure hibernate in accordance with the [hibernate configuration 
+documentation](http://hibernate.org/orm/). This feature does not provide 
+methods by which you can configure hibernate by anything other than the 
+default files: `hibernate.cfg.xml` and `hibernate.properties`.
+
+---
+
+
+
+$h2 Provided Components
+
+This feature provides the following components and component binders. Scope, 
+Types, and Names are provided.
+
+$h3 `Session`
+
+This library assumes that a session is created per service request, and 
+destroyed afterwards. If you want to create a session outside of a request 
+scope, we recommend you inject the SessionFactory.
+
+* *Scope:* RequestScoped
+* *Type:* org.hibernate.Session
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        public Session session;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
+$h3 `SessionFactory`
+
+If you would like to have finer control over when a session is created, you may 
+inject the SessionFactory yourself. Remember to close your sessions.
+
+* *Scope:* Singleton
+* *Type:* org.hibernate.SessionFactory
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        public SessionFactory sessionFactory;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
+$h3 `Configuration`
+
+While available for injection, the injection chain is such that you cannot 
+guarantee that modifications to the configuration will persist to the session 
+factory. You may override this by either providing your own Configuration 
+provider, or by updating your configuration files.
+
+* *Scope:* Singleton
+* *Type:* org.hibernate.cfg.Configuration
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        public Configuration configuration;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
+$h3 `FullTextSession`
+
+The FullTextSession provides a session for the [Hibernate Search API]
+(http://hibernate.org/search/). It is build off of the Session, and is used 
+in conjunction with the `org.hibernate.search.SearchFactory`.
+
+* *Scope:* RequestScoped
+* *Type:* org.hibernate.search.FullTextSession
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        public FullTextSession ftSession;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
+
+$h3 `SearchFactory`
+
+The SearchFactory provides a query factory for the [Hibernate Search API]
+(http://hibernate.org/search/). It is build from the FullTextSession and is 
+used to construct fulltext queries.
+
+* *Scope:* RequestScoped
+* *Type:* org.hibernate.search.SearchFactory
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        public SearchFactory ftSearchFactory;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
+
+$h3 `SearchIndexContextListener`
+
+This container lifecycle listener will trigger a rebuild of the hibernate 
+search index whenever the servlet container is restarted. While useful for 
+small deployments, it may not be suitable for larger ones.
+
+* *Scope:* Not applicable.
+* *Type:* org.glassfish.jersey.server.spi.ContainerLifecycleListener
+    
