@@ -29,7 +29,7 @@
     <packaging>jar</packaging>
     <name>jersey2-configuration</name>
     <description>
-        Centralized configuration for the jersey2-toolkit.
+        Centralized configuration for jersey2-toolkit.
     </description>
 
     <build>

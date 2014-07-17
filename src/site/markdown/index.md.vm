@@ -1,14 +1,18 @@
-# jersey2-toolkit
+#parse( "scripts.vm" )
 
-This project contains a collection of mix-and-match Jersey2 Features which
-can enhance and accelerate your web service development. Features can be 
-loaded wholesale, or can be assembled on an as-needed basis. Available features are as follows:
+$h1 jersey2-toolkit
+<span class="lead">${project.description}</span>
 
-* [jersey2-util](http://krotscheck.github.io/jersey2-toolkit/jersey2-util)<br/>Utilities that simplify development in a Jersey2 environment.
-* [jersey2-configuration](http://krotscheck.github.io/jersey2-toolkit/jersey2-configuration)<br/>Centralized configuration for all jersey2-toolkit components.
-* [jersey2-hibernate](http://krotscheck.github.io/jersey2-toolkit/jersey2-hibernate)<br/>Jersey2 Feature and Binders for the Hibernate ORM.
+This project contains a collection of mix-and-match Jersey2 Features which can 
+enhance and accelerate your web service development. Features can be loaded 
+wholesale, or can be assembled on an as-needed basis. 
 
-## Basic Usage
+#dependency("jersey2-toolkit")
+
+---
+
+$h2 Basic Usage
+
 Each feature is a distinct submodule, to isolate dependencies. Each submodule 
 contains one feature class which includes all components of that feature, which
 may be used as follows:
@@ -22,7 +26,8 @@ may be used as follows:
 	    }
 	}
 
-## Advanced Usage
+$h2 Advanced Usage
+
 In all cases, each component is dependent on an injection chain from the other 
 components, and is kept relatively isolated. Furthermore, every component 
 injector contains a public internal class called <code>Binder</code> which 
@@ -49,3 +54,15 @@ would like to exclude some feature, you may construct your own as follows:
             return true;
         }
     }
+        
+---
+
+Available features:
+
+#foreach ($collectedProject in $project.collectedProjects)
+
+[$collectedProject.name](${collectedProject.name}.html)<br/>$collectedProject.description
+
+
+
+#end

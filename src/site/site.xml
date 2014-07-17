@@ -23,9 +23,14 @@
         <version>1.1.1</version>
     </skin>
 
+    <bannerLeft>
+        <name>jersey2-toolkit</name>
+    </bannerLeft>
+
     <body>    <!-- Add a rel to Google profile for all pages -->
         <head>
-            <link rel="author" href="https://plus.google.com/+MichaelKrotscheck"/>
+            <link rel="author"
+                  href="https://plus.google.com/+MichaelKrotscheck"/>
         </head>
 
         <links>
@@ -36,8 +41,6 @@
         <menu name="Main">
             <item name="Home"
                   href="index.html"/>
-            <item name="Maven Repository"
-                  href="maven.html"/>
             <item name="GitHub Project"
                   href="http://github.com/krotscheck/jersey2-toolkit/"/>
             <item name="Release Notes"
@@ -45,17 +48,19 @@
         </menu>
 
         <menu name="Features">
+            <item name="jersey2-util"
+                  href="jersey2-util.html"/>
             <item name="jersey2-configuration"
-                  href="configuration.html"/>
+                  href="jersey2-configuration.html"/>
             <item name="jersey2-hibernate"
-                  href="hibernate.html"/>
+                  href="jersey2-hibernate.html"/>
         </menu>
 
         <menu name="Contribute">
             <item name="Contribute"
                   href="contribute.html"/>
             <item name="Issues"
-                  href="https://github.com/krotscheck/jersey2-toolkit/issues"/>
+                  href="https://github.com/krotscheck/jersey2-toolkit/issues/"/>
             <item name="Fork on GitHub"
                   href="http://github.com/krotscheck/jersey2-toolkit/"/>
             <item name="License"
@@ -72,6 +77,7 @@
 
     <custom>
         <reflowSkin>
+            <markPageHeader>false</markPageHeader>
             <skinAttribution>false</skinAttribution>
             <protocolRelativeURLs>false</protocolRelativeURLs>
             <smoothScroll>true</smoothScroll>
@@ -84,7 +90,7 @@
             <brand>
                 <href>https://krotscheck.github.io/jersey2-toolkit</href>
             </brand>
-            <slogan>A collection of useful Jersey2 Features</slogan>
+            <slogan>Useful Jersey2 Features</slogan>
             <titleTemplate>%2$s | %1$s</titleTemplate>
             <toc>false</toc>
             <breadcrumbs>false</breadcrumbs>
@@ -102,8 +108,14 @@
             <pages>
                 <index project="jersey2-toolkit">
                     <titleTemplate>jersey2-toolkit</titleTemplate>
-                    <markPageHeader>false</markPageHeader>
+
+                    <sections>
+                        <body/>
+                        <body/>
+                        <sidebar/>
+                    </sections>
                 </index>
+
 
                 <!-- Disable source highlighting for Maven reports -->
                 <source-repository>

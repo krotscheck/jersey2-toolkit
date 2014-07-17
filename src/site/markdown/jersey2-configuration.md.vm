@@ -1,0 +1,72 @@
+#parse( "scripts.vm" )
+#set($moduleName = "jersey2-configuration")
+
+#header($moduleName)
+
+This library provides a configuration injector for the jersey2-toolkit
+features, using Apache's commons-configuration. All of the toolkit's 
+configuration is handled via one file, with individual properties namespaced 
+by feature.
+
+#dependency($moduleName)
+
+$h2 Quickstart
+
+First, register the feature in your application in accordance with the 
+[Jersey2 Application Model](https://jersey.java.net/documentation/latest/deployment.html#environmenmt.appmodel).
+
+	import net.krotscheck.jersey2.configuration.ConfigurationFeature;
+	import org.glassfish.jersey.server.ResourceConfig;
+
+	public class YourApplication extends ResourceConfig {
+	    public YourApplication() {
+	        register(ConfigurationFeature.class);
+	    }
+	}
+	
+Second, create a configuration file named `/src/main/resources/jersey2-toolkit.properties`
+with configuration options as appropriate for your enabled toolkit features.
+For specific property names, please see the corresponding jersey2-toolkit 
+feature.
+
+    featurename1.propertyname1=value
+    featurename1.propertyname2=value
+    
+    featurename3.propertyname1=value
+
+---
+
+$h2 Provided Components
+
+This feature provides the following components and component binders. Scope, 
+Types, and Names are provided.
+
+$h3 `Jersey2ToolkitConfiguration`
+
+The centralized configuration instance. In most cases you won't have to access 
+it directly, however it could be useful if you want to consolidate configuration
+for your own features.
+
+* *Scope:* Singleton
+* *Type:* org.apache.commons.configuration.Configuration
+* *Type:* net.krotscheck.jersey2.configuration.Jersey2ToolkitConfiguration
+* *Name:* jersey2-toolkit
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        @Named("jersey2-toolkit")
+        public Configuration namedConfiguration;
+    
+        @Inject
+        public Jersey2ToolkitConfig explicitConfiguration;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
