@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="0.7058823529411765" lines-covered="132" lines-valid="132" branches-covered="24" branches-valid="34" complexity="1.6923076923076923" version="2.0.3" timestamp="1405576656717">
+<coverage line-rate="1.0" branch-rate="0.7058823529411765" lines-covered="132" lines-valid="132" branches-covered="24" branches-valid="34" complexity="1.6923076923076923" version="2.0.3" timestamp="1406681361557">
 	<sources>
 		<source>/Users/krotscheck/Desktop/jersey2-toolkit/target/checkout/jersey2-hibernate/src/main/java</source>
 		<source>--source</source>
@@ -118,9 +118,9 @@
 						</method>
 						<method name="&lt;init&gt;" signature="(Lorg/hibernate/Session;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="56" hits="4" branch="false"/>
-								<line number="57" hits="4" branch="false"/>
-								<line number="58" hits="4" branch="false"/>
+								<line number="56" hits="3" branch="false"/>
+								<line number="57" hits="3" branch="false"/>
+								<line number="58" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="dispose" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0">
@@ -141,24 +141,24 @@
 						</method>
 						<method name="provide" signature="()Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="37" hits="3" branch="false"/>
+								<line number="37" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Lorg/hibernate/search/FullTextSession;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="67" hits="3" branch="false"/>
-								<line number="68" hits="3" branch="false"/>
+								<line number="67" hits="2" branch="false"/>
+								<line number="68" hits="2" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="37" hits="3" branch="false"/>
+						<line number="37" hits="2" branch="false"/>
 						<line number="42" hits="1" branch="false"/>
-						<line number="56" hits="4" branch="false"/>
-						<line number="57" hits="4" branch="false"/>
-						<line number="58" hits="4" branch="false"/>
-						<line number="67" hits="3" branch="false"/>
-						<line number="68" hits="3" branch="false"/>
+						<line number="56" hits="3" branch="false"/>
+						<line number="57" hits="3" branch="false"/>
+						<line number="58" hits="3" branch="false"/>
+						<line number="67" hits="2" branch="false"/>
+						<line number="68" hits="2" branch="false"/>
 						<line number="78" hits="2" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
@@ -198,7 +198,7 @@
 						</method>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="75" hits="19" branch="false"/>
+								<line number="75" hits="20" branch="false"/>
 							</lines>
 						</method>
 						<method name="dispose" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0">
@@ -207,12 +207,12 @@
 						</method>
 						<method name="dispose" signature="(Lorg/hibernate/cfg/Configuration;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="70" hits="9" branch="false"/>
+								<line number="70" hits="10" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="37" hits="37" branch="false"/>
+								<line number="37" hits="39" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Lorg/hibernate/cfg/Configuration;" line-rate="1.0" branch-rate="1.0">
@@ -225,14 +225,14 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="37" hits="37" branch="false"/>
+						<line number="37" hits="39" branch="false"/>
 						<line number="43" hits="2" branch="false"/>
 						<line number="53" hits="11" branch="false"/>
 						<line number="56" hits="11" branch="false"/>
 						<line number="57" hits="11" branch="false"/>
 						<line number="59" hits="11" branch="false"/>
-						<line number="70" hits="9" branch="false"/>
-						<line number="75" hits="19" branch="false"/>
+						<line number="70" hits="10" branch="false"/>
+						<line number="75" hits="20" branch="false"/>
 					</lines>
 				</class>
 				<class name="net.krotscheck.jersey2.hibernate.factory.HibernateConfigurationFactory$Binder" filename="net/krotscheck/jersey2/hibernate/factory/HibernateConfigurationFactory.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
