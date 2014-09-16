@@ -47,10 +47,33 @@ public final class Jersey2ToolkitConfig extends CompositeConfiguration {
      * Create an instance of the configuration provider.
      */
     public Jersey2ToolkitConfig() {
+        logger.debug("Add version configuration");
+        addConfiguration(buildVersionConfig());
         logger.debug("Adding system configuration");
         addConfiguration(new SystemConfiguration());
         logger.debug("Adding jersey2-toolkit configuration");
         addConfiguration(buildToolkitConfig());
+    }
+
+    /**
+     * Creates a configuration object that contains the current version of the
+     * jersey2-toolkit library in use.
+     *
+     * @return A configuration instance with jersey2-toolkit.version set.
+     */
+    private Configuration buildVersionConfig() {
+
+        // Inject the library version
+        String jersey2ToolkitVersion = Jersey2ToolkitConfig.class
+                .getPackage().getImplementationVersion();
+        if (jersey2ToolkitVersion == null) {
+            jersey2ToolkitVersion = "dev";
+        }
+
+        HashMap<String, Object> versionConfigMap = new HashMap<>();
+        versionConfigMap.put("jersey2-toolkit.version", jersey2ToolkitVersion);
+
+        return new MapConfiguration(versionConfigMap);
     }
 
     /**

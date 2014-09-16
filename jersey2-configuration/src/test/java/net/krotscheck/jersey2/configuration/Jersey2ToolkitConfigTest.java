@@ -138,4 +138,24 @@ public final class Jersey2ToolkitConfigTest {
         // Apply the correct permissions again
         Files.setPosixFilePermissions(propFile.toPath(), oldPerms);
     }
+
+    /**
+     * Assert that the default version configuration in a compile environment is
+     * 'dev', and that you cannot override it.
+     */
+    @Test
+    public void testDebugVersionConfiguration() {
+        Configuration config = new Jersey2ToolkitConfig();
+
+        Assert.assertEquals("dev", config.getProperty(
+                "jersey2-toolkit.version"));
+
+        // Override the version property.
+        System.setProperty("jersey2-toolkit.version", "override1");
+
+        Assert.assertEquals("dev", config.getProperty(
+                "jersey2-toolkit.version"));
+
+        System.clearProperty("jersey2-toolkit.version");
+    }
 }
