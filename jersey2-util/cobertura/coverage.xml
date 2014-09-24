@@ -1,12 +1,28 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="0.8333333333333334" lines-covered="30" lines-valid="30" branches-covered="10" branches-valid="12" complexity="3.8" version="2.0.3" timestamp="1406681096827">
+<coverage line-rate="1.0" branch-rate="0.8333333333333334" lines-covered="30" lines-valid="30" branches-covered="10" branches-valid="12" complexity="3.8" version="2.0.3" timestamp="1411573229846">
 	<sources>
 		<source>--source</source>
 		<source>/Users/krotscheck/Desktop/jersey2-toolkit/target/checkout/jersey2-util/src/main/java</source>
 	</sources>
 	<packages>
+		<package name="net.krotscheck.test" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+			<classes>
+				<class name="net.krotscheck.test.IntegrationTest" filename="net/krotscheck/test/IntegrationTest.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="net.krotscheck.test.UnitTest" filename="net/krotscheck/test/UnitTest.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
 		<package name="net.krotscheck.util" line-rate="1.0" branch-rate="0.8333333333333334" complexity="3.8">
 			<classes>
 				<class name="net.krotscheck.util.ResourceUtil" filename="net/krotscheck/util/ResourceUtil.java" line-rate="1.0" branch-rate="0.8333333333333334" complexity="3.8">
