@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="18" lines-valid="18" branches-covered="0" branches-valid="0" complexity="1.5" version="2.0.3" timestamp="1406681213500">
+<coverage line-rate="1.0" branch-rate="0.5" lines-covered="26" lines-valid="26" branches-covered="1" branches-valid="2" complexity="1.6" version="2.0.3" timestamp="1411573277712">
 	<sources>
 		<source>--source</source>
 		<source>/Users/krotscheck/Desktop/jersey2-toolkit/target/checkout/jersey2-configuration/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="net.krotscheck.jersey2.configuration" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+		<package name="net.krotscheck.jersey2.configuration" line-rate="1.0" branch-rate="0.5" complexity="1.6">
 			<classes>
 				<class name="net.krotscheck.jersey2.configuration.ConfigurationFeature" filename="net/krotscheck/jersey2/configuration/ConfigurationFeature.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
@@ -29,7 +29,7 @@
 						<line number="43" hits="1" branch="false"/>
 					</lines>
 				</class>
-				<class name="net.krotscheck.jersey2.configuration.Jersey2ToolkitConfig" filename="net/krotscheck/jersey2/configuration/Jersey2ToolkitConfig.java" line-rate="1.0" branch-rate="1.0" complexity="1.6666666666666667">
+				<class name="net.krotscheck.jersey2.configuration.Jersey2ToolkitConfig" filename="net/krotscheck/jersey2/configuration/Jersey2ToolkitConfig.java" line-rate="1.0" branch-rate="0.5" complexity="1.75">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
@@ -38,57 +38,85 @@
 						</method>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="49" hits="5" branch="false"/>
-								<line number="50" hits="5" branch="false"/>
-								<line number="51" hits="5" branch="false"/>
-								<line number="52" hits="5" branch="false"/>
-								<line number="53" hits="5" branch="false"/>
-								<line number="54" hits="5" branch="false"/>
+								<line number="49" hits="6" branch="false"/>
+								<line number="50" hits="6" branch="false"/>
+								<line number="51" hits="6" branch="false"/>
+								<line number="52" hits="6" branch="false"/>
+								<line number="53" hits="6" branch="false"/>
+								<line number="54" hits="6" branch="false"/>
+								<line number="55" hits="6" branch="false"/>
+								<line number="56" hits="6" branch="false"/>
 							</lines>
 						</method>
 						<method name="buildToolkitConfig" signature="()Lorg/apache/commons/configuration/Configuration;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="65" hits="5" branch="false"/>
-								<line number="67" hits="5" branch="false"/>
-								<line number="68" hits="1" branch="false"/>
-								<line number="69" hits="1" branch="false"/>
-								<line number="73" hits="1" branch="false"/>
+								<line number="88" hits="6" branch="false"/>
+								<line number="90" hits="6" branch="false"/>
+								<line number="91" hits="1" branch="false"/>
+								<line number="92" hits="1" branch="false"/>
+								<line number="96" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="buildVersionConfig" signature="()Lorg/apache/commons/configuration/Configuration;" line-rate="1.0" branch-rate="0.5">
+							<lines>
+								<line number="67" hits="6" branch="false"/>
+								<line number="69" hits="6" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="70" hits="6" branch="false"/>
+								<line number="73" hits="6" branch="false"/>
+								<line number="74" hits="6" branch="false"/>
+								<line number="76" hits="6" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
 						<line number="44" hits="1" branch="false"/>
-						<line number="49" hits="5" branch="false"/>
-						<line number="50" hits="5" branch="false"/>
-						<line number="51" hits="5" branch="false"/>
-						<line number="52" hits="5" branch="false"/>
-						<line number="53" hits="5" branch="false"/>
-						<line number="54" hits="5" branch="false"/>
-						<line number="65" hits="5" branch="false"/>
-						<line number="67" hits="5" branch="false"/>
-						<line number="68" hits="1" branch="false"/>
-						<line number="69" hits="1" branch="false"/>
-						<line number="73" hits="1" branch="false"/>
+						<line number="49" hits="6" branch="false"/>
+						<line number="50" hits="6" branch="false"/>
+						<line number="51" hits="6" branch="false"/>
+						<line number="52" hits="6" branch="false"/>
+						<line number="53" hits="6" branch="false"/>
+						<line number="54" hits="6" branch="false"/>
+						<line number="55" hits="6" branch="false"/>
+						<line number="56" hits="6" branch="false"/>
+						<line number="67" hits="6" branch="false"/>
+						<line number="69" hits="6" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="70" hits="6" branch="false"/>
+						<line number="73" hits="6" branch="false"/>
+						<line number="74" hits="6" branch="false"/>
+						<line number="76" hits="6" branch="false"/>
+						<line number="88" hits="6" branch="false"/>
+						<line number="90" hits="6" branch="false"/>
+						<line number="91" hits="1" branch="false"/>
+						<line number="92" hits="1" branch="false"/>
+						<line number="96" hits="1" branch="false"/>
 					</lines>
 				</class>
-				<class name="net.krotscheck.jersey2.configuration.Jersey2ToolkitConfig$Binder" filename="net/krotscheck/jersey2/configuration/Jersey2ToolkitConfig.java" line-rate="1.0" branch-rate="1.0" complexity="1.6666666666666667">
+				<class name="net.krotscheck.jersey2.configuration.Jersey2ToolkitConfig$Binder" filename="net/krotscheck/jersey2/configuration/Jersey2ToolkitConfig.java" line-rate="1.0" branch-rate="1.0" complexity="1.75">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="80" hits="1" branch="false"/>
+								<line number="103" hits="1" branch="false"/>
 							</lines>
 						</method>
 						<method name="configure" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="84" hits="1" branch="false"/>
-								<line number="89" hits="1" branch="false"/>
+								<line number="107" hits="1" branch="false"/>
+								<line number="112" hits="1" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="80" hits="1" branch="false"/>
-						<line number="84" hits="1" branch="false"/>
-						<line number="89" hits="1" branch="false"/>
+						<line number="103" hits="1" branch="false"/>
+						<line number="107" hits="1" branch="false"/>
+						<line number="112" hits="1" branch="false"/>
 					</lines>
 				</class>
 			</classes>
