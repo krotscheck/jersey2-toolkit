@@ -18,6 +18,7 @@
 package net.krotscheck.jersey2.hibernate;
 
 import net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener;
+import net.krotscheck.test.UnitTest;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.hibernate.Session;
@@ -27,6 +28,7 @@ import org.hibernate.search.FullTextSession;
 import org.hibernate.search.SearchFactory;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -41,6 +43,7 @@ import javax.ws.rs.core.Response;
  *
  * @author Michael Krotscheck
  */
+@Category(UnitTest.class)
 public final class HibernateFeatureTest extends JerseyTest {
 
     /**
@@ -76,38 +79,57 @@ public final class HibernateFeatureTest extends JerseyTest {
         /**
          * Hibernate configuration.
          */
-        @Inject
         private SearchIndexContextListener contextListener;
 
         /**
          * Hibernate configuration.
          */
-        @Inject
         private Configuration config;
 
         /**
          * Session factory.
          */
-        @Inject
         private SessionFactory factory;
 
         /**
          * Search factory injection.
          */
-        @Inject
         private SearchFactory searchFactory;
 
         /**
          * FullText session injector.
          */
-        @Inject
         private FullTextSession ftSession;
 
         /**
          * Session injector.
          */
-        @Inject
         private Session session;
+
+        /**
+         * Create a new instance of our test service.
+         *
+         * @param cl  Context Listener
+         * @param c   Configuration
+         * @param f   Session Factory
+         * @param s   Hibernate Session
+         * @param sF  Search Factory
+         * @param ftS Full text session
+         */
+        @Inject
+        public TestService(final SearchIndexContextListener cl,
+                           final Configuration c,
+                           final SessionFactory f,
+                           final SearchFactory sF,
+                           final Session s,
+                           final FullTextSession ftS) {
+            contextListener = cl;
+            config = c;
+            factory = f;
+            session = s;
+            searchFactory = sF;
+            ftSession = ftS;
+        }
 
         /**
          * Run the test service.

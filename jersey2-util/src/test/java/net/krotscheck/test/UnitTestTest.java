@@ -27,13 +27,13 @@ import org.junit.experimental.categories.Category;
  * @author Michael Krotscheck
  */
 @Category(UnitTest.class)
-public final class IntegrationTestTest {
+public final class UnitTestTest {
 
     /**
      * Test that the annotation exists.
      */
     @Test
     public void testAnnotationExists() {
-        Assert.assertTrue(IntegrationTest.class.isInterface());
+        Assert.assertTrue(UnitTest.class.isInterface());
     }
 }

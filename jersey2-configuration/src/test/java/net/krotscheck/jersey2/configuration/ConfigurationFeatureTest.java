@@ -17,11 +17,13 @@
 
 package net.krotscheck.jersey2.configuration;
 
+import net.krotscheck.test.UnitTest;
 import org.apache.commons.configuration.Configuration;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -38,6 +40,7 @@ import javax.ws.rs.core.Response;
  *
  * @author Michael Krotscheck
  */
+@Category(UnitTest.class)
 public final class ConfigurationFeatureTest extends JerseyTest {
 
     /**

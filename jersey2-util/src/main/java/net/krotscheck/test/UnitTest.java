@@ -17,23 +17,17 @@
 
 package net.krotscheck.test;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
-
 /**
- * Unit tests for the integration test annotation interface.
+ * A marker interface used for JUnit categorization.
+ * <p/>
+ * The junit category runner supports inclusion and exclusion of specific test
+ * via the <code>@Category(IntegrationTest.class)</code>. By using this
+ * annotation, you can then use the 'groups' and 'excludedGroups' parameters in
+ * the maven-surefire-plugin to specify which tests should be run during which
+ * section of the build.
  *
  * @author Michael Krotscheck
  */
-@Category(UnitTest.class)
-public final class IntegrationTestTest {
+public interface UnitTest {
 
-    /**
-     * Test that the annotation exists.
-     */
-    @Test
-    public void testAnnotationExists() {
-        Assert.assertTrue(IntegrationTest.class.isInterface());
-    }
 }

@@ -259,6 +259,23 @@
                             <version>2.16</version>
                         </dependency>
                     </dependencies>
+                    <configuration>
+                        <groups>net.krotscheck.test.UnitTest</groups>
+                        <excludedGroups>net.krotscheck.test.IntegrationTest</excludedGroups>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>integration-tests</id>
+                            <phase>integration-test</phase>
+                            <goals>
+                                <goal>test</goal>
+                            </goals>
+                            <configuration>
+                                <groups>net.krotscheck.test.IntegrationTest</groups>
+                                <excludedGroups>net.krotscheck.test.UnitTest</excludedGroups>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
 
                 <!-- Test coverage -->

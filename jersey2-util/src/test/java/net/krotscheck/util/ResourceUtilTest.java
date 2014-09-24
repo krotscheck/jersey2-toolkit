@@ -17,9 +17,11 @@
 
 package net.krotscheck.util;
 
+import net.krotscheck.test.UnitTest;
 import org.apache.commons.io.input.NullInputStream;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import java.io.File;
 import java.io.InputStream;
@@ -35,6 +37,7 @@ import java.util.Set;
  *
  * @author Michael Krotscheck
  */
+@Category(UnitTest.class)
 public final class ResourceUtilTest {
 
     /**

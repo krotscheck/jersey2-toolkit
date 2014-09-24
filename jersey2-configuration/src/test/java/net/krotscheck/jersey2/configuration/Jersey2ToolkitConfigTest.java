@@ -17,11 +17,13 @@
 
 package net.krotscheck.jersey2.configuration;
 
+import net.krotscheck.test.UnitTest;
 import net.krotscheck.util.ResourceUtil;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,6 +37,7 @@ import java.util.Set;
  *
  * @author Michael Krotscheck
  */
+@Category(UnitTest.class)
 public final class Jersey2ToolkitConfigTest {
 
     /**

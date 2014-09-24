@@ -15,25 +15,27 @@
  * limitations under the License.
  */
 
-package net.krotscheck.test;
+package net.krotscheck.jersey2.configuration;
 
+import net.krotscheck.test.IntegrationTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 /**
- * Unit tests for the integration test annotation interface.
+ * Unit test for the configuration reader.
  *
  * @author Michael Krotscheck
  */
-@Category(UnitTest.class)
-public final class IntegrationTestTest {
+@Category(IntegrationTest.class)
+public final class Jersey2ToolkitConfigITest {
 
     /**
-     * Test that the annotation exists.
+     * Assert that the default version configuration in a compile environment is
+     * 'dev', and that you cannot override it.
      */
     @Test
-    public void testAnnotationExists() {
-        Assert.assertTrue(IntegrationTest.class.isInterface());
+    public void testIntegrationVersionConfiguration() {
+        Assert.assertTrue(true);
     }
 }

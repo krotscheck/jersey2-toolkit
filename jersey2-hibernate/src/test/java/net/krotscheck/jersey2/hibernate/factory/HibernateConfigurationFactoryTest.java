@@ -18,11 +18,13 @@
 package net.krotscheck.jersey2.hibernate.factory;
 
 
+import net.krotscheck.test.UnitTest;
 import org.glassfish.jersey.server.ApplicationHandler;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.hibernate.cfg.Configuration;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.FeatureContext;
@@ -32,6 +34,7 @@ import javax.ws.rs.core.FeatureContext;
  *
  * @author Michael Krotscheck
  */
+@Category(UnitTest.class)
 public final class HibernateConfigurationFactoryTest {
 
     /**

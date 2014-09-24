@@ -19,6 +19,7 @@ package net.krotscheck.jersey2.hibernate.lifecycle;
 
 import net.krotscheck.jersey2.hibernate.factory.HibernateConfigurationFactory;
 import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory;
+import net.krotscheck.test.UnitTest;
 import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.jersey.server.ApplicationHandler;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -31,6 +32,7 @@ import org.hibernate.search.Search;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
@@ -55,6 +57,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 @PrepareForTest(Search.class)
 @PowerMockIgnore("javax.management.*")
 @RunWith(PowerMockRunner.class)
+@Category(UnitTest.class)
 public final class SearchIndexContextListenerTest {
 
     /**
