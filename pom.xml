@@ -435,6 +435,7 @@
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.7</version>
                 <configuration>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                     <anonymousConnection>
                         scm:git:git@github.com:krotscheck/jersey2-toolkit.git
                     </anonymousConnection>
