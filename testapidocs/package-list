@@ -3,4 +3,5 @@ net.krotscheck.jersey2.hibernate
 net.krotscheck.jersey2.hibernate.entity
 net.krotscheck.jersey2.hibernate.factory
 net.krotscheck.jersey2.hibernate.lifecycle
+net.krotscheck.test
 net.krotscheck.util
