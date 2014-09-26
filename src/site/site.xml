@@ -54,6 +54,8 @@
                   href="jersey2-configuration.html"/>
             <item name="jersey2-hibernate"
                   href="jersey2-hibernate.html"/>
+            <item name="jersey2-vfs2"
+                  href="jersey2-vfs2.html"/>
         </menu>
 
         <menu name="Contribute">

@@ -1,0 +1,143 @@
+#parse( "scripts.vm" )
+#set($moduleName = "jersey2-vfs2")
+
+#header($moduleName)
+
+This library provides HK2 injectors and container lifecycle components for 
+Apache's Commons Virtual File System. This feature **does not** include 
+filesystem adapters, though you can add any that you wish by using VFS2's 
+[xml configuration](http://commons.apache.org/proper/commons-vfs/api.html).
+
+#dependency($moduleName)
+
+$h2 Quickstart
+
+First, register the feature in your application in accordance with the 
+[Jersey2 Application Model](https://jersey.java.net/documentation/latest/deployment.html#environmenmt.appmodel).
+
+	import net.krotscheck.jersey2.vfs2.VFS2Feature;
+	import org.glassfish.jersey.server.ResourceConfig;
+
+	public class YourApplication extends ResourceConfig {
+	    public YourApplication() {
+	        register(VFS2Feature.class);
+	    }
+	}
+
+Second, configure a default VFS2 filesystem, by using the jersey2-toolkit 
+configuration file at `/src/main/resources/jersey2-toolkit.properties` 
+(create if necessary) and adding the following parameter:
+
+    vfs2.default = ram://path
+
+This will provide a request-scoped FileSystem within your application that 
+is named "default". If this is the only FileSystem in your container, 
+you may simply inject it by type. If there are more (see below) you must 
+explicitly name it using the `@Named("default")` annotation.
+
+
+$h2 Adding more FileSystem factories
+
+Since in most applications you will need more than one file system, 
+and the HK2 injector does not provide a way to build name-injected factories,
+an `AbstractFileSystemFactory` is provided for you to extend. It requires 
+three steps to use.
+
+First, extend the factory:
+
+    public static final class CustomFileSystemFactory
+            extends AbstractFileSystemFactory {
+
+        private static final String NAME = "customFileSystemName";
+        
+        @Override
+        public String getFileSystemName() {
+            return NAME;
+        }
+        
+        // A binder for your application.
+        public static final class Binder extends AbstractBinder {
+
+            @Override
+            protected void configure() {
+                bindFactory(CustomFileSystemFactory.class)
+                        .to(FileSystem.class)
+                        .named(NAME)
+                        .in(PerRequest.class);
+            }
+        }
+    }
+
+Second, add a configuration entry in 
+`/src/main/resources/jersey2-toolkit.properties`. Make sure that the name 
+from the factory matches the name after `vfs2`:
+
+    vfs2.customFileSystemName = ram://path
+
+
+Lastly, bind the factory into your scope:
+
+    public final class MyFeature implements Feature {
+    
+        @Override
+        public boolean configure(final FeatureContext context) {
+            context.register(new CustomFileSystemFactory.Binder());
+            return true;
+        }
+    }
+
+---
+
+$h2 Provided Components
+
+This feature provides the following components and component binders. Scope, 
+Types, and Names are provided.
+
+$h3 `FileSystemManager`
+
+A VFS FileSystemManager, used as the singleton source of all filesystems. If 
+you want closer control over the lifecycle of your `FileSystem`s, 
+or wich to resolve `FileObjects` directly, you may inject this and use it as 
+you see fit.
+
+* *Scope:* Singleton
+* *Type:* org.apache.commons.vfs2.FileSystemManager
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        public FileSystemManager fsManager;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
+$h3 `FileSystem`
+
+A default filesystem factory, which is created and destroyed with every 
+request. This is to ensure that all transactions are atomic, 
+and failures in one request do not propagate to others.
+
+* *Scope:* PerRequest
+* *Type:* org.apache.commons.vfs2.FileSystem
+* *Name:* "default"
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        @Named("default")
+        public FileSystem defaultFileSystem;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
