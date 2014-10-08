@@ -16,7 +16,7 @@
  */
 
 /**
- * VFS2 Factory and filesystem injection.
+ * Apache2 VFS Feature.
  *
  * @author Michael Krotscheck
  */

@@ -53,11 +53,6 @@
             <artifactId>jersey2-util</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>net.krotscheck.jersey2</groupId>
-            <artifactId>jersey2-configuration</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
 
         <!-- Apache-commons-vfs2 -->
         <dependency>

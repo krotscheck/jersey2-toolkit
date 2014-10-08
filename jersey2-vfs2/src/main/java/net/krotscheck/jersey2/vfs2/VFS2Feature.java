@@ -18,17 +18,15 @@
 package net.krotscheck.jersey2.vfs2;
 
 
-import net.krotscheck.jersey2.configuration.ConfigurationFeature;
-
 import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.FeatureContext;
 
 /**
  * This jersey2 feature provides various helper classes that may be used to
  * access a virtual file system instance (as per apache commons-vfs2). It may be
- * used either explicitly by injecting the FileSystemManager, or by configuring
- * multiple different file systems by name in the jersey2-toolkit.configuration
- * file. For more information, please see the documentation.
+ * used explicitly by injecting the FileSystemManager and resolving your files
+ * from there. Please make sure that any file opened is closed in the scope of
+ * your request.
  *
  * @author Michael Krotscheck
  */
@@ -42,15 +40,7 @@ public final class VFS2Feature implements Feature {
      */
     @Override
     public boolean configure(final FeatureContext context) {
-
-        // First make sure the jersey2-configuration feature is included.
-        if (!context.getConfiguration()
-                .isRegistered(ConfigurationFeature.class)) {
-            context.register(ConfigurationFeature.class);
-        }
-
         context.register(new FileSystemManagerFactory.Binder());
-        context.register(new DefaultFileSystemFactory.Binder());
 
         return true;
     }

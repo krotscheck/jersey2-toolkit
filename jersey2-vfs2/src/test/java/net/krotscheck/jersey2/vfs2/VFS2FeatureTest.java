@@ -18,7 +18,6 @@
 package net.krotscheck.jersey2.vfs2;
 
 import net.krotscheck.test.UnitTest;
-import org.apache.commons.vfs2.FileSystem;
 import org.apache.commons.vfs2.FileSystemManager;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
@@ -27,7 +26,6 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -75,11 +73,6 @@ public final class VFS2FeatureTest extends JerseyTest {
     public static final class TestService {
 
         /**
-         * Default Filesystem.
-         */
-        private FileSystem defaultFilesystem;
-
-        /**
          * Custom Filesystem 2.
          */
         private FileSystemManager fsManager;
@@ -87,15 +80,12 @@ public final class VFS2FeatureTest extends JerseyTest {
         /**
          * Create a new instance of our test service.
          *
-         * @param manager   The filesystem manager.
-         * @param defaultFS Default Filesystemo
+         * @param manager The filesystem manager.
          */
         @Inject
-        public TestService(final FileSystemManager manager,
-                           @Named("default") final FileSystem defaultFS
+        public TestService(final FileSystemManager manager
         ) {
             this.fsManager = manager;
-            this.defaultFilesystem = defaultFS;
         }
 
         /**
@@ -108,7 +98,6 @@ public final class VFS2FeatureTest extends JerseyTest {
         public Response testService() {
 
             Assert.assertNotNull(fsManager);
-            Assert.assertNotNull(defaultFilesystem);
 
             return Response.ok().build();
         }
