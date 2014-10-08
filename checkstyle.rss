@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2014 krotscheck.net</copyright>
     <item>
-      <title>File: 23,
+      <title>File: 21,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -130,35 +130,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.vfs2.DefaultFileSystemFactory.java">net/krotscheck/jersey2/vfs2/DefaultFileSystemFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.HibernateFeature.java">net/krotscheck/jersey2/hibernate/HibernateFeature.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.vfs2.AbstractFileSystemFactory.java">net/krotscheck/jersey2/vfs2/AbstractFileSystemFactory.java</a>
                 </td>
                 <td>
                   0
