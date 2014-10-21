@@ -48,12 +48,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>net.krotscheck.jersey2</groupId>
-            <artifactId>jersey2-util</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-
         <!-- Apache-commons-vfs2 -->
         <dependency>
             <groupId>org.apache.commons</groupId>

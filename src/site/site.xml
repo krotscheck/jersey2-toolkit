@@ -48,8 +48,6 @@
         </menu>
 
         <menu name="Features">
-            <item name="jersey2-util"
-                  href="jersey2-util.html"/>
             <item name="jersey2-configuration"
                   href="jersey2-configuration.html"/>
             <item name="jersey2-hibernate"

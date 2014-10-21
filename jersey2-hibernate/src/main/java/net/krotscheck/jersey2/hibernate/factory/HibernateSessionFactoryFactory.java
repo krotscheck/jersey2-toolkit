@@ -45,7 +45,7 @@ import javax.inject.Inject;
  * application context. You may use this to generate your own sessions if you
  * are not in an explicit request context, however if you do so please make sure
  * to clean up after yourself and call session.close().
- * <p/>
+ *
  * Furthermore, this injector will search through the ServiceLocator context to
  * determine if there are any Hibernate Event Listeners injected from other
  * features. It will gather those and automatically register them against the

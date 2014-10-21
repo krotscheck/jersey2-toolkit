@@ -49,12 +49,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>net.krotscheck.jersey2</groupId>
-            <artifactId>jersey2-util</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-
         <!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
