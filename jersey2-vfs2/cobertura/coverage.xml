@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="14" lines-valid="14" branches-covered="0" branches-valid="0" complexity="1.75" version="2.0.3" timestamp="1412791116232">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="17" lines-valid="17" branches-covered="0" branches-valid="0" complexity="1.75" version="2.0.3" timestamp="1413903330488">
 	<sources>
 		<source>--source</source>
 		<source>/Users/krotscheck/Desktop/jersey2-toolkit/target/checkout/jersey2-vfs2/src/main/java</source>
@@ -13,7 +13,8 @@
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="42" hits="2" branch="false"/>
+								<line number="42" hits="4" branch="false"/>
+								<line number="43" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
@@ -46,7 +47,8 @@
 					</methods>
 					<lines>
 						<line number="36" hits="10" branch="false"/>
-						<line number="42" hits="2" branch="false"/>
+						<line number="42" hits="4" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
 						<line number="53" hits="4" branch="false"/>
 						<line number="54" hits="1" branch="false"/>
 						<line number="55" hits="1" branch="false"/>
@@ -65,6 +67,8 @@
 						<method name="configure" signature="()V" line-rate="1.0" branch-rate="1.0">
 							<lines>
 								<line number="77" hits="3" branch="false"/>
+								<line number="78" hits="3" branch="false"/>
+								<line number="79" hits="3" branch="false"/>
 								<line number="80" hits="3" branch="false"/>
 							</lines>
 						</method>
@@ -72,6 +76,8 @@
 					<lines>
 						<line number="73" hits="3" branch="false"/>
 						<line number="77" hits="3" branch="false"/>
+						<line number="78" hits="3" branch="false"/>
+						<line number="79" hits="3" branch="false"/>
 						<line number="80" hits="3" branch="false"/>
 					</lines>
 				</class>
