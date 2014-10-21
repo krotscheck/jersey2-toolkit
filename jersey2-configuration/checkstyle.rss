@@ -46,20 +46,6 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-configuration/checkstyle.html#net.krotscheck.jersey2.configuration.Jersey2ToolkitConfig.java">net/krotscheck/jersey2/configuration/Jersey2ToolkitConfig.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-configuration/checkstyle.html#net.krotscheck.jersey2.configuration.package-info.java">net/krotscheck/jersey2/configuration/package-info.java</a>
                 </td>
                 <td>
@@ -75,6 +61,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-configuration/checkstyle.html#net.krotscheck.jersey2.configuration.ConfigurationFeature.java">net/krotscheck/jersey2/configuration/ConfigurationFeature.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/krotscheck/jersey2-toolkit/jersey2-configuration/checkstyle.html#net.krotscheck.jersey2.configuration.Jersey2ToolkitConfig.java">net/krotscheck/jersey2/configuration/Jersey2ToolkitConfig.java</a>
                 </td>
                 <td>
                   0
