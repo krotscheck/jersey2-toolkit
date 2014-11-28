@@ -26,6 +26,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.event.service.spi.EventListenerRegistry;
 import org.hibernate.event.spi.EventType;
+import org.hibernate.event.spi.PostCommitDeleteEventListener;
+import org.hibernate.event.spi.PostCommitInsertEventListener;
+import org.hibernate.event.spi.PostCommitUpdateEventListener;
 import org.hibernate.event.spi.PostDeleteEventListener;
 import org.hibernate.event.spi.PostInsertEventListener;
 import org.hibernate.event.spi.PostUpdateEventListener;
@@ -196,6 +199,39 @@ public final class HibernateSessionFactoryFactory
                         .getClass().getCanonicalName());
                 eventRegistry.appendListeners(EventType.PRE_DELETE,
                         pdEventListener);
+            }
+        }
+
+        List<PostCommitInsertEventListener> pciEvents = locator
+                .getAllServices(PostCommitInsertEventListener.class);
+        if (pciEvents != null) {
+            for (PostCommitInsertEventListener cpiEventListener : pciEvents) {
+                logger.trace("Registering PostCommitInsert: " + cpiEventListener
+                        .getClass().getCanonicalName());
+                eventRegistry.appendListeners(EventType.POST_COMMIT_INSERT,
+                        cpiEventListener);
+            }
+        }
+
+        List<PostCommitUpdateEventListener> pcuEvents = locator
+                .getAllServices(PostCommitUpdateEventListener.class);
+        if (pcuEvents != null) {
+            for (PostCommitUpdateEventListener cpuEventListener : pcuEvents) {
+                logger.trace("Registering PostCommitUpdate: " + cpuEventListener
+                        .getClass().getCanonicalName());
+                eventRegistry.appendListeners(EventType.POST_COMMIT_UPDATE,
+                        cpuEventListener);
+            }
+        }
+
+        List<PostCommitDeleteEventListener> pcdEvents = locator
+                .getAllServices(PostCommitDeleteEventListener.class);
+        if (pcuEvents != null) {
+            for (PostCommitDeleteEventListener cpdEventListener : pcdEvents) {
+                logger.trace("Registering PostCommitDelete: " + cpdEventListener
+                        .getClass().getCanonicalName());
+                eventRegistry.appendListeners(EventType.POST_COMMIT_DELETE,
+                        cpdEventListener);
             }
         }
     }

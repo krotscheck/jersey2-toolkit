@@ -29,6 +29,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.event.service.spi.EventListenerGroup;
 import org.hibernate.event.service.spi.EventListenerRegistry;
 import org.hibernate.event.spi.EventType;
+import org.hibernate.event.spi.PostCommitDeleteEventListener;
+import org.hibernate.event.spi.PostCommitInsertEventListener;
+import org.hibernate.event.spi.PostCommitUpdateEventListener;
 import org.hibernate.event.spi.PostDeleteEvent;
 import org.hibernate.event.spi.PostDeleteEventListener;
 import org.hibernate.event.spi.PostInsertEvent;
@@ -177,6 +180,18 @@ public final class HibernateSessionFactoryFactoryTest {
         EventListenerGroup<PostDeleteEventListener> podGroup = eventRegistry
                 .getEventListenerGroup(EventType.POST_DELETE);
         assertContainsListener(podGroup);
+
+        EventListenerGroup<PostInsertEventListener> pciGroup = eventRegistry
+                .getEventListenerGroup(EventType.POST_COMMIT_INSERT);
+        assertContainsListener(pciGroup);
+
+        EventListenerGroup<PostUpdateEventListener> pcuGroup = eventRegistry
+                .getEventListenerGroup(EventType.POST_COMMIT_UPDATE);
+        assertContainsListener(pcuGroup);
+
+        EventListenerGroup<PostDeleteEventListener> pcdGroup = eventRegistry
+                .getEventListenerGroup(EventType.POST_COMMIT_DELETE);
+        assertContainsListener(pcdGroup);
     }
 
     /**
@@ -217,7 +232,9 @@ public final class HibernateSessionFactoryFactoryTest {
     public static final class TestEventListener
             implements PreInsertEventListener, PostInsertEventListener,
             PreUpdateEventListener, PostUpdateEventListener,
-            PreDeleteEventListener, PostDeleteEventListener {
+            PreDeleteEventListener, PostDeleteEventListener,
+            PostCommitInsertEventListener, PostCommitUpdateEventListener,
+            PostCommitDeleteEventListener {
 
         @Override
         public void onPostDelete(final PostDeleteEvent event) {
@@ -255,6 +272,21 @@ public final class HibernateSessionFactoryFactoryTest {
             return false;
         }
 
+        @Override
+        public void onPostDeleteCommitFailed(final PostDeleteEvent event) {
+
+        }
+
+        @Override
+        public void onPostInsertCommitFailed(final PostInsertEvent event) {
+
+        }
+
+        @Override
+        public void onPostUpdateCommitFailed(final PostUpdateEvent event) {
+
+        }
+
         /**
          * HK2 Binder for our injector context.
          */
@@ -269,6 +301,9 @@ public final class HibernateSessionFactoryFactoryTest {
                         .to(PostInsertEventListener.class)
                         .to(PreUpdateEventListener.class)
                         .to(PostUpdateEventListener.class)
+                        .to(PostCommitInsertEventListener.class)
+                        .to(PostCommitUpdateEventListener.class)
+                        .to(PostCommitDeleteEventListener.class)
                         .in(PerThread.class);
             }
         }
