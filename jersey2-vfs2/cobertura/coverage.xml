@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="17" lines-valid="17" branches-covered="0" branches-valid="0" complexity="1.75" version="2.0.3" timestamp="1413904364228">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="17" lines-valid="17" branches-covered="0" branches-valid="0" complexity="1.75" version="2.0.3" timestamp="1417218494603">
 	<sources>
 		<source>--source</source>
-		<source>/Users/krotscheck/Desktop/jersey2-toolkit/target/checkout/jersey2-vfs2/src/main/java</source>
+		<source>/Users/krotscheck/Desktop/github/jersey2-toolkit/target/checkout/jersey2-vfs2/src/main/java</source>
 	</sources>
 	<packages>
 		<package name="net.krotscheck.jersey2.vfs2" line-rate="1.0" branch-rate="1.0" complexity="1.75">
