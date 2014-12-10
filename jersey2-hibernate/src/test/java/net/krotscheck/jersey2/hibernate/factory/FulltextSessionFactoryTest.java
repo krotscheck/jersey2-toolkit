@@ -93,6 +93,13 @@ public final class FulltextSessionFactoryTest {
         factory.dispose(session);
         Assert.assertFalse(session.isOpen());
 
+        // Make sure we can dispose of the session again.
+        factory.dispose(session);
+        Assert.assertFalse(session.isOpen());
+
+        // Make sure accidentally passing null doesn't blow up.
+        factory.dispose(null);
+
         if (hibernateSession.isOpen()) {
             hibernateSession.close();
         }

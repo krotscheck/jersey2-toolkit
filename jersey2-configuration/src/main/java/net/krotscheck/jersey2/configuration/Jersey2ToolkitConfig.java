@@ -66,9 +66,6 @@ public final class Jersey2ToolkitConfig extends CompositeConfiguration {
         // Inject the library version
         String jersey2ToolkitVersion = Jersey2ToolkitConfig.class
                 .getPackage().getImplementationVersion();
-        if (jersey2ToolkitVersion == null) {
-            jersey2ToolkitVersion = "dev";
-        }
 
         HashMap<String, Object> versionConfigMap = new HashMap<>();
         versionConfigMap.put("jersey2-toolkit.version", jersey2ToolkitVersion);

@@ -75,7 +75,7 @@ public final class FulltextSessionFactory implements Factory<FullTextSession> {
      */
     @Override
     public void dispose(final FullTextSession session) {
-        if (session.isOpen()) {
+        if (session != null && session.isOpen()) {
             logger.trace("Disposing of hibernate fulltext session.");
             session.close();
         }

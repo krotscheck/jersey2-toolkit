@@ -90,6 +90,13 @@ public final class HibernateSessionFactoryTest {
         // Make sure we can dispose of the session.
         factory.dispose(session);
         Assert.assertFalse(session.isOpen());
+
+        // Make sure that disposing an already closed session doesn't blow up.
+        factory.dispose(session);
+        Assert.assertFalse(session.isOpen());
+
+        // Make sure accidentally passing null doesn't blow up.
+        factory.dispose(null);
     }
 
     /**

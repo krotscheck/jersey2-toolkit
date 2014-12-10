@@ -138,101 +138,83 @@ public final class HibernateSessionFactoryFactory
 
         List<PostInsertEventListener> postInsertEvents = locator
                 .getAllServices(PostInsertEventListener.class);
-        if (postInsertEvents != null) {
-            for (PostInsertEventListener piEventListener : postInsertEvents) {
-                logger.trace("Registering PostInsert: " + piEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.POST_INSERT,
-                        piEventListener);
-            }
+        for (PostInsertEventListener piEventListener : postInsertEvents) {
+            logger.trace("Registering PostInsert: " + piEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.POST_INSERT,
+                    piEventListener);
         }
 
         List<PostUpdateEventListener> postUpdateEvents = locator
                 .getAllServices(PostUpdateEventListener.class);
-        if (postUpdateEvents != null) {
-            for (PostUpdateEventListener puEventListener : postUpdateEvents) {
-                logger.trace("Registering PostUpdate: " + puEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.POST_UPDATE,
-                        puEventListener);
-            }
+        for (PostUpdateEventListener puEventListener : postUpdateEvents) {
+            logger.trace("Registering PostUpdate: " + puEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.POST_UPDATE,
+                    puEventListener);
         }
 
         List<PostDeleteEventListener> postDeleteEvents = locator
                 .getAllServices(PostDeleteEventListener.class);
-        if (postDeleteEvents != null) {
-            for (PostDeleteEventListener pdEventListener : postDeleteEvents) {
-                logger.trace("Registering PostDelete: " + pdEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.POST_DELETE,
-                        pdEventListener);
-            }
+        for (PostDeleteEventListener pdEventListener : postDeleteEvents) {
+            logger.trace("Registering PostDelete: " + pdEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.POST_DELETE,
+                    pdEventListener);
         }
 
         List<PreInsertEventListener> preInsertEvents = locator
                 .getAllServices(PreInsertEventListener.class);
-        if (preInsertEvents != null) {
-            for (PreInsertEventListener piEventListener : preInsertEvents) {
-                logger.trace("Registering PreInsert: " + piEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.PRE_INSERT,
-                        piEventListener);
-            }
+        for (PreInsertEventListener piEventListener : preInsertEvents) {
+            logger.trace("Registering PreInsert: " + piEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.PRE_INSERT,
+                    piEventListener);
         }
 
         List<PreUpdateEventListener> preUpdateEvents = locator
                 .getAllServices(PreUpdateEventListener.class);
-        if (preUpdateEvents != null) {
-            for (PreUpdateEventListener puEventListener : preUpdateEvents) {
-                logger.trace("Registering PreUpdate: " + puEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.PRE_UPDATE,
-                        puEventListener);
-            }
+        for (PreUpdateEventListener puEventListener : preUpdateEvents) {
+            logger.trace("Registering PreUpdate: " + puEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.PRE_UPDATE,
+                    puEventListener);
         }
 
         List<PreDeleteEventListener> preDeleteEvents = locator
                 .getAllServices(PreDeleteEventListener.class);
-        if (preDeleteEvents != null) {
-            for (PreDeleteEventListener pdEventListener : preDeleteEvents) {
-                logger.trace("Registering PreDelete: " + pdEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.PRE_DELETE,
-                        pdEventListener);
-            }
+        for (PreDeleteEventListener pdEventListener : preDeleteEvents) {
+            logger.trace("Registering PreDelete: " + pdEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.PRE_DELETE,
+                    pdEventListener);
         }
 
         List<PostCommitInsertEventListener> pciEvents = locator
                 .getAllServices(PostCommitInsertEventListener.class);
-        if (pciEvents != null) {
-            for (PostCommitInsertEventListener cpiEventListener : pciEvents) {
-                logger.trace("Registering PostCommitInsert: " + cpiEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.POST_COMMIT_INSERT,
-                        cpiEventListener);
-            }
+        for (PostCommitInsertEventListener cpiEventListener : pciEvents) {
+            logger.trace("Registering PostCommitInsert: " + cpiEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.POST_COMMIT_INSERT,
+                    cpiEventListener);
         }
 
         List<PostCommitUpdateEventListener> pcuEvents = locator
                 .getAllServices(PostCommitUpdateEventListener.class);
-        if (pcuEvents != null) {
-            for (PostCommitUpdateEventListener cpuEventListener : pcuEvents) {
-                logger.trace("Registering PostCommitUpdate: " + cpuEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.POST_COMMIT_UPDATE,
-                        cpuEventListener);
-            }
+        for (PostCommitUpdateEventListener cpuEventListener : pcuEvents) {
+            logger.trace("Registering PostCommitUpdate: " + cpuEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.POST_COMMIT_UPDATE,
+                    cpuEventListener);
         }
 
         List<PostCommitDeleteEventListener> pcdEvents = locator
                 .getAllServices(PostCommitDeleteEventListener.class);
-        if (pcuEvents != null) {
-            for (PostCommitDeleteEventListener cpdEventListener : pcdEvents) {
-                logger.trace("Registering PostCommitDelete: " + cpdEventListener
-                        .getClass().getCanonicalName());
-                eventRegistry.appendListeners(EventType.POST_COMMIT_DELETE,
-                        cpdEventListener);
-            }
+        for (PostCommitDeleteEventListener cpdEventListener : pcdEvents) {
+            logger.trace("Registering PostCommitDelete: " + cpdEventListener
+                    .getClass().getCanonicalName());
+            eventRegistry.appendListeners(EventType.POST_COMMIT_DELETE,
+                    cpdEventListener);
         }
     }
 

@@ -115,9 +115,14 @@ public final class HibernateSessionFactoryFactoryTest {
 
         // Make sure we can dispose of the factory.
         factoryFactory.dispose(factory);
-
         Assert.assertTrue(factory.isClosed());
         Assert.assertFalse(session.isOpen());
+
+        // Make sure doing it twice won't fail.
+        factoryFactory.dispose(factory);
+
+        // Make sure passing null doesn't fail
+        factoryFactory.dispose(null);
     }
 
     /**

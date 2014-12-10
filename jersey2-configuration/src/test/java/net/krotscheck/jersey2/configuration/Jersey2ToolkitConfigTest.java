@@ -141,19 +141,20 @@ public final class Jersey2ToolkitConfigTest {
 
     /**
      * Assert that the default version configuration in a compile environment is
-     * 'dev', and that you cannot override it.
+     * null, and that you cannot override it. This will be populated once the
+     * package is actually packaged and has the metadata associated with it.
      */
     @Test
     public void testDebugVersionConfiguration() {
         Configuration config = new Jersey2ToolkitConfig();
 
-        Assert.assertEquals("dev", config.getProperty(
+        Assert.assertEquals(null, config.getProperty(
                 "jersey2-toolkit.version"));
 
         // Override the version property.
         System.setProperty("jersey2-toolkit.version", "override1");
 
-        Assert.assertEquals("dev", config.getProperty(
+        Assert.assertEquals(null, config.getProperty(
                 "jersey2-toolkit.version"));
 
         System.clearProperty("jersey2-toolkit.version");
