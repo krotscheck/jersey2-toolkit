@@ -98,22 +98,29 @@
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>          <em class="jxr_comment">// Make sure we can dispose of the session.</em>
 <a class="jxr_linenumber" name="L91" href="#L91">91</a>          factory.dispose(session);
 <a class="jxr_linenumber" name="L92" href="#L92">92</a>          Assert.assertFalse(session.isOpen());
-<a class="jxr_linenumber" name="L93" href="#L93">93</a>      }
-<a class="jxr_linenumber" name="L94" href="#L94">94</a>  
-<a class="jxr_linenumber" name="L95" href="#L95">95</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L96" href="#L96">96</a>  <em class="jxr_javadoccomment">     * A private class to test our feature injection.</em>
-<a class="jxr_linenumber" name="L97" href="#L97">97</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L98" href="#L98">98</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../net/krotscheck/jersey2/hibernate/factory/HibernateSessionFactoryTest.html">TestFeature</a> <strong class="jxr_keyword">implements</strong> Feature {
-<a class="jxr_linenumber" name="L99" href="#L99">99</a>  
-<a class="jxr_linenumber" name="L100" href="#L100">100</a>         @Override
-<a class="jxr_linenumber" name="L101" href="#L101">101</a>         <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> configure(<strong class="jxr_keyword">final</strong> FeatureContext context) {
-<a class="jxr_linenumber" name="L102" href="#L102">102</a>             context.register(<strong class="jxr_keyword">new</strong> HibernateConfigurationFactory.Binder());
-<a class="jxr_linenumber" name="L103" href="#L103">103</a>             context.register(<strong class="jxr_keyword">new</strong> HibernateSessionFactoryFactory.Binder());
-<a class="jxr_linenumber" name="L104" href="#L104">104</a>             context.register(<strong class="jxr_keyword">new</strong> HibernateSessionFactory.Binder());
-<a class="jxr_linenumber" name="L105" href="#L105">105</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
-<a class="jxr_linenumber" name="L106" href="#L106">106</a>         }
-<a class="jxr_linenumber" name="L107" href="#L107">107</a>     }
-<a class="jxr_linenumber" name="L108" href="#L108">108</a> }
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          <em class="jxr_comment">// Make sure that disposing an already closed session doesn't blow up.</em>
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          factory.dispose(session);
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          Assert.assertFalse(session.isOpen());
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>  
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          <em class="jxr_comment">// Make sure accidentally passing null doesn't blow up.</em>
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          factory.dispose(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>     }
+<a class="jxr_linenumber" name="L101" href="#L101">101</a> 
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> <em class="jxr_javadoccomment">     * A private class to test our feature injection.</em>
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../net/krotscheck/jersey2/hibernate/factory/HibernateSessionFactoryTest.html">TestFeature</a> <strong class="jxr_keyword">implements</strong> Feature {
+<a class="jxr_linenumber" name="L106" href="#L106">106</a> 
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         @Override
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> configure(<strong class="jxr_keyword">final</strong> FeatureContext context) {
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>             context.register(<strong class="jxr_keyword">new</strong> HibernateConfigurationFactory.Binder());
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>             context.register(<strong class="jxr_keyword">new</strong> HibernateSessionFactoryFactory.Binder());
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>             context.register(<strong class="jxr_keyword">new</strong> HibernateSessionFactory.Binder());
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         }
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>     }
+<a class="jxr_linenumber" name="L115" href="#L115">115</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2014 <a href="http://www.krotscheck.net">krotscheck.net</a>. All rights reserved.</div>
