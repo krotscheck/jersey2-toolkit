@@ -1,0 +1,60 @@
+#parse( "scripts.vm" )
+#set($moduleName = "jersey2-http")
+
+#header($moduleName)
+
+This library injects constructed instances for various common components of 
+the Apache Commons HTTP library. They are all injected on a request scope
+
+Note: This library may require contribution to support the HTTP components 
+which you require. Please feel free to contribute your own components.
+
+#dependency($moduleName)
+
+$h2 Quickstart
+
+Simply register the feature in your application in accordance with the 
+[Jersey2 Application Model](https://jersey.java.net/documentation/latest/deployment.html#environmenmt.appmodel).
+
+	import net.krotscheck.jersey2.http.HttpFeature;
+	import org.glassfish.jersey.server.ResourceConfig;
+
+	public class YourApplication extends ResourceConfig {
+	    public YourApplication() {
+	        register(HttpFeature.class);
+	    }
+	}
+
+---
+
+$h2 Provided Components
+
+This feature provides the following components and component binders. Scope, 
+Types, and Names are provided.
+
+$h3 `AcceptHeader`
+
+The HTTP "Accept" header, cast to an HTTP `BasicHeader` instance. While not 
+sorted based on priority, it will provide `BasicHeaderElement` instances for 
+every mimeType requested by the client.
+
+* *Scope:* RequestScoped
+* *Type:* org.apache.http.message.BasicHeader
+* *Type:* net.krotscheck.jersey2.http.header.AcceptHeader
+* *Name:* Accept
+
+
+    @Path("/path")
+    public class MyService {
+    
+        @Inject
+        @Named(HttpHeaders.ACCEPT)
+        public BasicHeader acceptsHeader;
+    
+        @GET
+        @Produces(MediaType.APPLICATION_JSON)
+        public Response getMethod() {
+            return Response.ok().build();
+        }
+    }
+
