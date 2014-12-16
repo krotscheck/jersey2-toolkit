@@ -1,5 +1,16 @@
 # Release Notes
 
+## Version 0.1.18
+* Updated version of jersey to 2.14
+
+## Version 0.1.17
+* Updated hibernate to 4.3.7.FINAL
+* Created Jersey2 HTTP Feature
+* Build now fails on checkstyle or coverage failures.
+
+## Version 0.1.16
+*  Added post commit event injection to hibernate feature
+
 ## Version 0.1.15
 * Removed jersey2-util module in favor of net.krotscheck:knet-utils.
 * Updated release notes.
