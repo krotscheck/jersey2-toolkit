@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="183" lines-valid="183" branches-covered="30" branches-valid="30" complexity="1.6153846153846154" version="2.0.3" timestamp="1418250557454">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="183" lines-valid="183" branches-covered="30" branches-valid="30" complexity="1.6153846153846154" version="2.0.3" timestamp="1418747965047">
 	<sources>
 		<source>--source</source>
 		<source>/Users/krotscheck/Desktop/github/jersey2-toolkit/target/checkout/jersey2-hibernate/src/main/java</source>
@@ -125,9 +125,9 @@
 						</method>
 						<method name="&lt;init&gt;" signature="(Lorg/hibernate/Session;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="56" hits="4" branch="false"/>
-								<line number="57" hits="4" branch="false"/>
-								<line number="58" hits="4" branch="false"/>
+								<line number="56" hits="3" branch="false"/>
+								<line number="57" hits="3" branch="false"/>
+								<line number="58" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="dispose" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0">
@@ -142,40 +142,40 @@
 										<condition number="1" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="79" hits="2" branch="false"/>
-								<line number="80" hits="2" branch="false"/>
+								<line number="79" hits="1" branch="false"/>
+								<line number="80" hits="1" branch="false"/>
 								<line number="82" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="37" hits="3" branch="false"/>
+								<line number="37" hits="2" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Lorg/hibernate/search/FullTextSession;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="67" hits="3" branch="false"/>
-								<line number="68" hits="3" branch="false"/>
+								<line number="67" hits="2" branch="false"/>
+								<line number="68" hits="2" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="37" hits="3" branch="false"/>
+						<line number="37" hits="2" branch="false"/>
 						<line number="42" hits="2" branch="false"/>
 						<line number="43" hits="1" branch="false"/>
-						<line number="56" hits="4" branch="false"/>
-						<line number="57" hits="4" branch="false"/>
-						<line number="58" hits="4" branch="false"/>
-						<line number="67" hits="3" branch="false"/>
-						<line number="68" hits="3" branch="false"/>
+						<line number="56" hits="3" branch="false"/>
+						<line number="57" hits="3" branch="false"/>
+						<line number="58" hits="3" branch="false"/>
+						<line number="67" hits="2" branch="false"/>
+						<line number="68" hits="2" branch="false"/>
 						<line number="78" hits="4" branch="true" condition-coverage="100% (4/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="79" hits="2" branch="false"/>
-						<line number="80" hits="2" branch="false"/>
+						<line number="79" hits="1" branch="false"/>
+						<line number="80" hits="1" branch="false"/>
 						<line number="82" hits="4" branch="false"/>
 					</lines>
 				</class>
@@ -285,9 +285,9 @@
 						</method>
 						<method name="&lt;init&gt;" signature="(Lorg/hibernate/SessionFactory;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="58" hits="3" branch="false"/>
-								<line number="59" hits="3" branch="false"/>
-								<line number="60" hits="3" branch="false"/>
+								<line number="58" hits="4" branch="false"/>
+								<line number="59" hits="4" branch="false"/>
+								<line number="60" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="dispose" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0">
@@ -302,40 +302,40 @@
 										<condition number="1" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="81" hits="1" branch="false"/>
-								<line number="82" hits="1" branch="false"/>
+								<line number="81" hits="2" branch="false"/>
+								<line number="82" hits="2" branch="false"/>
 								<line number="84" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="39" hits="2" branch="false"/>
+								<line number="39" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="provide" signature="()Lorg/hibernate/Session;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="69" hits="2" branch="false"/>
-								<line number="70" hits="2" branch="false"/>
+								<line number="69" hits="3" branch="false"/>
+								<line number="70" hits="3" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="2" branch="false"/>
+						<line number="39" hits="3" branch="false"/>
 						<line number="44" hits="2" branch="false"/>
 						<line number="45" hits="1" branch="false"/>
-						<line number="58" hits="3" branch="false"/>
-						<line number="59" hits="3" branch="false"/>
-						<line number="60" hits="3" branch="false"/>
-						<line number="69" hits="2" branch="false"/>
-						<line number="70" hits="2" branch="false"/>
+						<line number="58" hits="4" branch="false"/>
+						<line number="59" hits="4" branch="false"/>
+						<line number="60" hits="4" branch="false"/>
+						<line number="69" hits="3" branch="false"/>
+						<line number="70" hits="3" branch="false"/>
 						<line number="80" hits="4" branch="true" condition-coverage="100% (4/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="81" hits="1" branch="false"/>
-						<line number="82" hits="1" branch="false"/>
+						<line number="81" hits="2" branch="false"/>
+						<line number="82" hits="2" branch="false"/>
 						<line number="84" hits="4" branch="false"/>
 					</lines>
 				</class>
