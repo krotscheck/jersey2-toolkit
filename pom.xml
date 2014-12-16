@@ -14,7 +14,6 @@
         <module>jersey2-configuration</module>
         <module>jersey2-hibernate</module>
         <module>jersey2-vfs2</module>
-        <module>jersey2-http</module>
     </modules>
 
     <profiles>
@@ -119,7 +118,6 @@
 
         <!-- velocity variables -->
         <site_version>${project.version}</site_version>
-        <apache.http.version>4.3.2</apache.http.version>
     </properties>
 
     <distributionManagement>
@@ -149,14 +147,13 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <configuration>
                     <server>github</server>
-                    <message>Site:
-                        ${project.groupId}:${project.artifactId}:${project.version}
-                    </message>
+                    <message>Site: ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <merge>true</merge>
                     <oauth2Token>${github.oauth2Token}</oauth2Token>
                 </configuration>
 
             </plugin>
+
 
 
             <plugin>
@@ -180,8 +177,7 @@
                         </dependency>
                     </dependencies>
                     <configuration>
-                        <arguments>-Dgpg.passphrase=${gpg.passphrase}
-                        </arguments>
+                        <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
                     </configuration>
                 </plugin>
 
@@ -265,8 +261,7 @@
                     </dependencies>
                     <configuration>
                         <groups>net.krotscheck.test.UnitTest</groups>
-                        <excludedGroups>net.krotscheck.test.IntegrationTest
-                        </excludedGroups>
+                        <excludedGroups>net.krotscheck.test.IntegrationTest</excludedGroups>
                     </configuration>
                     <executions>
                         <execution>
@@ -276,10 +271,8 @@
                                 <goal>test</goal>
                             </goals>
                             <configuration>
-                                <groups>net.krotscheck.test.IntegrationTest
-                                </groups>
-                                <excludedGroups>net.krotscheck.test.UnitTest
-                                </excludedGroups>
+                                <groups>net.krotscheck.test.IntegrationTest</groups>
+                                <excludedGroups>net.krotscheck.test.UnitTest</excludedGroups>
                             </configuration>
                         </execution>
                     </executions>
@@ -374,28 +367,6 @@
                     <version>2.8</version>
                 </plugin>
 
-                <!-- Checkstyle plugin -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>2.13</version>
-                    <configuration>
-                        <configLocation>checkstyle.xml</configLocation>
-                        <failsOnError>true</failsOnError>
-                        <consoleOutput>true</consoleOutput>
-                        <encoding>UTF-8</encoding>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>validate</id>
-                            <phase>validate</phase>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
 
             </plugins>
         </pluginManagement>
@@ -471,8 +442,7 @@
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.7</version>
                 <configuration>
-                    <dependencyLocationsEnabled>false
-                    </dependencyLocationsEnabled>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                     <anonymousConnection>
                         scm:git:git@github.com:krotscheck/jersey2-toolkit.git
                     </anonymousConnection>
@@ -511,6 +481,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.13</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                    <failsOnError>true</failsOnError>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
