@@ -23,9 +23,9 @@ under the License.
     <link>https://github.com/krotscheck/jersey2-toolkit</link>
     <description>jersey2-toolkit - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2014 krotscheck.net</copyright>
+    <copyright>&#169;2015 krotscheck.net</copyright>
     <item>
-      <title>File: 20,
+      <title>File: 16,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -44,20 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.http.header.package-info.java">net/krotscheck/jersey2/http/header/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.vfs2.package-info.java">net/krotscheck/jersey2/vfs2/package-info.java</a>
@@ -89,34 +75,6 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.vfs2.VFS2Feature.java">net/krotscheck/jersey2/vfs2/VFS2Feature.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.http.package-info.java">net/krotscheck/jersey2/http/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.http.HttpFeature.java">net/krotscheck/jersey2/http/HttpFeature.java</a>
                 </td>
                 <td>
                   0
@@ -173,20 +131,6 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener.java">net/krotscheck/jersey2/hibernate/lifecycle/SearchIndexContextListener.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.http.header.AcceptsHeader.java">net/krotscheck/jersey2/http/header/AcceptsHeader.java</a>
                 </td>
                 <td>
                   0
