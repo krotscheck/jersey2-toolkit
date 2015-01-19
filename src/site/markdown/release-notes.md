@@ -1,5 +1,9 @@
 # Release Notes
 
+## Version 0.1.19
+* Updated version of jersey to 2.15
+* Revoked Jersey2 HTTP Feature
+
 ## Version 0.1.18
 * Updated version of jersey to 2.14
 
