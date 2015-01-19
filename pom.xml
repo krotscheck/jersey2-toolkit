@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.krotscheck.jersey2</groupId>
     <artifactId>jersey2-toolkit</artifactId>
-    <version>1.1.19-SNAPSHOT</version>
+    <version>1.1.19</version>
 
     <packaging>pom</packaging>
     <name>jersey2-toolkit</name>
@@ -103,7 +103,7 @@
         <url>
             https://github.com/krotscheck/jersey2-toolkit
         </url>
-        <tag>HEAD</tag>
+        <tag>jersey2-toolkit-1.1.19</tag>
     </scm>
 
     <properties>
