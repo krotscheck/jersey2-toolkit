@@ -1,8 +1,6 @@
 language: java
 jdk:
 - openjdk7
-install: mvn install -DskipTests=true
-script: mvn install
 branches:
   only:
   - master
@@ -13,3 +11,14 @@ branches:
 cache:
   directories:
   - $HOME/.m2
+
+before_script:
+  - mvn clean
+  - mvn checkstyle:check
+  - mvn cobertura:check
+  - mvn pmd:check
+  - mvn pmd:cpd-check
+script:
+  - mvn install
+after_success:
+  - mvn clean cobertura:cobertura coveralls:report
