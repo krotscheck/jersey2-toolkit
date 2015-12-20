@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="0" lines-valid="0" branches-covered="0" branches-valid="0" complexity="0.0" version="2.0.3" timestamp="1450626902911">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="0" lines-valid="0" branches-covered="0" branches-valid="0" complexity="0.0" version="2.0.3" timestamp="1450642264139">
 	<sources>
 		<source>/Users/krotscheck/Desktop/dataplay/jersey2-toolkit/target/checkout/jersey2-hibernate/src/main/java</source>
 		<source>--source</source>
