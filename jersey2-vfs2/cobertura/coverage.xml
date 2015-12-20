@@ -1,107 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="1.0" branch-rate="1.0" lines-covered="17" lines-valid="17" branches-covered="0" branches-valid="0" complexity="1.75" version="2.0.3" timestamp="1440379900810">
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="0" lines-valid="0" branches-covered="0" branches-valid="0" complexity="0.0" version="2.0.3" timestamp="1450627448790">
 	<sources>
 		<source>--source</source>
-		<source>/Users/krotscheck/Desktop/github/jersey2-toolkit/target/checkout/jersey2-vfs2/src/main/java</source>
+		<source>/Users/krotscheck/Desktop/dataplay/jersey2-toolkit/target/checkout/jersey2-vfs2/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="net.krotscheck.jersey2.vfs2" line-rate="1.0" branch-rate="1.0" complexity="1.75">
-			<classes>
-				<class name="net.krotscheck.jersey2.vfs2.FileSystemManagerFactory" filename="net/krotscheck/jersey2/vfs2/FileSystemManagerFactory.java" line-rate="1.0" branch-rate="1.0" complexity="2.0">
-					<methods>
-						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="42" hits="4" branch="false"/>
-								<line number="43" hits="2" branch="false"/>
-							</lines>
-						</method>
-						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="73" hits="6" branch="false"/>
-							</lines>
-						</method>
-						<method name="dispose" signature="(Ljava/lang/Object;)V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-							</lines>
-						</method>
-						<method name="dispose" signature="(Lorg/apache/commons/vfs2/FileSystemManager;)V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="68" hits="3" branch="false"/>
-							</lines>
-						</method>
-						<method name="provide" signature="()Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="36" hits="10" branch="false"/>
-							</lines>
-						</method>
-						<method name="provide" signature="()Lorg/apache/commons/vfs2/FileSystemManager;" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="53" hits="4" branch="false"/>
-								<line number="54" hits="1" branch="false"/>
-								<line number="55" hits="1" branch="false"/>
-								<line number="56" hits="1" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="36" hits="10" branch="false"/>
-						<line number="42" hits="4" branch="false"/>
-						<line number="43" hits="2" branch="false"/>
-						<line number="53" hits="4" branch="false"/>
-						<line number="54" hits="1" branch="false"/>
-						<line number="55" hits="1" branch="false"/>
-						<line number="56" hits="1" branch="false"/>
-						<line number="68" hits="3" branch="false"/>
-						<line number="73" hits="6" branch="false"/>
-					</lines>
-				</class>
-				<class name="net.krotscheck.jersey2.vfs2.FileSystemManagerFactory$Binder" filename="net/krotscheck/jersey2/vfs2/FileSystemManagerFactory.java" line-rate="1.0" branch-rate="1.0" complexity="2.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="73" hits="3" branch="false"/>
-							</lines>
-						</method>
-						<method name="configure" signature="()V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="77" hits="3" branch="false"/>
-								<line number="78" hits="3" branch="false"/>
-								<line number="79" hits="3" branch="false"/>
-								<line number="80" hits="3" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="73" hits="3" branch="false"/>
-						<line number="77" hits="3" branch="false"/>
-						<line number="78" hits="3" branch="false"/>
-						<line number="79" hits="3" branch="false"/>
-						<line number="80" hits="3" branch="false"/>
-					</lines>
-				</class>
-				<class name="net.krotscheck.jersey2.vfs2.VFS2Feature" filename="net/krotscheck/jersey2/vfs2/VFS2Feature.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="33" hits="1" branch="false"/>
-							</lines>
-						</method>
-						<method name="configure" signature="(Ljavax/ws/rs/core/FeatureContext;)Z" line-rate="1.0" branch-rate="1.0">
-							<lines>
-								<line number="43" hits="1" branch="false"/>
-								<line number="45" hits="1" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="33" hits="1" branch="false"/>
-						<line number="43" hits="1" branch="false"/>
-						<line number="45" hits="1" branch="false"/>
-					</lines>
-				</class>
-			</classes>
-		</package>
 	</packages>
 </coverage>
