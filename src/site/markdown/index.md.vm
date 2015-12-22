@@ -49,7 +49,7 @@ would like to exclude some feature, you may construct your own as follows:
     
             // Library Provided Binders
             context.register(new HibernateSessionFactory.Binder());
-            context.register(new HibernateConfigurationFactory.Binder());
+            context.register(new HibernateServiceRegistryFactory.Binder());
     
             // Disable search indexing
             // context.register(new FulltextSearchFactoryFactory.Binder());

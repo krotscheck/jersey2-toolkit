@@ -25,7 +25,6 @@ import org.glassfish.jersey.server.ApplicationHandler;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.event.service.spi.EventListenerGroup;
 import org.hibernate.event.service.spi.EventListenerRegistry;
 import org.hibernate.event.spi.EventType;
@@ -100,9 +99,10 @@ public final class HibernateSessionFactoryFactoryTest {
      */
     @Test
     public void testProvideDispose() {
-        Configuration config = locator.getService(Configuration.class);
+        ServiceRegistry serviceRegistry =
+                locator.getService(ServiceRegistry.class);
         HibernateSessionFactoryFactory factoryFactory =
-                new HibernateSessionFactoryFactory(config, locator);
+                new HibernateSessionFactoryFactory(serviceRegistry, locator);
         SessionFactory factory = locator.getService(SessionFactory.class);
 
         // Assert that the factory is open.
@@ -223,7 +223,7 @@ public final class HibernateSessionFactoryFactoryTest {
 
         @Override
         public boolean configure(final FeatureContext context) {
-            context.register(new HibernateConfigurationFactory.Binder());
+            context.register(new HibernateServiceRegistryFactory.Binder());
             context.register(new HibernateSessionFactoryFactory.Binder());
             context.register(new TestEventListener.Binder());
             return true;

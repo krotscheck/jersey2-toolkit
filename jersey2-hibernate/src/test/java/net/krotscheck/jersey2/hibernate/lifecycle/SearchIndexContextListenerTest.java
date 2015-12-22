@@ -17,7 +17,8 @@
 
 package net.krotscheck.jersey2.hibernate.lifecycle;
 
-import net.krotscheck.jersey2.hibernate.factory.HibernateConfigurationFactory;
+import net.krotscheck.jersey2.hibernate.factory.HibernateServiceRegistryFactory;
+import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactory;
 import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory;
 import net.krotscheck.test.UnitTest;
 import org.glassfish.hk2.api.ServiceLocator;
@@ -54,7 +55,6 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
  *
  * @author Michael Krotscheck
  */
-@PrepareForTest(Search.class)
 @PowerMockIgnore("javax.management.*")
 @RunWith(PowerMockRunner.class)
 @Category(UnitTest.class)
@@ -96,6 +96,7 @@ public final class SearchIndexContextListenerTest {
      *
      * @throws java.lang.Exception Any unexpected exceptions.
      */
+    @PrepareForTest(Search.class)
     @Test
     public void testOnStartup() throws Exception {
         // Set up our container
@@ -137,6 +138,7 @@ public final class SearchIndexContextListenerTest {
      *
      * @throws Exception An exception that might be thrown.
      */
+    @PrepareForTest(Search.class)
     @Test
     public void testInterruptedIndex() throws Exception {
         // Set up our container
@@ -200,7 +202,7 @@ public final class SearchIndexContextListenerTest {
                 new SearchIndexContextListener(sessionFactory);
 
         Container mockContainer = mock(Container.class);
-        listener.onReload(mockContainer);
+        listener.onShutdown(mockContainer);
         verifyZeroInteractions(mockContainer);
     }
 
@@ -211,8 +213,9 @@ public final class SearchIndexContextListenerTest {
 
         @Override
         public boolean configure(final FeatureContext context) {
-            context.register(new HibernateConfigurationFactory.Binder());
+            context.register(new HibernateServiceRegistryFactory.Binder());
             context.register(new HibernateSessionFactoryFactory.Binder());
+            context.register(new HibernateSessionFactory.Binder());
             return true;
         }
     }

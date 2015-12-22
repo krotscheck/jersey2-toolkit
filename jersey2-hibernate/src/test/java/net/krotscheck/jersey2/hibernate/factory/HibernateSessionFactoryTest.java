@@ -106,7 +106,7 @@ public final class HibernateSessionFactoryTest {
 
         @Override
         public boolean configure(final FeatureContext context) {
-            context.register(new HibernateConfigurationFactory.Binder());
+            context.register(new HibernateServiceRegistryFactory.Binder());
             context.register(new HibernateSessionFactoryFactory.Binder());
             context.register(new HibernateSessionFactory.Binder());
             return true;

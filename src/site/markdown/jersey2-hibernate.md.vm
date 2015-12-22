@@ -82,22 +82,22 @@ inject the SessionFactory yourself. Remember to close your sessions.
         }
     }
 
-$h3 `Configuration`
+$h3 `ServiceRegistry`
 
-While available for injection, the injection chain is such that you cannot 
-guarantee that modifications to the configuration will persist to the session 
-factory. You may override this by either providing your own Configuration 
-provider, or by updating your configuration files.
+While available for injection, the injection chain is such that you cannot
+guarantee that modifications to the service registry will persist to the
+session factory. You may override this by either providing your own
+StandardServiceRegistry provider, or by updating your configuration files.
 
 * *Scope:* Singleton
-* *Type:* org.hibernate.cfg.Configuration
+* *Type:* org.hibernate.service.ServiceRegistry
 
 
     @Path("/path")
     public class MyService {
     
         @Inject
-        public Configuration configuration;
+        public ServiceRegistry serviceRegistry;
     
         @GET
         @Produces(MediaType.APPLICATION_JSON)

@@ -21,7 +21,10 @@ package net.krotscheck.jersey2.hibernate.factory;
 import net.krotscheck.test.UnitTest;
 import org.glassfish.jersey.server.ApplicationHandler;
 import org.glassfish.jersey.server.ResourceConfig;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.dialect.Dialect;
+import org.hibernate.dialect.H2Dialect;
+import org.hibernate.service.ServiceRegistry;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -35,27 +38,25 @@ import javax.ws.rs.core.FeatureContext;
  * @author Michael Krotscheck
  */
 @Category(UnitTest.class)
-public final class HibernateConfigurationFactoryTest {
+public final class HibernateServiceRegistryFactoryTest {
 
     /**
      * Test provide and dispose.
      */
     @Test
     public void testProvideDispose() {
-        HibernateConfigurationFactory factory = new
-                HibernateConfigurationFactory();
+        HibernateServiceRegistryFactory factory = new
+                HibernateServiceRegistryFactory();
 
-        Configuration config = factory.provide();
+        ServiceRegistry serviceRegistry = factory.provide();
 
-        Assert.assertEquals(
-                "org.hibernate.dialect.H2Dialect",
-                config.getProperty("hibernate.dialect")
-        );
+        Dialect d = new MetadataSources(serviceRegistry)
+                .buildMetadata().getDatabase().getDialect();
+        Assert.assertTrue(d instanceof H2Dialect);
 
         // This shouldn't actually do anything, but is included here for
         // coverage.
-        factory.dispose(config);
-
+        factory.dispose(serviceRegistry);
     }
 
     /**
@@ -72,20 +73,19 @@ public final class HibernateConfigurationFactoryTest {
 
         // Create a fake application.
         ApplicationHandler handler = new ApplicationHandler(config);
-        Configuration appConfig = handler
-                .getServiceLocator().getService(Configuration.class);
-        Assert.assertNotNull(appConfig);
+        ServiceRegistry serviceRegistry = handler
+                .getServiceLocator().getService(ServiceRegistry.class);
+        Assert.assertNotNull(serviceRegistry);
 
         // Make sure it's reading from the same place.
-        Assert.assertEquals(
-                "org.hibernate.dialect.H2Dialect",
-                appConfig.getProperty("hibernate.dialect")
-        );
+        Dialect d = new MetadataSources(serviceRegistry)
+                .buildMetadata().getDatabase().getDialect();
+        Assert.assertTrue(d instanceof H2Dialect);
 
         // Make sure it's a singleton...
-        Configuration appConfig2 = handler
-                .getServiceLocator().getService(Configuration.class);
-        Assert.assertSame(appConfig, appConfig2);
+        ServiceRegistry serviceRegistry2 = handler
+                .getServiceLocator().getService(ServiceRegistry.class);
+        Assert.assertSame(serviceRegistry, serviceRegistry2);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class HibernateConfigurationFactoryTest {
 
         @Override
         public boolean configure(final FeatureContext context) {
-            context.register(new HibernateConfigurationFactory.Binder());
+            context.register(new HibernateServiceRegistryFactory.Binder());
             return true;
         }
     }

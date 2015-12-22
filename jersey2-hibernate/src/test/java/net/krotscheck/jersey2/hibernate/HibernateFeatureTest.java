@@ -23,9 +23,9 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.search.FullTextSession;
 import org.hibernate.search.SearchFactory;
+import org.hibernate.service.ServiceRegistry;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -82,9 +82,9 @@ public final class HibernateFeatureTest extends JerseyTest {
         private SearchIndexContextListener contextListener;
 
         /**
-         * Hibernate configuration.
+         * Hibernate service registry.
          */
-        private Configuration config;
+        private ServiceRegistry serviceRegistry;
 
         /**
          * Session factory.
@@ -110,7 +110,7 @@ public final class HibernateFeatureTest extends JerseyTest {
          * Create a new instance of our test service.
          *
          * @param cl  Context Listener
-         * @param c   Configuration
+         * @param sr  ServiceRegistry
          * @param f   Session Factory
          * @param s   Hibernate Session
          * @param sF  Search Factory
@@ -118,13 +118,13 @@ public final class HibernateFeatureTest extends JerseyTest {
          */
         @Inject
         public TestService(final SearchIndexContextListener cl,
-                           final Configuration c,
+                           final ServiceRegistry sr,
                            final SessionFactory f,
                            final SearchFactory sF,
                            final Session s,
                            final FullTextSession ftS) {
             contextListener = cl;
-            config = c;
+            serviceRegistry = sr;
             factory = f;
             session = s;
             searchFactory = sF;
@@ -139,7 +139,7 @@ public final class HibernateFeatureTest extends JerseyTest {
         @GET
         @Produces(MediaType.APPLICATION_JSON)
         public Response testService() {
-            Assert.assertNotNull(config);
+            Assert.assertNotNull(serviceRegistry);
             Assert.assertNotNull(searchFactory);
             Assert.assertNotNull(factory);
             Assert.assertNotNull(ftSession);

@@ -19,54 +19,53 @@ package net.krotscheck.jersey2.hibernate.factory;
 
 import org.glassfish.hk2.api.Factory;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.service.ServiceRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
 
 /**
- * This factory creates a singleton hibernate configuration object, using either
- * your application's hibernate.properties or hibernate.cfg.xml file. To ensure
- * all of your entities are properly registered, add both of those files to your
- * resources directory and ensure they reflect the correct settings for your
- * application.
+ * This factory creates a singleton hibernate service registry object, using
+ * hibernate's default configuration mechanism (hibernate.properties and
+ * hibernate.cfg.xml). To ensure  all of your entities are properly registered,
+ * add both of those files to your resources directory and ensure they reflect
+ * the correct settings for your application.
  *
  * @author Michael Krotscheck
  */
-public final class HibernateConfigurationFactory
-        implements Factory<Configuration> {
+public final class HibernateServiceRegistryFactory
+        implements Factory<ServiceRegistry> {
 
     /**
      * Logger instance.
      */
     private static Logger logger =
-            LoggerFactory.getLogger(HibernateConfigurationFactory.class);
+            LoggerFactory.getLogger(HibernateServiceRegistryFactory.class);
 
     /**
-     * Provide a Hibernate Configuration object.
+     * Provide a Hibernate Service Registry object.
      *
-     * @return The hibernate configuration.
+     * @return The hibernate serfice registry.
      */
     @Override
-    public Configuration provide() {
-        logger.trace("Configuration provide");
+    public ServiceRegistry provide() {
+        logger.trace("Service Registry provide");
 
-        // Get the hibernate configuration;
-        Configuration configuration = new Configuration();
-        configuration.configure();
-
-        return configuration;
+        return new StandardServiceRegistryBuilder()
+                .configure() // configures settings from hibernate.cfg.xml
+                .build();
     }
 
     /**
      * Dispose of the hibernate configuration.
      *
-     * @param configuration The configuration to dispose of.
+     * @param serviceRegistry The service registry to dispose of.
      */
     @Override
-    public void dispose(final Configuration configuration) {
-        // This instance doesn't need to be disposed of.
+    public void dispose(final ServiceRegistry serviceRegistry) {
+        StandardServiceRegistryBuilder.destroy(serviceRegistry);
     }
 
     /**
@@ -76,8 +75,8 @@ public final class HibernateConfigurationFactory
 
         @Override
         protected void configure() {
-            bindFactory(HibernateConfigurationFactory.class)
-                    .to(Configuration.class)
+            bindFactory(HibernateServiceRegistryFactory.class)
+                    .to(ServiceRegistry.class)
                     .in(Singleton.class);
         }
     }

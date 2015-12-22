@@ -22,8 +22,7 @@ import org.glassfish.hk2.api.PerThread;
 import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.boot.MetadataSources;
 import org.hibernate.event.service.spi.EventListenerRegistry;
 import org.hibernate.event.spi.EventType;
 import org.hibernate.event.spi.PostCommitDeleteEventListener;
@@ -68,21 +67,21 @@ public final class HibernateSessionFactoryFactory
     /**
      * Create a new factory factory.
      *
-     * @param hibernateConfig The Hibernate Config
+     * @param registry The Hibernate Service Registry
      * @param serviceLocator  The service locator from which to resolve event
      *                        handlers.
      */
     @Inject
-    public HibernateSessionFactoryFactory(final Configuration hibernateConfig,
+    public HibernateSessionFactoryFactory(final ServiceRegistry registry,
                                           final ServiceLocator serviceLocator) {
-        this.configuration = hibernateConfig;
+        this.serviceRegistry = registry;
         this.locator = serviceLocator;
     }
 
     /**
      * Injected hibernate configuration.
      */
-    private Configuration configuration;
+    private ServiceRegistry serviceRegistry;
 
     /**
      * The service locator.
@@ -99,11 +98,9 @@ public final class HibernateSessionFactoryFactory
         logger.trace("Creating hibernate session factory.");
 
         // Build the service registry.
-        ServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .applySettings(configuration.getProperties())
-                .build();
-
-        SessionFactory factory = configuration.buildSessionFactory(registry);
+        SessionFactory factory = new MetadataSources(serviceRegistry)
+                .buildMetadata()
+                .buildSessionFactory();
 
         // Register our event listeners.
         injectEventListeners(((SessionFactoryImpl) factory)
