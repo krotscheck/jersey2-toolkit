@@ -88,20 +88,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateConfigurationFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateConfigurationFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.package-info.java">net/krotscheck/jersey2/hibernate/package-info.java</a>
                 </td>
                 <td>
@@ -131,6 +117,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener.java">net/krotscheck/jersey2/hibernate/lifecycle/SearchIndexContextListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://github.com/krotscheck/jersey2-toolkit/checkstyle.html#net.krotscheck.jersey2.hibernate.factory.HibernateServiceRegistryFactory.java">net/krotscheck/jersey2/hibernate/factory/HibernateServiceRegistryFactory.java</a>
                 </td>
                 <td>
                   0
