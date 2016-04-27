@@ -18,7 +18,6 @@
 package net.krotscheck.jersey2.hibernate.factory;
 
 import org.glassfish.hk2.api.Factory;
-import org.glassfish.hk2.api.PerThread;
 import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.hibernate.SessionFactory;
@@ -41,6 +40,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * This factory provides a singleton Hibernate SessionFactory for your
@@ -67,9 +67,9 @@ public final class HibernateSessionFactoryFactory
     /**
      * Create a new factory factory.
      *
-     * @param registry The Hibernate Service Registry
-     * @param serviceLocator  The service locator from which to resolve event
-     *                        handlers.
+     * @param registry       The Hibernate Service Registry
+     * @param serviceLocator The service locator from which to resolve event
+     *                       handlers.
      */
     @Inject
     public HibernateSessionFactoryFactory(final ServiceRegistry registry,
@@ -224,7 +224,7 @@ public final class HibernateSessionFactoryFactory
         protected void configure() {
             bindFactory(HibernateSessionFactoryFactory.class)
                     .to(SessionFactory.class)
-                    .in(PerThread.class);
+                    .in(Singleton.class);
         }
     }
 }
