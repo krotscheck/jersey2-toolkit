@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Michael Krotscheck
+ * Copyright (c) 2016 Michael Krotscheck
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy
@@ -15,33 +15,25 @@
  * limitations under the License.
  */
 
-package net.krotscheck.jersey2.hibernate.lifecycle;
+package net.krotscheck.jersey2.hibernate.context;
 
-import net.krotscheck.jersey2.hibernate.factory.HibernateServiceRegistryFactory;
-import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactory;
-import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory;
 import net.krotscheck.test.UnitTest;
-import org.glassfish.hk2.api.ServiceLocator;
-import org.glassfish.jersey.server.ApplicationHandler;
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.server.spi.Container;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.search.FullTextSession;
 import org.hibernate.search.MassIndexer;
 import org.hibernate.search.Search;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import javax.ws.rs.core.Feature;
-import javax.ws.rs.core.FeatureContext;
+import javax.servlet.ServletContextEvent;
 
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.doCallRealMethod;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -55,53 +47,18 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
  *
  * @author Michael Krotscheck
  */
-@PowerMockIgnore("javax.management.*")
-@RunWith(PowerMockRunner.class)
 @Category(UnitTest.class)
-@PrepareForTest(Search.class)
-public final class SearchIndexContextListenerTest {
-
-    /**
-     * The jersey application handler.
-     */
-    private ApplicationHandler handler;
-
-    /**
-     * The jersey application service locator.
-     */
-    private ServiceLocator locator;
-
-    /**
-     * Setup the application handler for this test.
-     */
-    @Before
-    public void setup() {
-        ResourceConfig config = new ResourceConfig();
-        config.register(TestFeature.class);
-        handler = new ApplicationHandler(config);
-        locator = handler.getServiceLocator();
-    }
-
-    /**
-     * Teardown the application handler.
-     */
-    @After
-    public void teardown() {
-        locator.shutdown();
-        locator = null;
-        handler = null;
-    }
+@RunWith(PowerMockRunner.class)
+public final class SearchIndexContextListenerITest {
 
     /**
      * Assert that the index is created on startup.
      *
-     * @throws java.lang.Exception Any unexpected exceptions.
+     * @throws Exception Any unexpected exceptions.
      */
     @Test
+    @PrepareForTest({Search.class, SearchIndexContextListener.class})
     public void testOnStartup() throws Exception {
-        // Set up our container
-        Container mockContainer = mock(Container.class);
-
         // Set up a fake session factory
         SessionFactory mockFactory = mock(SessionFactory.class);
         Session mockSession = mock(Session.class);
@@ -122,15 +79,18 @@ public final class SearchIndexContextListenerTest {
                 .thenReturn(mockFtSession);
 
         SearchIndexContextListener listener =
-                new SearchIndexContextListener(mockFactory);
-        listener.onStartup(mockContainer);
+                mock(SearchIndexContextListener.class);
+
+        doReturn(mockFactory).when(listener).createSessionFactory();
+        doCallRealMethod().when(listener).contextInitialized(any());
+
+        // Run the test
+        listener.contextInitialized(mock(ServletContextEvent.class));
 
         verify(mockIndexer).startAndWait();
 
         // Verify that the session was closed.
         verify(mockSession).close();
-
-        verifyZeroInteractions(mockContainer);
     }
 
     /**
@@ -139,10 +99,8 @@ public final class SearchIndexContextListenerTest {
      * @throws Exception An exception that might be thrown.
      */
     @Test
+    @PrepareForTest({Search.class, SearchIndexContextListener.class})
     public void testInterruptedIndex() throws Exception {
-        // Set up our container
-        Container mockContainer = mock(Container.class);
-
         // Set up a fake session factory
         SessionFactory mockFactory = mock(SessionFactory.class);
         Session mockSession = mock(Session.class);
@@ -166,26 +124,29 @@ public final class SearchIndexContextListenerTest {
                 .thenReturn(mockFtSession);
 
         SearchIndexContextListener listener =
-                new SearchIndexContextListener(mockFactory);
-        listener.onStartup(mockContainer);
+                mock(SearchIndexContextListener.class);
+        doReturn(mockFactory).when(listener).createSessionFactory();
+        doCallRealMethod().when(listener).contextInitialized(any());
+
+        // Run the test
+        listener.contextInitialized(mock(ServletContextEvent.class));
 
         // Verify that the session was closed.
         verify(mockSession).close();
-
-        verifyZeroInteractions(mockContainer);
+        verify(mockFactory).close();
     }
 
     /**
-     * A private class to test our feature injection.
+     * Assert that the disposal method does nothing.
+     *
+     * @throws Exception An exception that might be thrown.
      */
-    private static class TestFeature implements Feature {
+    @Test
+    public void testDisposal() throws Exception {
+        ServletContextEvent e = mock(ServletContextEvent.class);
+        SearchIndexContextListener listener = new SearchIndexContextListener();
+        listener.contextDestroyed(e);
 
-        @Override
-        public boolean configure(final FeatureContext context) {
-            context.register(new HibernateServiceRegistryFactory.Binder());
-            context.register(new HibernateSessionFactoryFactory.Binder());
-            context.register(new HibernateSessionFactory.Binder());
-            return true;
-        }
+        verifyZeroInteractions(e);
     }
 }

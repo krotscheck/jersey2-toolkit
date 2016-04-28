@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Michael Krotscheck
+ * Copyright (c) 2016 Michael Krotscheck
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy
@@ -16,8 +16,7 @@
  */
 
 /**
- * Container Lifecycle components required by Hibernate.
- *
- * @author Michael Krotscheck
+ * Container context listeners available for hibernate (must be configured
+ * separately).
  */
-package net.krotscheck.jersey2.hibernate.lifecycle;
+package net.krotscheck.jersey2.hibernate.context;

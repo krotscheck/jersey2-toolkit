@@ -17,7 +17,6 @@
 
 package net.krotscheck.jersey2.hibernate;
 
-import net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener;
 import net.krotscheck.test.UnitTest;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
@@ -77,11 +76,6 @@ public final class HibernateFeatureTest extends JerseyTest {
     public static final class TestService {
 
         /**
-         * Hibernate configuration.
-         */
-        private SearchIndexContextListener contextListener;
-
-        /**
          * Hibernate service registry.
          */
         private ServiceRegistry serviceRegistry;
@@ -109,7 +103,6 @@ public final class HibernateFeatureTest extends JerseyTest {
         /**
          * Create a new instance of our test service.
          *
-         * @param cl  Context Listener
          * @param sr  ServiceRegistry
          * @param f   Session Factory
          * @param s   Hibernate Session
@@ -117,13 +110,11 @@ public final class HibernateFeatureTest extends JerseyTest {
          * @param ftS Full text session
          */
         @Inject
-        public TestService(final SearchIndexContextListener cl,
-                           final ServiceRegistry sr,
+        public TestService(final ServiceRegistry sr,
                            final SessionFactory f,
                            final SearchFactory sF,
                            final Session s,
                            final FullTextSession ftS) {
-            contextListener = cl;
             serviceRegistry = sr;
             factory = f;
             session = s;
@@ -144,7 +135,6 @@ public final class HibernateFeatureTest extends JerseyTest {
             Assert.assertNotNull(factory);
             Assert.assertNotNull(ftSession);
             Assert.assertNotNull(session);
-            Assert.assertNotNull(contextListener);
 
             return Response.ok().build();
         }

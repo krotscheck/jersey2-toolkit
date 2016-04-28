@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 Michael Krotscheck
+ * Copyright (c) 2016 Michael Krotscheck
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy
@@ -20,4 +20,4 @@
  *
  * @author Michael Krotscheck
  */
-package net.krotscheck.jersey2.hibernate.lifecycle;
+package net.krotscheck.jersey2.hibernate.context;

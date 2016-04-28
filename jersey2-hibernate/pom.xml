@@ -20,7 +20,7 @@
     <parent>
         <artifactId>jersey2-toolkit</artifactId>
         <groupId>net.krotscheck.jersey2</groupId>
-        <version>2.0.3-SNAPSHOT</version>
+        <version>2.1.0-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -58,16 +58,24 @@
     </build>
 
     <dependencies>
+        <!-- Root level servlet API -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.0.6.Final</version>
+            <version>5.1.0.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-search-orm</artifactId>
-            <version>5.5.1.Final</version>
+            <version>5.5.3.Final</version>
         </dependency>
 
         <!-- Transaction library -->

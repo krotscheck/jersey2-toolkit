@@ -156,10 +156,16 @@ used to construct fulltext queries.
 
 $h3 `SearchIndexContextListener`
 
-This container lifecycle listener will trigger a rebuild of the hibernate 
-search index whenever the servlet container is restarted. While useful for 
-small deployments, it may not be suitable for larger ones.
+This servlet context listener will trigger a rebuild of the hibernate
+search index whenever the servlet is restarted. While useful for
+small deployments, it may not be suitable for larger ones. To configure,
+please declare the listener in web.xml.
 
 * *Scope:* Not applicable.
-* *Type:* org.glassfish.jersey.server.spi.ContainerLifecycleListener
-    
+* *Type:* org.glassfish.jersey.server.spi.ServletContextListener
+
+
+    <!-- Hibernate Search Lucene Index Rebuild -->
+    <listener>
+        <listener-class>net.krotscheck.servlet.HibernateSearchIndexContextListener</listener-class>
+    </listener>

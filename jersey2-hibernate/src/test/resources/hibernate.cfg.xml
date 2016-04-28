@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (c) 2014 Michael Krotscheck
+  ~ Copyright (c) 2016 Michael Krotscheck
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License"); you may not
   ~ use this file except in compliance with the License. You may obtain a copy
@@ -15,11 +15,28 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
-<!DOCTYPE hibernate-configuration SYSTEM
-        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:mem:test</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password">sa</property>
+
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <!-- Hibernate Search Configuration -->
+        <property name="search.default.directory_provider">filesystem</property>
+        <property name="hibernate.search.default.indexBase">/tmp/j2tk_lucene</property>
+
+        <!-- Hibernate ID Gen Configuration -->
+        <property name="id.new_generator_mappings">true</property>
+
+        <!-- Entity Mappings -->
         <mapping class="net.krotscheck.jersey2.hibernate.entity.TestEntity"/>
     </session-factory>
 </hibernate-configuration>

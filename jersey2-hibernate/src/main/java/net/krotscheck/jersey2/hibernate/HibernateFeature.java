@@ -23,7 +23,6 @@ import net.krotscheck.jersey2.hibernate.factory.FulltextSessionFactory;
 import net.krotscheck.jersey2.hibernate.factory.HibernateServiceRegistryFactory;
 import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactory;
 import net.krotscheck.jersey2.hibernate.factory.HibernateSessionFactoryFactory;
-import net.krotscheck.jersey2.hibernate.lifecycle.SearchIndexContextListener;
 
 import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.FeatureContext;
@@ -55,9 +54,6 @@ public final class HibernateFeature implements Feature {
         context.register(new HibernateServiceRegistryFactory.Binder());
         context.register(new FulltextSearchFactoryFactory.Binder());
         context.register(new FulltextSessionFactory.Binder());
-
-        // Migration binder
-        context.register(new SearchIndexContextListener.Binder());
 
         return true;
     }
